@@ -1,0 +1,46 @@
+[09066309P 08134385K]  2025-05-15 11:11:25.811 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-15 11:11:25.813 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+[09066309P 08134385K]  2025-05-15 11:11:25.813 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+[09066309P 08134385K]  2025-05-15 11:11:25.871 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-15 11:07:59 CEST
+[09066309P 08134385K]  2025-05-15 11:11:25.900 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K] ::1(24728) 2025-05-15 11:11:34.354 CESTLOG:  duración: 3.654 ms  sentencia: SELECT pg_catalog.set_config('search_path', '', false);
+[09066309P 08134385K] ::1(24728) 2025-05-15 11:11:34.357 CESTLOG:  iniciando la decodificación lógica para el slot «telpark_sub»
+[09066309P 08134385K] ::1(24728) 2025-05-15 11:11:34.357 CESTDETALLE:  Transacciones en flujo comprometiendo después de D8/91004560, leyendo WAL desde D8/91004560.
+[09066309P 08134385K] ::1(24728) 2025-05-15 11:11:34.357 CESTSENTENCIA:  START_REPLICATION SLOT "telpark_sub" LOGICAL 0/0 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(24728) 2025-05-15 11:11:34.358 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004560
+[09066309P 08134385K] ::1(24728) 2025-05-15 11:11:34.358 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(24728) 2025-05-15 11:11:34.358 CESTSENTENCIA:  START_REPLICATION SLOT "telpark_sub" LOGICAL 0/0 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.897 CESTLOG:  duración: 0.037 ms  sentencia: SET search_path = pg_catalog
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.897 CESTLOG:  duración: 0.016 ms  sentencia: SET timezone = 'GMT'
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.897 CESTLOG:  duración: 0.013 ms  sentencia: SET datestyle = ISO
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.897 CESTLOG:  duración: 0.012 ms  sentencia: SET intervalstyle = postgres
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.897 CESTLOG:  duración: 0.015 ms  sentencia: SET extra_float_digits = 3
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.898 CESTLOG:  duración: 0.012 ms  sentencia: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.901 CESTLOG:  duración: 2.368 ms  parse: <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, provincia FROM public.clientes
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.901 CESTLOG:  duración: 0.021 ms  bind <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, provincia FROM public.clientes
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.905 CESTLOG:  duración: 4.440 ms  ejecutar <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, provincia FROM public.clientes
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.906 CESTLOG:  duración: 0.280 ms  sentencia: FETCH 100 FROM c1
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.906 CESTLOG:  duración: 0.076 ms  parse: <unnamed>: DECLARE c2 CURSOR FOR
+	SELECT clienteid_clientes FROM public.reservas
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.906 CESTLOG:  duración: 0.005 ms  bind <unnamed>: DECLARE c2 CURSOR FOR
+	SELECT clienteid_clientes FROM public.reservas
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.907 CESTLOG:  duración: 1.187 ms  ejecutar <unnamed>: DECLARE c2 CURSOR FOR
+	SELECT clienteid_clientes FROM public.reservas
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.908 CESTLOG:  duración: 0.055 ms  sentencia: FETCH 100 FROM c2
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.908 CESTLOG:  duración: 0.453 ms  sentencia: CLOSE c2
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.909 CESTLOG:  duración: 0.009 ms  sentencia: CLOSE c1
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:35.909 CESTLOG:  duración: 0.012 ms  sentencia: COMMIT TRANSACTION
+[09066309P 08134385K] ::1(25166) 2025-05-15 11:15:57.641 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K]  2025-05-15 11:16:25.872 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-15 11:16:26.148 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.012 s, sync=0.007 s, total=0.278 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=0 kB, estimación=0 kB; lsn=D8/91004680, lsn de redo=D8/91004648
+[09066309P 08134385K]  2025-05-15 12:19:26.507 CESTLOG:  could not reserve shared memory region (addr=00000265B9DB0000) for child 0000000000001470: error code 487
+[09066309P 08134385K]  2025-05-15 12:21:56.741 CESTLOG:  could not reserve shared memory region (addr=00000265B9DB0000) for child 0000000000001494: error code 487
+[09066309P 08134385K]  2025-05-15 13:08:27.279 CESTLOG:  could not reserve shared memory region (addr=00000265B9DB0000) for child 0000000000001424: error code 487
+[09066309P 08134385K]  2025-05-15 13:42:51.381 CESTLOG:  proceso de servidor (PID 34972) fue terminado por una excepción 0xC000013A
+[09066309P 08134385K]  2025-05-15 13:42:51.381 CESTDETALLE:  El proceso que falló estaba ejecutando: START_REPLICATION SLOT "telpark_sub" LOGICAL 0/0 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K]  2025-05-15 13:42:51.381 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+[09066309P 08134385K]  2025-05-15 13:42:51.381 CESTLOG:  terminando todos los otros procesos de servidor activos

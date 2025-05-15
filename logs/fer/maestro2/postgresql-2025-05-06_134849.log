@@ -1,0 +1,89 @@
+[09066309P 08134385K]  2025-05-06 13:48:49.969 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-06 13:48:49.970 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+[09066309P 08134385K]  2025-05-06 13:48:49.970 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+[09066309P 08134385K]  2025-05-06 13:48:50.048 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-06 13:46:55 CEST
+[09066309P 08134385K]  2025-05-06 13:49:00.082 CESTLOG:  sincronizando el directorio de datos (fsync), transcurrido: 10.03 s, ruta actual: ./base/4/2600
+[09066309P 08134385K]  2025-05-06 13:49:10.071 CESTLOG:  sincronizando el directorio de datos (fsync), transcurrido: 20.02 s, ruta actual: ./base/89640/2674
+[09066309P 08134385K]  2025-05-06 13:49:19.010 CESTLOG:  iniciando recuperación de backup con LSN de redo D8/89000028, LSN de checkpoint D8/89000060, en timeline 1
+[09066309P 08134385K]  2025-05-06 13:49:19.044 CESTLOG:  redo comienza en D8/89000028
+[09066309P 08134385K]  2025-05-06 13:49:19.058 CESTLOG:  se completó la recuperación de backup con LSN de redo D8/89000028 y LSN de término D8/89000138
+[09066309P 08134385K]  2025-05-06 13:49:19.058 CESTLOG:  el estado de recuperación consistente fue alcanzado en D8/89000138
+[09066309P 08134385K]  2025-05-06 13:49:19.058 CESTLOG:  redo listo en D8/89000138 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.01 s
+[09066309P 08134385K]  2025-05-06 13:49:19.956 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+[09066309P 08134385K]  2025-05-06 13:49:20.126 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.053 s, sync=0.020 s, total=0.181 s; archivos sincronizados=2, más largo=0.011 s, promedio=0.010 s; distancia=16384 kB, estimación=16384 kB; lsn=D8/8A000028, lsn de redo=D8/8A000028
+[09066309P 08134385K]  2025-05-06 13:49:20.191 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.520 CESTLOG:  duración: 6.111 ms  sentencia: BEGIN;
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.522 CESTLOG:  sentencia: CREATE EXTENSION IF NOT EXISTS postgres_fdw;
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.553 CESTLOG:  duración: 31.971 ms
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.554 CESTLOG:  sentencia: DROP SCHEMA IF EXISTS telpark_foraneo CASCADE;
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.555 CESTLOG:  duración: 0.794 ms
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.561 CESTLOG:  sentencia: DROP SERVER IF EXISTS maestro1 CASCADE;
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.562 CESTLOG:  duración: 0.365 ms
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.568 CESTLOG:  sentencia: CREATE SERVER IF NOT EXISTS maestro1
+	    FOREIGN DATA WRAPPER postgres_fdw
+	    OPTIONS (host 'localhost', port '5432', dbname 'telpark');
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.569 CESTLOG:  duración: 1.075 ms
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.570 CESTLOG:  sentencia: CREATE USER MAPPING IF NOT EXISTS FOR postgres
+	    SERVER maestro1
+	    OPTIONS (user 'postgres', password 'postgres');
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.571 CESTLOG:  duración: 1.122 ms
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.573 CESTLOG:  sentencia: CREATE SCHEMA IF NOT EXISTS telpark_foraneo;
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.573 CESTLOG:  duración: 0.412 ms
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.574 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro1
+	    INTO telpark_foraneo;
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.671 CESTLOG:  duración: 96.474 ms
+[09066309P 08134385K] ::1(38044) 2025-05-06 13:50:26.680 CESTLOG:  duración: 6.046 ms  sentencia: COMMIT;
+[09066309P 08134385K] ::1(38095) 2025-05-06 13:51:32.725 CESTLOG:  duración: 0.149 ms  sentencia: SET search_path = pg_catalog
+[09066309P 08134385K] ::1(38095) 2025-05-06 13:51:32.725 CESTLOG:  duración: 0.077 ms  sentencia: SET timezone = 'GMT'
+[09066309P 08134385K] ::1(38095) 2025-05-06 13:51:32.726 CESTLOG:  duración: 0.054 ms  sentencia: SET datestyle = ISO
+[09066309P 08134385K] ::1(38095) 2025-05-06 13:51:32.726 CESTLOG:  duración: 0.049 ms  sentencia: SET intervalstyle = postgres
+[09066309P 08134385K] ::1(38095) 2025-05-06 13:51:32.727 CESTLOG:  duración: 0.081 ms  sentencia: SET extra_float_digits = 3
+[09066309P 08134385K] ::1(38095) 2025-05-06 13:51:32.728 CESTLOG:  duración: 0.047 ms  sentencia: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(38095) 2025-05-06 13:51:32.736 CESTLOG:  duración: 8.244 ms  sentencia: SELECT 1 FROM pg_catalog.pg_namespace WHERE nspname = 'public'
+[09066309P 08134385K] ::1(38095) 2025-05-06 13:51:32.752 CESTLOG:  duración: 15.249 ms  sentencia: SELECT relname,   attname,   format_type(atttypid, atttypmod),   attnotnull,   pg_get_expr(adbin, adrelid),   attgenerated,   collname,   collnsp.nspname FROM pg_class c   JOIN pg_namespace n ON     relnamespace = n.oid   LEFT JOIN pg_attribute a ON     attrelid = c.oid AND attnum > 0       AND NOT attisdropped   LEFT JOIN pg_attrdef ad ON     adrelid = c.oid AND adnum = attnum   LEFT JOIN pg_collation coll ON     coll.oid = attcollation   LEFT JOIN pg_namespace collnsp ON     collnsp.oid = collnamespace WHERE c.relkind IN ('r','v','f','m','p')   AND n.nspname = 'public' AND NOT c.relispartition  ORDER BY c.relname, a.attnum
+[09066309P 08134385K] ::1(38095) 2025-05-06 13:51:32.797 CESTLOG:  duración: 0.065 ms  sentencia: COMMIT TRANSACTION
+[09066309P 08134385K]  2025-05-06 13:54:19.126 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-06 13:54:25.294 CESTLOG:  checkpoint completo: escritos 56 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=6.008 s, sync=0.113 s, total=6.169 s; archivos sincronizados=39, más largo=0.004 s, promedio=0.003 s; distancia=190 kB, estimación=14764 kB; lsn=D8/8A02FA28, lsn de redo=D8/8A02F9F0
+[09066309P 08134385K] ::1(38245) 2025-05-06 13:54:56.921 CESTLOG:  duración: 0.056 ms  sentencia: SET search_path = pg_catalog
+[09066309P 08134385K] ::1(38245) 2025-05-06 13:54:56.922 CESTLOG:  duración: 0.024 ms  sentencia: SET timezone = 'GMT'
+[09066309P 08134385K] ::1(38245) 2025-05-06 13:54:56.922 CESTLOG:  duración: 0.021 ms  sentencia: SET datestyle = ISO
+[09066309P 08134385K] ::1(38245) 2025-05-06 13:54:56.922 CESTLOG:  duración: 0.014 ms  sentencia: SET intervalstyle = postgres
+[09066309P 08134385K] ::1(38245) 2025-05-06 13:54:56.922 CESTLOG:  duración: 0.035 ms  sentencia: SET extra_float_digits = 3
+[09066309P 08134385K] ::1(38245) 2025-05-06 13:54:56.923 CESTLOG:  duración: 0.018 ms  sentencia: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(38245) 2025-05-06 13:54:56.924 CESTLOG:  duración: 1.024 ms  sentencia: SELECT 1 FROM pg_catalog.pg_namespace WHERE nspname = 'public'
+[09066309P 08134385K] ::1(38245) 2025-05-06 13:54:56.927 CESTLOG:  duración: 3.071 ms  sentencia: SELECT relname,   attname,   format_type(atttypid, atttypmod),   attnotnull,   pg_get_expr(adbin, adrelid),   attgenerated,   collname,   collnsp.nspname FROM pg_class c   JOIN pg_namespace n ON     relnamespace = n.oid   LEFT JOIN pg_attribute a ON     attrelid = c.oid AND attnum > 0       AND NOT attisdropped   LEFT JOIN pg_attrdef ad ON     adrelid = c.oid AND adnum = attnum   LEFT JOIN pg_collation coll ON     coll.oid = attcollation   LEFT JOIN pg_namespace collnsp ON     collnsp.oid = collnamespace WHERE c.relkind IN ('r','v','f','m','p')   AND n.nspname = 'public' AND NOT c.relispartition  ORDER BY c.relname, a.attnum
+[09066309P 08134385K] ::1(38245) 2025-05-06 13:54:56.940 CESTLOG:  duración: 0.024 ms  sentencia: COMMIT TRANSACTION
+[09066309P 08134385K] ::1(38245) 2025-05-06 13:55:05.780 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(38272) 2025-05-06 13:55:38.363 CESTLOG:  sentencia: DROP SCHEMA IF EXISTS telpark_foraneo CASCADE;
+[09066309P 08134385K] ::1(38272) 2025-05-06 13:55:38.394 CESTLOG:  duración: 33.785 ms
+[09066309P 08134385K] ::1(38272) 2025-05-06 13:55:40.827 CESTLOG:  sentencia: DROP SERVER IF EXISTS maestro1 CASCADE;
+[09066309P 08134385K] ::1(38272) 2025-05-06 13:55:40.856 CESTLOG:  duración: 28.419 ms
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.686 CESTLOG:  duración: 0.056 ms  sentencia: BEGIN;
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.687 CESTLOG:  sentencia: CREATE EXTENSION IF NOT EXISTS postgres_fdw;
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.705 CESTLOG:  duración: 18.671 ms
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.707 CESTLOG:  sentencia: DROP SCHEMA IF EXISTS telpark_foraneo CASCADE;
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.707 CESTLOG:  duración: 0.164 ms
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.714 CESTLOG:  sentencia: DROP SERVER IF EXISTS maestro1 CASCADE;
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.715 CESTLOG:  duración: 0.825 ms
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.724 CESTLOG:  sentencia: CREATE SERVER IF NOT EXISTS maestro1
+	    FOREIGN DATA WRAPPER postgres_fdw
+	    OPTIONS (host 'localhost', port '5432', dbname 'telpark');
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.725 CESTLOG:  duración: 0.994 ms
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.727 CESTLOG:  sentencia: CREATE USER MAPPING IF NOT EXISTS FOR postgres
+	    SERVER maestro1
+	    OPTIONS (user 'postgres', password 'postgres');
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.728 CESTLOG:  duración: 1.135 ms
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.730 CESTLOG:  sentencia: CREATE SCHEMA IF NOT EXISTS telpark_foraneo;
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.731 CESTLOG:  duración: 0.848 ms
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.732 CESTLOG:  sentencia: IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro1
+	    INTO telpark_foraneo;
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.821 CESTLOG:  duración: 88.921 ms
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:46.827 CESTLOG:  duración: 2.947 ms  sentencia: COMMIT;
+[09066309P 08134385K] ::1(38287) 2025-05-06 13:55:49.304 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K]  2025-05-06 13:56:19.080 CESTLOG:  proceso ayudante «logical replication launcher» (PID 61512) fue terminado por una excepción 0xC000013A
+[09066309P 08134385K]  2025-05-06 13:56:19.080 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+[09066309P 08134385K]  2025-05-06 13:56:19.080 CESTLOG:  terminando todos los otros procesos de servidor activos

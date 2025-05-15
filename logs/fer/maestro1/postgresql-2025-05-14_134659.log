@@ -1,0 +1,444 @@
+[09066309P 08134385K]  2025-05-14 13:46:59.794 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-14 13:45:55 CEST
+[09066309P 08134385K]  2025-05-14 13:51:59.783 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-14 13:51:59.873 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.057 s, sync=0.006 s, total=0.098 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.003 s; distancia=0 kB, estimación=0 kB; lsn=D8/90032780, lsn de redo=D8/90032748
+[09066309P 08134385K] ::1(2316) 2025-05-15 10:12:20.064 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(2316) 2025-05-15 10:12:20.064 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.469 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.489 CESTLOG:  duración: 25.324 ms
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.490 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.493 CESTLOG:  duración: 3.148 ms
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.494 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.512 CESTLOG:  duración: 18.242 ms
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.513 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.516 CESTLOG:  duración: 3.161 ms
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.518 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.523 CESTLOG:  duración: 5.097 ms
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.524 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.530 CESTLOG:  duración: 6.006 ms
+[09066309P 08134385K]  2025-05-15 10:13:17.054 CESTLOG:  empezando checkpoint: force wait
+[09066309P 08134385K]  2025-05-15 10:13:18.641 CESTLOG:  checkpoint completo: escritos 15 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=1.556 s, sync=0.007 s, total=1.588 s; archivos sincronizados=12, más largo=0.001 s, promedio=0.001 s; distancia=16182 kB, estimación=16182 kB; lsn=D8/91000060, lsn de redo=D8/91000028
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.155 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.166 CESTLOG:  duración: 16.887 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.166 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.167 CESTLOG:  duración: 1.116 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.168 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.169 CESTLOG:  duración: 1.267 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.170 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.172 CESTLOG:  duración: 2.063 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.173 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.174 CESTLOG:  duración: 0.998 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.175 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.177 CESTLOG:  duración: 2.145 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.188 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.193 CESTLOG:  duración: 5.335 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.202 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.203 CESTLOG:  duración: 1.405 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.212 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.221 CESTLOG:  duración: 9.045 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.233 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.237 CESTLOG:  duración: 4.025 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.247 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.249 CESTLOG:  duración: 2.592 ms
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.259 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18700) 2025-05-15 10:16:48.261 CESTLOG:  duración: 2.397 ms
+[09066309P 08134385K]  2025-05-15 10:18:17.642 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-15 10:18:20.642 CESTLOG:  checkpoint completo: escritos 28 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=2.978 s, sync=0.010 s, total=3.000 s; archivos sincronizados=22, más largo=0.001 s, promedio=0.001 s; distancia=16500 kB, estimación=16500 kB; lsn=D8/9201D3B8, lsn de redo=D8/9201D380
+[09066309P 08134385K] ::1(18958) 2025-05-15 10:19:23.126 CESTLOG:  duración: 24.891 ms  sentencia: EXPLAIN SELECT provincia, COUNT(*) AS total
+	FROM (
+	    SELECT provincia
+	    FROM reservas
+	    JOIN clientes ON reservas.clienteid_clientes = clientes.clienteid
+	    
+	    UNION
+	    
+	    SELECT provincia
+	    FROM telpark_foraneo.reservas
+	    JOIN telpark_foraneo.clientes ON reservas.clienteid_clientes = clientes.clienteid
+	) AS subquery
+	GROUP BY provincia;
+[09066309P 08134385K]  2025-05-15 10:23:17.656 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-15 10:23:19.788 CESTLOG:  checkpoint completo: escritos 20 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.105 s, sync=0.009 s, total=2.133 s; archivos sincronizados=15, más largo=0.002 s, promedio=0.001 s; distancia=40 kB, estimación=14854 kB; lsn=D8/92027588, lsn de redo=D8/92027550
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.069 CESTLOG:  duración: 39.735 ms  sentencia: SET DateStyle=ISO; SET client_min_messages=notice; SELECT set_config('bytea_output','hex',false) FROM pg_settings WHERE name = 'bytea_output'; SET client_encoding='utf-8';
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.071 CESTLOG:  duración: 0.894 ms  sentencia: SELECT version()
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.080 CESTLOG:  duración: 9.278 ms  sentencia: 
+	SELECT
+	    db.oid as did, db.datname, db.datallowconn,
+	    pg_encoding_to_char(db.encoding) AS serverencoding,
+	    has_database_privilege(db.oid, 'CREATE') as cancreate,
+	    datistemplate
+	FROM
+	    pg_catalog.pg_database db
+	WHERE db.datname = current_database()
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.084 CESTLOG:  duración: 3.079 ms  sentencia: 
+	        SELECT
+	             gss_authenticated, encrypted
+	        FROM
+	            pg_catalog.pg_stat_gssapi
+	        WHERE pid = pg_backend_pid()
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.095 CESTLOG:  duración: 11.663 ms  sentencia: 
+	        SELECT
+	            roles.oid as id, roles.rolname as name,
+	            roles.rolsuper as is_superuser,
+	            CASE WHEN roles.rolsuper THEN true ELSE roles.rolcreaterole END as
+	            can_create_role,
+	            CASE WHEN roles.rolsuper THEN true
+	            ELSE roles.rolcreatedb END as can_create_db,
+	            CASE WHEN 'pg_signal_backend'=ANY(ARRAY(WITH RECURSIVE cte AS (
+	            SELECT pg_roles.oid,pg_roles.rolname FROM pg_roles
+	                WHERE pg_roles.oid = roles.oid
+	            UNION ALL
+	            SELECT m.roleid,pgr.rolname FROM cte cte_1
+	                JOIN pg_auth_members m ON m.member = cte_1.oid
+	                JOIN pg_roles pgr ON pgr.oid = m.roleid)
+	            SELECT rolname  FROM cte)) THEN True
+	            ELSE False END as can_signal_backend
+	        FROM
+	            pg_catalog.pg_roles as roles
+	        WHERE
+	            rolname = current_user
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.131 CESTLOG:  duración: 0.994 ms  sentencia: SELECT CASE WHEN usesuper
+	       THEN pg_catalog.pg_is_in_recovery()
+	       ELSE FALSE
+	       END as inrecovery,
+	       CASE WHEN usesuper AND pg_catalog.pg_is_in_recovery()
+	       THEN pg_is_wal_replay_paused()
+	       ELSE FALSE
+	       END as isreplaypaused
+	FROM pg_catalog.pg_user WHERE usename=current_user
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.172 CESTLOG:  duración: 6.991 ms  sentencia: SELECT CASE
+	    WHEN (SELECT count(extname) FROM pg_catalog.pg_extension WHERE extname='bdr') > 0
+	    THEN 'pgd'
+	    WHEN (SELECT COUNT(*) FROM pg_replication_slots) > 0
+	    THEN 'log'
+	    ELSE NULL
+	END as type;
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.315 CESTLOG:  duración: 11.345 ms  sentencia: /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity) AS "Total",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'active')  AS "Active",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'idle')  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_catalog.pg_stat_database) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_catalog.pg_stat_database) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_catalog.pg_stat_database) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_catalog.pg_stat_database) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_catalog.pg_stat_database) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_catalog.pg_stat_database) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_catalog.pg_stat_database) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_catalog.pg_stat_database) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_catalog.pg_stat_database) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_catalog.pg_stat_database) AS "Hits"
+	) t
+	
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.328 CESTLOG:  duración: 6.959 ms  sentencia: 
+	SELECT
+	    has_table_privilege(
+	      'pgagent.pga_job', 'INSERT, SELECT, UPDATE'
+	    ) has_priviledge
+	WHERE EXISTS(
+	    SELECT has_schema_privilege('pgagent', 'USAGE')
+	    WHERE EXISTS(
+	        SELECT cl.oid FROM pg_catalog.pg_class cl
+	        LEFT JOIN pg_catalog.pg_namespace ns ON ns.oid=relnamespace
+	        WHERE relname='pga_job' AND nspname='pgagent'
+	    )
+	)
+	
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.335 CESTLOG:  duración: 0.450 ms  sentencia: SELECT CASE
+	    WHEN (SELECT count(extname) FROM pg_catalog.pg_extension WHERE extname='bdr') > 0
+	    THEN 'pgd'
+	    WHEN (SELECT COUNT(*) FROM pg_replication_slots) > 0
+	    THEN 'log'
+	    ELSE NULL
+	END as type;
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.338 CESTLOG:  duración: 0.398 ms  sentencia: SELECT CASE
+	    WHEN (SELECT count(extname) FROM pg_catalog.pg_extension WHERE extname='bdr') > 0
+	    THEN 'pgd'
+	    WHEN (SELECT COUNT(*) FROM pg_replication_slots) > 0
+	    THEN 'log'
+	    ELSE NULL
+	END as type;
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.440 CESTLOG:  duración: 5.485 ms  sentencia: SELECT
+	    db.oid as did, db.datname as name, ta.spcname as spcname, db.datallowconn,
+	    db.datistemplate AS is_template,
+	    pg_catalog.has_database_privilege(db.oid, 'CREATE') as cancreate, datdba as owner,
+	    descr.description
+	FROM
+	    pg_catalog.pg_database db
+	    LEFT OUTER JOIN pg_catalog.pg_tablespace ta ON db.dattablespace = ta.oid
+	    LEFT OUTER JOIN pg_catalog.pg_shdescription descr ON (
+	        db.oid=descr.objoid AND descr.classoid='pg_database'::regclass
+	    )
+	WHERE         db.oid > 16383::OID OR db.datname IN ('postgres', 'edb')
+	
+	ORDER BY datname;
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.469 CESTLOG:  duración: 0.225 ms  sentencia: 
+	SELECT
+	    db.oid as did, db.datname, db.datallowconn,
+	    pg_catalog.pg_encoding_to_char(db.encoding) AS serverencoding,
+	    pg_catalog.has_database_privilege(db.oid, 'CREATE') as cancreate,
+	    datistemplate
+	FROM
+	    pg_catalog.pg_database db
+	WHERE db.oid = 117346
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.472 CESTLOG:  duración: 0.260 ms  sentencia: 
+	SELECT
+	    db.oid as did, db.datname, db.datallowconn,
+	    pg_catalog.pg_encoding_to_char(db.encoding) AS serverencoding,
+	    pg_catalog.has_database_privilege(db.oid, 'CREATE') as cancreate,
+	    datistemplate
+	FROM
+	    pg_catalog.pg_database db
+	WHERE db.oid = 117346
+[09066309P 08134385K] ::1(20226) 2025-05-15 10:30:49.547 CESTLOG:  duración: 13.494 ms  sentencia: SET DateStyle=ISO; SET client_min_messages=notice; SELECT set_config('bytea_output','hex',false) FROM pg_settings WHERE name = 'bytea_output'; SET client_encoding='utf-8';
+[09066309P 08134385K] ::1(20225) 2025-05-15 10:30:49.547 CESTLOG:  duración: 14.097 ms  sentencia: SET DateStyle=ISO; SET client_min_messages=notice; SELECT set_config('bytea_output','hex',false) FROM pg_settings WHERE name = 'bytea_output'; SET client_encoding='utf-8';
+[09066309P 08134385K] ::1(20225) 2025-05-15 10:30:49.548 CESTLOG:  duración: 0.947 ms  sentencia: SELECT version()
+[09066309P 08134385K] ::1(20226) 2025-05-15 10:30:49.548 CESTLOG:  duración: 1.215 ms  sentencia: SELECT version()
+[09066309P 08134385K] ::1(20226) 2025-05-15 10:30:49.553 CESTLOG:  duración: 4.579 ms  sentencia: 
+	SELECT
+	    db.oid as did, db.datname, db.datallowconn,
+	    pg_encoding_to_char(db.encoding) AS serverencoding,
+	    has_database_privilege(db.oid, 'CREATE') as cancreate,
+	    datistemplate
+	FROM
+	    pg_catalog.pg_database db
+	WHERE db.datname = current_database()
+[09066309P 08134385K] ::1(20225) 2025-05-15 10:30:49.553 CESTLOG:  duración: 4.698 ms  sentencia: 
+	SELECT
+	    db.oid as did, db.datname, db.datallowconn,
+	    pg_encoding_to_char(db.encoding) AS serverencoding,
+	    has_database_privilege(db.oid, 'CREATE') as cancreate,
+	    datistemplate
+	FROM
+	    pg_catalog.pg_database db
+	WHERE db.datname = current_database()
+[09066309P 08134385K] ::1(20226) 2025-05-15 10:30:49.556 CESTLOG:  duración: 2.044 ms  sentencia: 
+	        SELECT
+	             gss_authenticated, encrypted
+	        FROM
+	            pg_catalog.pg_stat_gssapi
+	        WHERE pid = pg_backend_pid()
+[09066309P 08134385K] ::1(20225) 2025-05-15 10:30:49.556 CESTLOG:  duración: 1.886 ms  sentencia: 
+	        SELECT
+	             gss_authenticated, encrypted
+	        FROM
+	            pg_catalog.pg_stat_gssapi
+	        WHERE pid = pg_backend_pid()
+[09066309P 08134385K] ::1(20226) 2025-05-15 10:30:49.563 CESTLOG:  duración: 7.081 ms  sentencia: 
+	        SELECT
+	            roles.oid as id, roles.rolname as name,
+	            roles.rolsuper as is_superuser,
+	            CASE WHEN roles.rolsuper THEN true ELSE roles.rolcreaterole END as
+	            can_create_role,
+	            CASE WHEN roles.rolsuper THEN true
+	            ELSE roles.rolcreatedb END as can_create_db,
+	            CASE WHEN 'pg_signal_backend'=ANY(ARRAY(WITH RECURSIVE cte AS (
+	            SELECT pg_roles.oid,pg_roles.rolname FROM pg_roles
+	                WHERE pg_roles.oid = roles.oid
+	            UNION ALL
+	            SELECT m.roleid,pgr.rolname FROM cte cte_1
+	                JOIN pg_auth_members m ON m.member = cte_1.oid
+	                JOIN pg_roles pgr ON pgr.oid = m.roleid)
+	            SELECT rolname  FROM cte)) THEN True
+	            ELSE False END as can_signal_backend
+	        FROM
+	            pg_catalog.pg_roles as roles
+	        WHERE
+	            rolname = current_user
+[09066309P 08134385K] ::1(20225) 2025-05-15 10:30:49.563 CESTLOG:  duración: 7.304 ms  sentencia: 
+	        SELECT
+	            roles.oid as id, roles.rolname as name,
+	            roles.rolsuper as is_superuser,
+	            CASE WHEN roles.rolsuper THEN true ELSE roles.rolcreaterole END as
+	            can_create_role,
+	            CASE WHEN roles.rolsuper THEN true
+	            ELSE roles.rolcreatedb END as can_create_db,
+	            CASE WHEN 'pg_signal_backend'=ANY(ARRAY(WITH RECURSIVE cte AS (
+	            SELECT pg_roles.oid,pg_roles.rolname FROM pg_roles
+	                WHERE pg_roles.oid = roles.oid
+	            UNION ALL
+	            SELECT m.roleid,pgr.rolname FROM cte cte_1
+	                JOIN pg_auth_members m ON m.member = cte_1.oid
+	                JOIN pg_roles pgr ON pgr.oid = m.roleid)
+	            SELECT rolname  FROM cte)) THEN True
+	            ELSE False END as can_signal_backend
+	        FROM
+	            pg_catalog.pg_roles as roles
+	        WHERE
+	            rolname = current_user
+[09066309P 08134385K] ::1(20226) 2025-05-15 10:30:49.587 CESTLOG:  duración: 4.080 ms  sentencia: 
+	            SELECT COUNT(*) FROM pg_extension WHERE extname IN (
+	                'edb_job_scheduler', 'dbms_scheduler') 
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.705 CESTLOG:  duración: 0.790 ms  sentencia: SELECT CASE WHEN datlocprovider = 'i' THEN
+		(SELECT daticulocale as cname FROM pg_database WHERE datname = current_database())
+	ELSE
+	    (SELECT datcollate as cname FROM pg_database WHERE datname = current_database()
+	    UNION
+	    SELECT datctype as cname FROM pg_database WHERE datname = current_database())
+	END
+	FROM pg_database WHERE datname = current_database();
+[09066309P 08134385K] ::1(20226) 2025-05-15 10:30:49.721 CESTLOG:  duración: 19.001 ms  sentencia: /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Total",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'active' AND datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346))  AS "Active",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'idle' AND datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346))  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Hits"
+	) t
+	
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.722 CESTLOG:  duración: 0.424 ms  sentencia: SELECT CASE WHEN datlocprovider = 'i' THEN
+		(SELECT daticulocale as cname FROM pg_database WHERE datname = current_database())
+	ELSE
+	    (SELECT datcollate as cname FROM pg_database WHERE datname = current_database()
+	    UNION
+	    SELECT datctype as cname FROM pg_database WHERE datname = current_database())
+	END
+	FROM pg_database WHERE datname = current_database();
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.748 CESTLOG:  duración: 4.477 ms  sentencia: SELECT colliculocale from pg_collation where collprovider = 'i'
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.898 CESTLOG:  duración: 2.723 ms  sentencia: SELECT
+		r.oid, r.rolname, r.rolcanlogin, r.rolsuper,
+		pg_catalog.shobj_description(r.oid, 'pg_authid') AS description
+	FROM
+		pg_catalog.pg_roles r
+	ORDER BY r.rolcanlogin, r.rolname
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.907 CESTLOG:  duración: 1.173 ms  sentencia: SELECT * FROM
+	(SELECT pg_catalog.pg_encoding_to_char(s.i) AS encoding
+	FROM (SELECT pg_catalog.generate_series(0, 100, 1) as i) s) a
+	WHERE encoding != '' ORDER BY encoding;
+	
+	
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:49.911 CESTLOG:  duración: 0.482 ms  sentencia: SELECT
+	    ts.oid AS oid, spcname AS name, spcowner as owner,
+	    pg_catalog.shobj_description(oid, 'pg_tablespace') AS description
+	FROM
+	    pg_catalog.pg_tablespace ts
+	ORDER BY name;
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:30:51.756 CESTLOG:  duración: 3.754 ms  sentencia: /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity) AS "Total",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'active')  AS "Active",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'idle')  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_catalog.pg_stat_database) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_catalog.pg_stat_database) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_catalog.pg_stat_database) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_catalog.pg_stat_database) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_catalog.pg_stat_database) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_catalog.pg_stat_database) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_catalog.pg_stat_database) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_catalog.pg_stat_database) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_catalog.pg_stat_database) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_catalog.pg_stat_database) AS "Hits"
+	) t
+	
+[09066309P 08134385K] ::1(20211) 2025-05-15 10:31:09.168 CESTLOG:  duración: 3.848 ms  sentencia: /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity) AS "Total",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'active')  AS "Active",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'idle')  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_catalog.pg_stat_database) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_catalog.pg_stat_database) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_catalog.pg_stat_database) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_catalog.pg_stat_database) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_catalog.pg_stat_database) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_catalog.pg_stat_database) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_catalog.pg_stat_database) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_catalog.pg_stat_database) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_catalog.pg_stat_database) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_catalog.pg_stat_database) AS "Hits"
+	) t
+	
+[09066309P 08134385K]  2025-05-15 10:35:12.559 CESTLOG:  empezando checkpoint: force wait
+[09066309P 08134385K]  2025-05-15 10:35:12.575 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.006 s, sync=0.001 s, total=0.016 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16226 kB, estimación=16226 kB; lsn=D8/93000060, lsn de redo=D8/93000028
+[09066309P 08134385K] ::1(18670) 2025-05-15 10:35:12.597 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000092 ya ha sido eliminado
+[09066309P 08134385K] ::1(18670) 2025-05-15 10:35:12.597 CESTSENTENCIA:  START_REPLICATION D8/92000000 TIMELINE 1
+[09066309P 08134385K] ::1(20790) 2025-05-15 10:35:28.876 CESTLOG:  no se pudo enviar datos al cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20790) 2025-05-15 10:35:28.876 CESTSENTENCIA:  BASE_BACKUP ( LABEL 'pg_basebackup base backup',  PROGRESS,  WAIT 0,  MANIFEST 'yes',  TARGET 'client')
+[09066309P 08134385K] ::1(20795) 2025-05-15 10:35:28.876 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20795) 2025-05-15 10:35:28.876 CESTSENTENCIA:  START_REPLICATION SLOT "pg_basebackup_13492" D8/93000000 TIMELINE 1
+[09066309P 08134385K] ::1(20795) 2025-05-15 10:35:28.876 CESTLOG:  se encontró fin de archivo inesperado en la conexión standby
+[09066309P 08134385K] ::1(20795) 2025-05-15 10:35:28.876 CESTSENTENCIA:  START_REPLICATION SLOT "pg_basebackup_13492" D8/93000000 TIMELINE 1
+[09066309P 08134385K] ::1(20790) 2025-05-15 10:35:29.563 CESTFATAL:  se ha perdido la conexión al cliente
+[09066309P 08134385K] ::1(20790) 2025-05-15 10:35:29.563 CESTSENTENCIA:  BASE_BACKUP ( LABEL 'pg_basebackup base backup',  PROGRESS,  WAIT 0,  MANIFEST 'yes',  TARGET 'client')
+[09066309P 08134385K] ::1(20790) 2025-05-15 10:35:29.563 CESTWARNING:  abortando el backup porque el proceso servidor terminó antes de que pg_backup_stop fuera invocada
+[09066309P 08134385K] ::1(20226) 2025-05-15 11:10:08.566 CESTFATAL:  terminando la conexión debido a una orden del administrador
+[09066309P 08134385K] ::1(20211) 2025-05-15 11:10:08.567 CESTFATAL:  terminando la conexión debido a una orden del administrador
+[09066309P 08134385K]  2025-05-15 11:10:08.581 CESTLOG:  apagando
+[09066309P 08134385K]  2025-05-15 11:10:08.582 CESTLOG:  empezando checkpoint: shutdown immediate
+[09066309P 08134385K]  2025-05-15 11:10:08.599 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.007 s, sync=0.001 s, total=0.019 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=14604 kB; lsn=D8/93000110, lsn de redo=D8/93000110

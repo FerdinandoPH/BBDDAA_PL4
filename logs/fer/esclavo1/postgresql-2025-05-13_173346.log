@@ -1,0 +1,7 @@
+[09066309P 08134385K]  2025-05-13 17:33:47.065 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-13 15:06:18 CEST
+[09066309P 08134385K]  2025-05-13 17:33:48.859 CESTLOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+[09066309P 08134385K]  2025-05-13 17:33:48.864 CESTLOG:  redo comienza en D8/90032450
+[09066309P 08134385K]  2025-05-13 17:33:48.864 CESTLOG:  largo de registro no válido en D8/90032538: se esperaba al menos 24, se obtuvo 0
+[09066309P 08134385K]  2025-05-13 17:33:48.864 CESTLOG:  redo listo en D8/90032500 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+[09066309P 08134385K]  2025-05-13 17:33:48.870 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+[09066309P 08134385K]  2025-05-13 17:33:48.886 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.011 s, sync=0.002 s, total=0.018 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=D8/90032538, lsn de redo=D8/90032538

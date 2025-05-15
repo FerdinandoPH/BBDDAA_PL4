@@ -1,0 +1,3 @@
+[09066309P 08134385K]  2025-05-04 17:55:10.958 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-04 17:54:08 CEST
+[09066309P 08134385K]  2025-05-04 18:00:10.946 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-04 18:00:10.987 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.014 s, sync=0.003 s, total=0.044 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=D8/80AB82E0, lsn de redo=D8/80AB82A8

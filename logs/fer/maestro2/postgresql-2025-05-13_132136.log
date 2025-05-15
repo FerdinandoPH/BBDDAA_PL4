@@ -1,0 +1,18 @@
+[09066309P 08134385K]  2025-05-13 13:21:36.208 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-13 13:21:36.210 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+[09066309P 08134385K]  2025-05-13 13:21:36.210 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+[09066309P 08134385K]  2025-05-13 13:21:36.235 CESTLOG:  could not reserve shared memory region (addr=000001C3704E0000) for child 0000000000001538: error code 487
+[09066309P 08134385K]  2025-05-13 13:21:36.240 CESTLOG:  could not reserve shared memory region (addr=000001C3704E0000) for child 0000000000001538: error code 487
+[09066309P 08134385K]  2025-05-13 13:21:36.291 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-13 13:20:47 CEST
+[09066309P 08134385K]  2025-05-13 13:21:36.317 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K] ::1(18342) 2025-05-13 13:22:01.120 CESTLOG:  duración: 306.854 ms  sentencia: SELECT * FROM telpark_foraneo.clientes;
+[09066309P 08134385K]  2025-05-13 13:22:04.664 CESTLOG:  se recibió petición de apagado rápido
+[09066309P 08134385K]  2025-05-13 13:22:04.666 CESTERROR:  cancelando la sentencia debido a una petición del usuario
+[09066309P 08134385K]  2025-05-13 13:22:04.671 CESTLOG:  abortando transacciones activas
+[09066309P 08134385K] ::1(18342) 2025-05-13 13:22:04.671 CESTFATAL:  terminando la conexión debido a una orden del administrador
+[09066309P 08134385K]  2025-05-13 13:22:04.671 CESTLOG:  proceso ayudante «logical replication launcher» (PID 37048) terminó con código de salida 1
+[09066309P 08134385K]  2025-05-13 13:22:04.681 CESTLOG:  apagando
+[09066309P 08134385K]  2025-05-13 13:22:04.686 CESTLOG:  empezando checkpoint: shutdown immediate
+[09066309P 08134385K] ::1(18367) 2025-05-13 13:22:04.709 CESTLOG:  el PID 34676 en la petición de cancelación no coincidió con ningún proceso
+[09066309P 08134385K]  2025-05-13 13:22:04.730 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.016 s, sync=0.007 s, total=0.049 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=0 kB, estimación=0 kB; lsn=D8/8A078EF0, lsn de redo=D8/8A078EF0
+[09066309P 08134385K]  2025-05-13 13:22:04.753 CESTLOG:  el sistema de bases de datos está apagado

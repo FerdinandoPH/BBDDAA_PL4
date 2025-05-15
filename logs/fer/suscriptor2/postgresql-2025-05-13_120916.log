@@ -1,0 +1,97 @@
+[09066309P 08134385K]  2025-05-13 12:09:16.434 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-13 12:09:16.435 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+[09066309P 08134385K]  2025-05-13 12:09:16.435 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+[09066309P 08134385K]  2025-05-13 12:09:16.550 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-06 13:54:25 CEST
+[09066309P 08134385K]  2025-05-13 12:09:26.555 CESTLOG:  sincronizando el directorio de datos (fsync), transcurrido: 10.00 s, ruta actual: ./base/98506/14891
+[09066309P 08134385K]  2025-05-13 12:09:28.888 CESTLOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+[09066309P 08134385K]  2025-05-13 12:09:28.899 CESTLOG:  redo comienza en D8/8A02F9F0
+[09066309P 08134385K]  2025-05-13 12:09:28.934 CESTLOG:  largo de registro no válido en D8/8A068A10: se esperaba al menos 24, se obtuvo 0
+[09066309P 08134385K]  2025-05-13 12:09:28.934 CESTLOG:  redo listo en D8/8A0689D8 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.03 s
+[09066309P 08134385K]  2025-05-13 12:09:28.945 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+[09066309P 08134385K]  2025-05-13 12:09:29.160 CESTLOG:  checkpoint completo: escritos 74 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.043 s, sync=0.152 s, total=0.221 s; archivos sincronizados=54, más largo=0.004 s, promedio=0.003 s; distancia=228 kB, estimación=228 kB; lsn=D8/8A068A10, lsn de redo=D8/8A068A10
+[09066309P 08134385K]  2025-05-13 12:09:29.196 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K] ::1(59492) 2025-05-13 12:09:42.867 CESTLOG:  duración: 387.689 ms  sentencia: SELECT n.nspname as "Schema",
+	  c.relname as "Name",
+	  CASE c.relkind WHEN 'r' THEN 'table' WHEN 'v' THEN 'view' WHEN 'm' THEN 'materialized view' WHEN 'i' THEN 'index' WHEN 'S' THEN 'sequence' WHEN 't' THEN 'TOAST table' WHEN 'f' THEN 'foreign table' WHEN 'p' THEN 'partitioned table' WHEN 'I' THEN 'partitioned index' END as "Type",
+	  pg_catalog.pg_get_userbyid(c.relowner) as "Owner"
+	FROM pg_catalog.pg_class c
+	     LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+	     LEFT JOIN pg_catalog.pg_am am ON am.oid = c.relam
+	WHERE c.relkind IN ('r','p','v','m','S','f','')
+	      AND n.nspname <> 'pg_catalog'
+	      AND n.nspname !~ '^pg_toast'
+	      AND n.nspname <> 'information_schema'
+	  AND pg_catalog.pg_table_is_visible(c.oid)
+	ORDER BY 1,2;
+[09066309P 08134385K] ::1(59492) 2025-05-13 12:09:44.624 CESTLOG:  duración: 240.567 ms  sentencia: SELECT
+	  d.datname as "Name",
+	  pg_catalog.pg_get_userbyid(d.datdba) as "Owner",
+	  pg_catalog.pg_encoding_to_char(d.encoding) as "Encoding",
+	  CASE d.datlocprovider WHEN 'c' THEN 'libc' WHEN 'i' THEN 'icu' END AS "Locale Provider",
+	  d.datcollate as "Collate",
+	  d.datctype as "Ctype",
+	  d.daticulocale as "ICU Locale",
+	  d.daticurules as "ICU Rules",
+	  pg_catalog.array_to_string(d.datacl, E'\n') AS "Access privileges"
+	FROM pg_catalog.pg_database d
+	ORDER BY 1;
+[09066309P 08134385K] ::1(59526) 2025-05-13 12:10:18.488 CESTLOG:  duración: 700.845 ms  sentencia: SELECT * FROM telpark_foraneo.clientes;
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.230 CESTLOG:  duración: 0.042 ms  sentencia: SET search_path = pg_catalog
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.231 CESTLOG:  duración: 0.026 ms  sentencia: SET timezone = 'GMT'
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.231 CESTLOG:  duración: 0.015 ms  sentencia: SET datestyle = ISO
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.231 CESTLOG:  duración: 0.014 ms  sentencia: SET intervalstyle = postgres
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.231 CESTLOG:  duración: 0.018 ms  sentencia: SET extra_float_digits = 3
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.232 CESTLOG:  duración: 0.014 ms  sentencia: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.464 CESTLOG:  duración: 232.737 ms  parse: <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.465 CESTLOG:  duración: 0.017 ms  bind <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.471 CESTLOG:  duración: 6.194 ms  ejecutar <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.471 CESTLOG:  duración: 0.486 ms  sentencia: FETCH 100 FROM c1
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.472 CESTLOG:  duración: 0.010 ms  sentencia: CLOSE c1
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:11:11.472 CESTLOG:  duración: 0.014 ms  sentencia: COMMIT TRANSACTION
+[09066309P 08134385K] ::1(59647) 2025-05-13 12:13:09.237 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K]  2025-05-13 12:14:28.166 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 12:14:29.833 CESTLOG:  checkpoint completo: escritos 12 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.350 s, sync=0.044 s, total=1.667 s; archivos sincronizados=12, más largo=0.005 s, promedio=0.004 s; distancia=5 kB, estimación=205 kB; lsn=D8/8A06A1D0, lsn de redo=D8/8A06A198
+[09066309P 08134385K] ::1(13762) 2025-05-13 12:37:07.175 CESTLOG:  duración: 3.421 ms  sentencia: SELECT * FROM clientes;
+[09066309P 08134385K] ::1(13762) 2025-05-13 12:37:14.151 CESTLOG:  duración: 63.861 ms  sentencia: SELECT * FROM telpark_foraneo.clientes;
+[09066309P 08134385K] ::1(14046) 2025-05-13 12:39:39.582 CESTERROR:  error de sintaxis en o cerca de «telpark_foraneo» en carácter 142
+[09066309P 08134385K] ::1(14046) 2025-05-13 12:39:39.582 CESTSENTENCIA:  SELECT provincia, COUNT(*) AS total
+	FROM (telpark.reservas JOIN telpark.clientes ON reservas.clienteid_clientes = clientes.clineteid) UNION (telpark_foraneo.reservas JOIN telpark_foraneo.clientes ON reservas.clienteid_clientes = clientes.clineteid)
+	GROUP BY provincia;
+[09066309P 08134385K] ::1(14139) 2025-05-13 12:40:31.318 CESTERROR:  no existe la relación «telpark.reservas» en carácter 74
+[09066309P 08134385K] ::1(14139) 2025-05-13 12:40:31.318 CESTSENTENCIA:  SELECT provincia, COUNT(*) AS total
+	FROM (
+	    SELECT provincia
+	    FROM telpark.reservas
+	    JOIN telpark.clientes ON reservas.clienteid_clientes = clientes.clienteid
+	    
+	    UNION
+	    
+	    SELECT provincia
+	    FROM telpark_foraneo.reservas
+	    JOIN telpark_foraneo.clientes ON reservas.clienteid_clientes = clientes.clienteid
+	) AS subquery
+	GROUP BY provincia;
+[09066309P 08134385K] ::1(14168) 2025-05-13 12:40:47.434 CESTLOG:  duración: 316.835 ms  sentencia: SELECT provincia, COUNT(*) AS total
+	FROM (
+	    SELECT provincia
+	    FROM reservas
+	    JOIN clientes ON reservas.clienteid_clientes = clientes.clienteid
+	    
+	    UNION
+	    
+	    SELECT provincia
+	    FROM telpark_foraneo.reservas
+	    JOIN telpark_foraneo.clientes ON reservas.clienteid_clientes = clientes.clienteid
+	) AS subquery
+	GROUP BY provincia;
+[09066309P 08134385K] ::1(14168) 2025-05-13 12:41:38.537 CESTLOG:  duración: 0.151 ms  sentencia: SELECT * FROM reservas;
+[09066309P 08134385K]  2025-05-13 12:44:28.892 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 12:44:29.492 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.341 s, sync=0.008 s, total=0.600 s; archivos sincronizados=3, más largo=0.003 s, promedio=0.003 s; distancia=5 kB, estimación=185 kB; lsn=D8/8A06B988, lsn de redo=D8/8A06B950
+[09066309P 08134385K]  2025-05-13 12:56:52.900 CESTLOG:  proceso de servidor (PID 3264) fue terminado por una excepción 0xC000013A
+[09066309P 08134385K]  2025-05-13 12:56:52.900 CESTDETALLE:  El proceso que falló estaba ejecutando: SELECT * FROM telpark_foraneo.clientes;
+[09066309P 08134385K]  2025-05-13 12:56:52.900 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+[09066309P 08134385K]  2025-05-13 12:56:52.900 CESTLOG:  terminando todos los otros procesos de servidor activos

@@ -1,0 +1,1 @@
+[09066309P 08134385K]  2025-04-26 13:57:01.080 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.009 s, sync=0.001 s, total=0.031 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=3797 kB; lsn=D8/80AB7EE8, lsn de redo=D8/80AB7EE8

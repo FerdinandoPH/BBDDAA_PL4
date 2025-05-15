@@ -1,0 +1,7 @@
+[09066309P 08134385K]  2025-05-15 10:36:45.550 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-15 10:36:45.552 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+[09066309P 08134385K]  2025-05-15 10:36:45.552 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+[09066309P 08134385K]  2025-05-15 10:36:45.611 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-15 10:36:29 CEST
+[09066309P 08134385K]  2025-05-15 10:36:45.630 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K]  2025-05-15 10:36:50.164 CESTLOG:  empezando checkpoint: force wait
+[09066309P 08134385K]  2025-05-15 10:36:50.210 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.013 s, sync=0.007 s, total=0.048 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=16383 kB, estimación=16383 kB; lsn=D8/90000060, lsn de redo=D8/90000028

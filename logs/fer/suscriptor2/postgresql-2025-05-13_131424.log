@@ -1,0 +1,46 @@
+[09066309P 08134385K]  2025-05-13 13:14:24.075 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-13 13:14:24.076 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+[09066309P 08134385K]  2025-05-13 13:14:24.077 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+[09066309P 08134385K]  2025-05-13 13:14:24.147 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-13 12:44:29 CEST
+[09066309P 08134385K]  2025-05-13 13:14:32.654 CESTLOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+[09066309P 08134385K]  2025-05-13 13:14:32.661 CESTLOG:  redo comienza en D8/8A06B950
+[09066309P 08134385K]  2025-05-13 13:14:32.661 CESTLOG:  largo de registro no válido en D8/8A06BA38: se esperaba al menos 24, se obtuvo 0
+[09066309P 08134385K]  2025-05-13 13:14:32.661 CESTLOG:  redo listo en D8/8A06BA00 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+[09066309P 08134385K]  2025-05-13 13:14:32.672 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+[09066309P 08134385K]  2025-05-13 13:14:32.710 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.013 s, sync=0.007 s, total=0.044 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=0 kB, estimación=0 kB; lsn=D8/8A06BA38, lsn de redo=D8/8A06BA38
+[09066309P 08134385K]  2025-05-13 13:14:32.726 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.309 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.552 CESTLOG:  duración: 244.912 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.554 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.555 CESTLOG:  duración: 1.355 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.557 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.558 CESTLOG:  duración: 0.745 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.559 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.570 CESTLOG:  duración: 10.993 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.571 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.572 CESTLOG:  duración: 1.284 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.573 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.576 CESTLOG:  duración: 3.393 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.586 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.587 CESTLOG:  duración: 0.707 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.588 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.589 CESTLOG:  duración: 0.738 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.590 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.591 CESTLOG:  duración: 1.506 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.602 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.604 CESTLOG:  duración: 2.571 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.616 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.617 CESTLOG:  duración: 1.360 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.625 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:36.627 CESTLOG:  duración: 1.340 ms
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:44.186 CESTLOG:  duración: 0.166 ms  sentencia: SELECT * FROM clientes;
+[09066309P 08134385K]  2025-05-13 13:20:46.913 CESTLOG:  se recibió petición de apagado rápido
+[09066309P 08134385K]  2025-05-13 13:20:46.916 CESTERROR:  cancelando la sentencia debido a una petición del usuario
+[09066309P 08134385K]  2025-05-13 13:20:47.148 CESTLOG:  abortando transacciones activas
+[09066309P 08134385K] ::1(18211) 2025-05-13 13:20:47.148 CESTFATAL:  terminando la conexión debido a una orden del administrador
+[09066309P 08134385K]  2025-05-13 13:20:47.148 CESTLOG:  proceso ayudante «logical replication launcher» (PID 18116) terminó con código de salida 1
+[09066309P 08134385K]  2025-05-13 13:20:47.165 CESTLOG:  apagando
+[09066309P 08134385K]  2025-05-13 13:20:47.170 CESTLOG:  empezando checkpoint: shutdown immediate
+[09066309P 08134385K] ::1(18230) 2025-05-13 13:20:47.200 CESTLOG:  el PID 21856 en la petición de cancelación no coincidió con ningún proceso
+[09066309P 08134385K]  2025-05-13 13:20:47.268 CESTLOG:  checkpoint completo: escritos 22 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.022 s, sync=0.054 s, total=0.103 s; archivos sincronizados=18, más largo=0.004 s, promedio=0.003 s; distancia=53 kB, estimación=53 kB; lsn=D8/8A078E40, lsn de redo=D8/8A078E40
+[09066309P 08134385K]  2025-05-13 13:20:47.302 CESTLOG:  el sistema de bases de datos está apagado

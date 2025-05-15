@@ -1,0 +1,34 @@
+[09066309P 08134385K]  2025-05-13 13:40:13.659 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-13 13:40:13.660 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+[09066309P 08134385K]  2025-05-13 13:40:13.660 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+[09066309P 08134385K]  2025-05-13 13:40:13.721 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-13 13:37:17 CEST
+[09066309P 08134385K]  2025-05-13 13:40:22.386 CESTLOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+[09066309P 08134385K]  2025-05-13 13:40:22.394 CESTLOG:  redo comienza en D8/8C000060
+[09066309P 08134385K]  2025-05-13 13:40:22.394 CESTLOG:  largo de registro no válido en D8/8C000148: se esperaba al menos 24, se obtuvo 0
+[09066309P 08134385K]  2025-05-13 13:40:22.394 CESTLOG:  redo listo en D8/8C000110 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+[09066309P 08134385K]  2025-05-13 13:40:22.405 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+[09066309P 08134385K]  2025-05-13 13:40:22.444 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.012 s, sync=0.007 s, total=0.044 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=0 kB, estimación=0 kB; lsn=D8/8C000148, lsn de redo=D8/8C000148
+[09066309P 08134385K]  2025-05-13 13:40:22.462 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.971 CESTLOG:  duración: 0.045 ms  sentencia: SET search_path = pg_catalog
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.971 CESTLOG:  duración: 0.020 ms  sentencia: SET timezone = 'GMT'
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.972 CESTLOG:  duración: 0.015 ms  sentencia: SET datestyle = ISO
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.972 CESTLOG:  duración: 0.014 ms  sentencia: SET intervalstyle = postgres
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.972 CESTLOG:  duración: 0.017 ms  sentencia: SET extra_float_digits = 3
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.972 CESTLOG:  duración: 0.015 ms  sentencia: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.976 CESTLOG:  duración: 3.226 ms  parse: <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.976 CESTLOG:  duración: 0.017 ms  bind <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.983 CESTLOG:  duración: 7.427 ms  ejecutar <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.984 CESTLOG:  duración: 0.089 ms  sentencia: FETCH 100 FROM c1
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.984 CESTLOG:  duración: 0.013 ms  sentencia: CLOSE c1
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:46.984 CESTLOG:  duración: 0.016 ms  sentencia: COMMIT TRANSACTION
+[09066309P 08134385K]  2025-05-13 13:40:58.388 CESTLOG:  se recibió petición de apagado rápido
+[09066309P 08134385K]  2025-05-13 13:40:58.394 CESTLOG:  abortando transacciones activas
+[09066309P 08134385K] ::1(20294) 2025-05-13 13:40:58.395 CESTFATAL:  terminando la conexión debido a una orden del administrador
+[09066309P 08134385K]  2025-05-13 13:40:58.404 CESTLOG:  proceso ayudante «logical replication launcher» (PID 26764) terminó con código de salida 1
+[09066309P 08134385K]  2025-05-13 13:40:58.405 CESTLOG:  apagando
+[09066309P 08134385K]  2025-05-13 13:40:58.409 CESTLOG:  empezando checkpoint: shutdown immediate
+[09066309P 08134385K]  2025-05-13 13:40:58.436 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.006 s, sync=0.001 s, total=0.031 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=0 kB; lsn=D8/8C0001F8, lsn de redo=D8/8C0001F8
+[09066309P 08134385K]  2025-05-13 13:40:58.455 CESTLOG:  el sistema de bases de datos está apagado

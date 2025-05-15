@@ -1,0 +1,19 @@
+[09066309P 08134385K]  2025-05-14 13:46:59.794 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-14 13:45:55 CEST
+[09066309P 08134385K]  2025-05-14 13:51:59.783 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-14 13:51:59.873 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.057 s, sync=0.006 s, total=0.098 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.003 s; distancia=0 kB, estimación=0 kB; lsn=D8/90032780, lsn de redo=D8/90032748
+[09066309P 08134385K] ::1(2316) 2025-05-15 10:12:20.064 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(2316) 2025-05-15 10:12:20.064 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.469 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.489 CESTLOG:  duración: 25.324 ms
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.490 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.493 CESTLOG:  duración: 3.148 ms
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.494 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.512 CESTLOG:  duración: 18.242 ms
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.513 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.516 CESTLOG:  duración: 3.161 ms
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.518 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.523 CESTLOG:  duración: 5.097 ms
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.524 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(2349) 2025-05-15 10:12:38.530 CESTLOG:  duración: 6.006 ms
+[09066309P 08134385K]  2025-05-15 10:13:17.054 CESTLOG:  empezando checkpoint: force wait
+[09066309P 08134385K]  2025-05-15 10:13:18.641 CESTLOG:  checkpoint completo: escritos 15 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=1.556 s, sync=0.007 s, total=1.588 s; archivos sincronizados=12, más largo=0.001 s, promedio=0.001 s; distancia=16182 kB, estimación=16182 kB; lsn=D8/91000060, lsn de redo=D8/91000028

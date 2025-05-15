@@ -1,0 +1,1129 @@
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.438 CESTLOG:  duración: 0.243 ms  sentencia: SET search_path = pg_catalog
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.438 CESTLOG:  duración: 0.071 ms  sentencia: SET timezone = 'GMT'
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.439 CESTLOG:  duración: 0.064 ms  sentencia: SET datestyle = ISO
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.439 CESTLOG:  duración: 0.043 ms  sentencia: SET intervalstyle = postgres
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.440 CESTLOG:  duración: 0.064 ms  sentencia: SET extra_float_digits = 3
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.441 CESTLOG:  duración: 0.045 ms  sentencia: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.455 CESTLOG:  duración: 13.911 ms  parse: <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.455 CESTLOG:  duración: 0.040 ms  bind <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.482 CESTLOG:  duración: 27.001 ms  ejecutar <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.483 CESTLOG:  duración: 0.565 ms  sentencia: FETCH 100 FROM c1
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.485 CESTLOG:  duración: 0.839 ms  sentencia: CLOSE c1
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:10:18.485 CESTLOG:  duración: 0.054 ms  sentencia: COMMIT TRANSACTION
+[09066309P 08134385K] ::1(59598) 2025-05-13 12:11:11.473 CESTLOG:  duración: 318.228 ms  sentencia: SELECT * FROM telpark_foraneo.clientes;
+[09066309P 08134385K]  2025-05-13 12:13:26.814 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 12:13:27.581 CESTLOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.719 s, sync=0.008 s, total=0.770 s; archivos sincronizados=6, más largo=0.003 s, promedio=0.002 s; distancia=5 kB, estimación=5 kB; lsn=D8/8A06A528, lsn de redo=D8/8A06A4F0
+[09066309P 08134385K] ::1(12200) 2025-05-13 12:23:21.526 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12200) 2025-05-13 12:23:21.526 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12201) 2025-05-13 12:23:21.636 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12201) 2025-05-13 12:23:21.636 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12210) 2025-05-13 12:23:26.632 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12210) 2025-05-13 12:23:26.632 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12219) 2025-05-13 12:23:31.723 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12219) 2025-05-13 12:23:31.723 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12226) 2025-05-13 12:23:36.787 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12226) 2025-05-13 12:23:36.787 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12234) 2025-05-13 12:23:41.689 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12234) 2025-05-13 12:23:41.689 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12242) 2025-05-13 12:23:46.640 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12242) 2025-05-13 12:23:46.640 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12252) 2025-05-13 12:23:51.751 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12252) 2025-05-13 12:23:51.751 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12261) 2025-05-13 12:23:56.639 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12261) 2025-05-13 12:23:56.639 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12268) 2025-05-13 12:24:01.651 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12268) 2025-05-13 12:24:01.651 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12277) 2025-05-13 12:24:06.664 CESTFATAL:  la autentificación password falló para el usuario «postgres»
+[09066309P 08134385K] ::1(12277) 2025-05-13 12:24:06.664 CESTDETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 122: «host    replication     all             ::1/128                 scram-sha-256»
+[09066309P 08134385K] ::1(12409) 2025-05-13 12:24:44.962 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12409) 2025-05-13 12:24:44.962 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12410) 2025-05-13 12:24:45.045 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12410) 2025-05-13 12:24:45.045 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12424) 2025-05-13 12:24:50.122 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12424) 2025-05-13 12:24:50.122 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12432) 2025-05-13 12:24:55.133 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12432) 2025-05-13 12:24:55.133 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12442) 2025-05-13 12:25:00.161 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12442) 2025-05-13 12:25:00.161 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12449) 2025-05-13 12:25:05.150 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12449) 2025-05-13 12:25:05.150 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12459) 2025-05-13 12:25:10.117 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12459) 2025-05-13 12:25:10.117 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12468) 2025-05-13 12:25:15.162 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12468) 2025-05-13 12:25:15.162 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12473) 2025-05-13 12:25:20.209 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12473) 2025-05-13 12:25:20.209 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12484) 2025-05-13 12:25:25.297 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12484) 2025-05-13 12:25:25.297 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12492) 2025-05-13 12:25:30.203 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12492) 2025-05-13 12:25:30.203 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12499) 2025-05-13 12:25:35.162 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12499) 2025-05-13 12:25:35.162 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12499) 2025-05-13 12:25:35.163 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(12507) 2025-05-13 12:25:40.264 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12507) 2025-05-13 12:25:40.264 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12507) 2025-05-13 12:25:40.265 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(12514) 2025-05-13 12:25:45.152 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12514) 2025-05-13 12:25:45.152 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12523) 2025-05-13 12:25:50.205 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12523) 2025-05-13 12:25:50.205 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12535) 2025-05-13 12:25:55.246 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12535) 2025-05-13 12:25:55.246 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12535) 2025-05-13 12:25:55.247 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(12542) 2025-05-13 12:26:00.202 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12542) 2025-05-13 12:26:00.202 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12550) 2025-05-13 12:26:05.213 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12550) 2025-05-13 12:26:05.213 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12550) 2025-05-13 12:26:05.213 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(12559) 2025-05-13 12:26:10.187 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12559) 2025-05-13 12:26:10.187 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12567) 2025-05-13 12:26:15.253 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12567) 2025-05-13 12:26:15.253 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12583) 2025-05-13 12:26:20.231 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12583) 2025-05-13 12:26:20.231 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12583) 2025-05-13 12:26:20.232 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(12592) 2025-05-13 12:26:25.218 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12592) 2025-05-13 12:26:25.218 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12598) 2025-05-13 12:26:30.278 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12598) 2025-05-13 12:26:30.278 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12606) 2025-05-13 12:26:35.391 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12606) 2025-05-13 12:26:35.391 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12614) 2025-05-13 12:26:40.238 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12614) 2025-05-13 12:26:40.238 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12621) 2025-05-13 12:26:45.313 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12621) 2025-05-13 12:26:45.313 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K] ::1(12629) 2025-05-13 12:26:50.256 CESTERROR:  el segmento de WAL solicitado 00000001000000D800000086 ya ha sido eliminado
+[09066309P 08134385K] ::1(12629) 2025-05-13 12:26:50.256 CESTSENTENCIA:  START_REPLICATION D8/86000000 TIMELINE 1
+[09066309P 08134385K]  2025-05-13 12:27:29.641 CESTLOG:  empezando checkpoint: force wait
+[09066309P 08134385K]  2025-05-13 12:27:29.676 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.013 s, sync=0.001 s, total=0.035 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=15958 kB, estimación=15958 kB; lsn=D8/8B000060, lsn de redo=D8/8B000028
+[09066309P 08134385K]  2025-05-13 12:32:29.679 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 12:32:29.755 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.025 s, sync=0.001 s, total=0.076 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16384 kB, estimación=16384 kB; lsn=D8/8C000098, lsn de redo=D8/8C000060
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.363 CESTLOG:  duración: 32.725 ms  sentencia: SET DateStyle=ISO; SET client_min_messages=notice; SELECT set_config('bytea_output','hex',false) FROM pg_settings WHERE name = 'bytea_output'; SET client_encoding='utf-8';
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.364 CESTLOG:  duración: 0.733 ms  sentencia: SELECT version()
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.375 CESTLOG:  duración: 10.453 ms  sentencia: 
+	SELECT
+	    db.oid as did, db.datname, db.datallowconn,
+	    pg_encoding_to_char(db.encoding) AS serverencoding,
+	    has_database_privilege(db.oid, 'CREATE') as cancreate,
+	    datistemplate
+	FROM
+	    pg_catalog.pg_database db
+	WHERE db.datname = current_database()
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.380 CESTLOG:  duración: 3.651 ms  sentencia: 
+	        SELECT
+	             gss_authenticated, encrypted
+	        FROM
+	            pg_catalog.pg_stat_gssapi
+	        WHERE pid = pg_backend_pid()
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.399 CESTLOG:  duración: 18.958 ms  sentencia: 
+	        SELECT
+	            roles.oid as id, roles.rolname as name,
+	            roles.rolsuper as is_superuser,
+	            CASE WHEN roles.rolsuper THEN true ELSE roles.rolcreaterole END as
+	            can_create_role,
+	            CASE WHEN roles.rolsuper THEN true
+	            ELSE roles.rolcreatedb END as can_create_db,
+	            CASE WHEN 'pg_signal_backend'=ANY(ARRAY(WITH RECURSIVE cte AS (
+	            SELECT pg_roles.oid,pg_roles.rolname FROM pg_roles
+	                WHERE pg_roles.oid = roles.oid
+	            UNION ALL
+	            SELECT m.roleid,pgr.rolname FROM cte cte_1
+	                JOIN pg_auth_members m ON m.member = cte_1.oid
+	                JOIN pg_roles pgr ON pgr.oid = m.roleid)
+	            SELECT rolname  FROM cte)) THEN True
+	            ELSE False END as can_signal_backend
+	        FROM
+	            pg_catalog.pg_roles as roles
+	        WHERE
+	            rolname = current_user
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.434 CESTLOG:  duración: 0.944 ms  sentencia: SELECT CASE WHEN usesuper
+	       THEN pg_catalog.pg_is_in_recovery()
+	       ELSE FALSE
+	       END as inrecovery,
+	       CASE WHEN usesuper AND pg_catalog.pg_is_in_recovery()
+	       THEN pg_is_wal_replay_paused()
+	       ELSE FALSE
+	       END as isreplaypaused
+	FROM pg_catalog.pg_user WHERE usename=current_user
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.472 CESTLOG:  duración: 5.535 ms  sentencia: SELECT CASE
+	    WHEN (SELECT count(extname) FROM pg_catalog.pg_extension WHERE extname='bdr') > 0
+	    THEN 'pgd'
+	    WHEN (SELECT COUNT(*) FROM pg_replication_slots) > 0
+	    THEN 'log'
+	    ELSE NULL
+	END as type;
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.604 CESTLOG:  duración: 6.804 ms  sentencia: /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity) AS "Total",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'active')  AS "Active",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'idle')  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_catalog.pg_stat_database) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_catalog.pg_stat_database) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_catalog.pg_stat_database) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_catalog.pg_stat_database) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_catalog.pg_stat_database) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_catalog.pg_stat_database) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_catalog.pg_stat_database) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_catalog.pg_stat_database) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_catalog.pg_stat_database) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_catalog.pg_stat_database) AS "Hits"
+	) t
+	
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.609 CESTLOG:  duración: 4.826 ms  sentencia: 
+	SELECT
+	    has_table_privilege(
+	      'pgagent.pga_job', 'INSERT, SELECT, UPDATE'
+	    ) has_priviledge
+	WHERE EXISTS(
+	    SELECT has_schema_privilege('pgagent', 'USAGE')
+	    WHERE EXISTS(
+	        SELECT cl.oid FROM pg_catalog.pg_class cl
+	        LEFT JOIN pg_catalog.pg_namespace ns ON ns.oid=relnamespace
+	        WHERE relname='pga_job' AND nspname='pgagent'
+	    )
+	)
+	
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.616 CESTLOG:  duración: 0.412 ms  sentencia: SELECT CASE
+	    WHEN (SELECT count(extname) FROM pg_catalog.pg_extension WHERE extname='bdr') > 0
+	    THEN 'pgd'
+	    WHEN (SELECT COUNT(*) FROM pg_replication_slots) > 0
+	    THEN 'log'
+	    ELSE NULL
+	END as type;
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:33:41.618 CESTLOG:  duración: 0.332 ms  sentencia: SELECT CASE
+	    WHEN (SELECT count(extname) FROM pg_catalog.pg_extension WHERE extname='bdr') > 0
+	    THEN 'pgd'
+	    WHEN (SELECT COUNT(*) FROM pg_replication_slots) > 0
+	    THEN 'log'
+	    ELSE NULL
+	END as type;
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:34:13.618 CESTLOG:  duración: 15.983 ms  sentencia: SELECT
+	    db.oid as did, db.datname as name, ta.spcname as spcname, db.datallowconn,
+	    db.datistemplate AS is_template,
+	    pg_catalog.has_database_privilege(db.oid, 'CREATE') as cancreate, datdba as owner,
+	    descr.description
+	FROM
+	    pg_catalog.pg_database db
+	    LEFT OUTER JOIN pg_catalog.pg_tablespace ta ON db.dattablespace = ta.oid
+	    LEFT OUTER JOIN pg_catalog.pg_shdescription descr ON (
+	        db.oid=descr.objoid AND descr.classoid='pg_database'::regclass
+	    )
+	WHERE         db.oid > 16383::OID OR db.datname IN ('postgres', 'edb')
+	
+	ORDER BY datname;
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:34:13.722 CESTLOG:  duración: 3.994 ms  sentencia: /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity) AS "Total",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'active')  AS "Active",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'idle')  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_catalog.pg_stat_database) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_catalog.pg_stat_database) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_catalog.pg_stat_database) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_catalog.pg_stat_database) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_catalog.pg_stat_database) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_catalog.pg_stat_database) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_catalog.pg_stat_database) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_catalog.pg_stat_database) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_catalog.pg_stat_database) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_catalog.pg_stat_database) AS "Hits"
+	) t
+	
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:34:15.690 CESTLOG:  duración: 0.395 ms  sentencia: 
+	SELECT
+	    db.oid as did, db.datname, db.datallowconn,
+	    pg_catalog.pg_encoding_to_char(db.encoding) AS serverencoding,
+	    pg_catalog.has_database_privilege(db.oid, 'CREATE') as cancreate,
+	    datistemplate
+	FROM
+	    pg_catalog.pg_database db
+	WHERE db.oid = 117346
+[09066309P 08134385K] ::1(13430) 2025-05-13 12:34:15.829 CESTLOG:  duración: 33.078 ms  sentencia: SET DateStyle=ISO; SET client_min_messages=notice; SELECT set_config('bytea_output','hex',false) FROM pg_settings WHERE name = 'bytea_output'; SET client_encoding='utf-8';
+[09066309P 08134385K] ::1(13430) 2025-05-13 12:34:15.830 CESTLOG:  duración: 0.170 ms  sentencia: SELECT version()
+[09066309P 08134385K] ::1(13430) 2025-05-13 12:34:15.836 CESTLOG:  duración: 6.385 ms  sentencia: 
+	SELECT
+	    db.oid as did, db.datname, db.datallowconn,
+	    pg_encoding_to_char(db.encoding) AS serverencoding,
+	    has_database_privilege(db.oid, 'CREATE') as cancreate,
+	    datistemplate
+	FROM
+	    pg_catalog.pg_database db
+	WHERE db.datname = current_database()
+[09066309P 08134385K] ::1(13430) 2025-05-13 12:34:15.838 CESTLOG:  duración: 1.277 ms  sentencia: 
+	        SELECT
+	             gss_authenticated, encrypted
+	        FROM
+	            pg_catalog.pg_stat_gssapi
+	        WHERE pid = pg_backend_pid()
+[09066309P 08134385K] ::1(13430) 2025-05-13 12:34:15.849 CESTLOG:  duración: 10.347 ms  sentencia: 
+	        SELECT
+	            roles.oid as id, roles.rolname as name,
+	            roles.rolsuper as is_superuser,
+	            CASE WHEN roles.rolsuper THEN true ELSE roles.rolcreaterole END as
+	            can_create_role,
+	            CASE WHEN roles.rolsuper THEN true
+	            ELSE roles.rolcreatedb END as can_create_db,
+	            CASE WHEN 'pg_signal_backend'=ANY(ARRAY(WITH RECURSIVE cte AS (
+	            SELECT pg_roles.oid,pg_roles.rolname FROM pg_roles
+	                WHERE pg_roles.oid = roles.oid
+	            UNION ALL
+	            SELECT m.roleid,pgr.rolname FROM cte cte_1
+	                JOIN pg_auth_members m ON m.member = cte_1.oid
+	                JOIN pg_roles pgr ON pgr.oid = m.roleid)
+	            SELECT rolname  FROM cte)) THEN True
+	            ELSE False END as can_signal_backend
+	        FROM
+	            pg_catalog.pg_roles as roles
+	        WHERE
+	            rolname = current_user
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:34:15.939 CESTLOG:  duración: 1.078 ms  sentencia: SELECT
+		r.oid, r.rolname, r.rolcanlogin, r.rolsuper,
+		pg_catalog.shobj_description(r.oid, 'pg_authid') AS description
+	FROM
+		pg_catalog.pg_roles r
+	ORDER BY r.rolcanlogin, r.rolname
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:34:15.951 CESTLOG:  duración: 0.526 ms  sentencia: SELECT * FROM
+	(SELECT pg_catalog.pg_encoding_to_char(s.i) AS encoding
+	FROM (SELECT pg_catalog.generate_series(0, 100, 1) as i) s) a
+	WHERE encoding != '' ORDER BY encoding;
+	
+	
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:34:15.954 CESTLOG:  duración: 0.692 ms  sentencia: SELECT
+	    ts.oid AS oid, spcname AS name, spcowner as owner,
+	    pg_catalog.shobj_description(oid, 'pg_tablespace') AS description
+	FROM
+	    pg_catalog.pg_tablespace ts
+	ORDER BY name;
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:34:15.958 CESTLOG:  duración: 0.907 ms  sentencia: SELECT CASE WHEN datlocprovider = 'i' THEN
+		(SELECT daticulocale as cname FROM pg_database WHERE datname = current_database())
+	ELSE
+	    (SELECT datcollate as cname FROM pg_database WHERE datname = current_database()
+	    UNION
+	    SELECT datctype as cname FROM pg_database WHERE datname = current_database())
+	END
+	FROM pg_database WHERE datname = current_database();
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:34:15.968 CESTLOG:  duración: 3.277 ms  sentencia: SELECT colliculocale from pg_collation where collprovider = 'i'
+[09066309P 08134385K] ::1(13430) 2025-05-13 12:34:15.976 CESTLOG:  duración: 10.342 ms  sentencia: /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Total",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'active' AND datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346))  AS "Active",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'idle' AND datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346))  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Hits"
+	) t
+	
+[09066309P 08134385K] ::1(13309) 2025-05-13 12:34:15.981 CESTLOG:  duración: 0.311 ms  sentencia: SELECT CASE WHEN datlocprovider = 'i' THEN
+		(SELECT daticulocale as cname FROM pg_database WHERE datname = current_database())
+	ELSE
+	    (SELECT datcollate as cname FROM pg_database WHERE datname = current_database()
+	    UNION
+	    SELECT datctype as cname FROM pg_database WHERE datname = current_database())
+	END
+	FROM pg_database WHERE datname = current_database();
+[09066309P 08134385K] ::1(13430) 2025-05-13 12:34:16.044 CESTLOG:  duración: 2.727 ms  sentencia: 
+	            SELECT COUNT(*) FROM pg_extension WHERE extname IN (
+	                'edb_job_scheduler', 'dbms_scheduler') 
+[09066309P 08134385K] ::1(13430) 2025-05-13 12:34:21.090 CESTLOG:  duración: 6.516 ms  sentencia: /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Total",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'active' AND datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346))  AS "Active",
+	   (SELECT count(*) FROM pg_catalog.pg_stat_activity WHERE state = 'idle' AND datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346))  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, pg_catalog.row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_catalog.pg_stat_database WHERE datname = (SELECT datname FROM pg_catalog.pg_database WHERE oid = 117346)) AS "Hits"
+	) t
+	
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:34:43.997 CESTLOG:  duración: 3.264 ms  sentencia: SELECT * FROM clientes;
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:36.293 CESTLOG:  sentencia: INSERT INTO clientes VALUES (1,'Jaimito','Garcia','jg@gmail.com',123456789, 'Guadalajara');
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:36.300 CESTERROR:  llave duplicada viola restricción de unicidad «clientes_pkey»
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:36.300 CESTDETALLE:  Ya existe la llave (clienteid)=(1).
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:36.300 CESTSENTENCIA:  INSERT INTO clientes VALUES (1,'Jaimito','Garcia','jg@gmail.com',123456789, 'Guadalajara');
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:43.236 CESTLOG:  sentencia: INSERT INTO clientes VALUES (2,'Jaimito','Garcia','jg@gmail.com',123456789, 'Guadalajara');
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:43.239 CESTLOG:  duración: 3.134 ms
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:52.108 CESTERROR:  error de sintaxis en o cerca de «,» en carácter 7
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:52.108 CESTSENTENCIA:  COMMIT,
+	COMMIT;
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:53.413 CESTWARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:53.413 CESTSENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:35:53.413 CESTLOG:  duración: 0.117 ms  sentencia: COMMIT;
+[09066309P 08134385K] ::1(13466) 2025-05-13 12:36:03.856 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.147 CESTLOG:  duración: 0.034 ms  sentencia: SET search_path = pg_catalog
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.147 CESTLOG:  duración: 0.017 ms  sentencia: SET timezone = 'GMT'
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.147 CESTLOG:  duración: 0.013 ms  sentencia: SET datestyle = ISO
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.148 CESTLOG:  duración: 0.012 ms  sentencia: SET intervalstyle = postgres
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.148 CESTLOG:  duración: 0.016 ms  sentencia: SET extra_float_digits = 3
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.148 CESTLOG:  duración: 0.012 ms  sentencia: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.148 CESTLOG:  duración: 0.160 ms  parse: <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.149 CESTLOG:  duración: 0.017 ms  bind <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.151 CESTLOG:  duración: 2.093 ms  ejecutar <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.151 CESTLOG:  duración: 0.051 ms  sentencia: FETCH 100 FROM c1
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.151 CESTLOG:  duración: 0.009 ms  sentencia: CLOSE c1
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:37:14.151 CESTLOG:  duración: 0.010 ms  sentencia: COMMIT TRANSACTION
+[09066309P 08134385K]  2025-05-13 12:37:29.765 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 12:37:30.789 CESTLOG:  checkpoint completo: escritos 10 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.006 s, sync=0.009 s, total=1.024 s; archivos sincronizados=10, más largo=0.002 s, promedio=0.001 s; distancia=1 kB, estimación=14745 kB; lsn=D8/8C000558, lsn de redo=D8/8C000520
+[09066309P 08134385K] ::1(13783) 2025-05-13 12:39:39.584 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.425 CESTLOG:  duración: 0.033 ms  sentencia: SET search_path = pg_catalog
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.425 CESTLOG:  duración: 0.017 ms  sentencia: SET timezone = 'GMT'
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.425 CESTLOG:  duración: 0.013 ms  sentencia: SET datestyle = ISO
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.425 CESTLOG:  duración: 0.011 ms  sentencia: SET intervalstyle = postgres
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.426 CESTLOG:  duración: 0.017 ms  sentencia: SET extra_float_digits = 3
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.426 CESTLOG:  duración: 0.012 ms  sentencia: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.427 CESTLOG:  duración: 0.154 ms  parse: <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, provincia FROM public.clientes
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.427 CESTLOG:  duración: 0.017 ms  bind <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, provincia FROM public.clientes
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.429 CESTLOG:  duración: 2.123 ms  ejecutar <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, provincia FROM public.clientes
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.429 CESTLOG:  duración: 0.036 ms  sentencia: FETCH 100 FROM c1
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.430 CESTLOG:  duración: 0.988 ms  parse: <unnamed>: DECLARE c2 CURSOR FOR
+	SELECT clienteid_clientes FROM public.reservas
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.430 CESTLOG:  duración: 0.005 ms  bind <unnamed>: DECLARE c2 CURSOR FOR
+	SELECT clienteid_clientes FROM public.reservas
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.431 CESTLOG:  duración: 1.062 ms  ejecutar <unnamed>: DECLARE c2 CURSOR FOR
+	SELECT clienteid_clientes FROM public.reservas
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.431 CESTLOG:  duración: 0.025 ms  sentencia: FETCH 100 FROM c2
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.432 CESTLOG:  duración: 0.010 ms  sentencia: CLOSE c2
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.432 CESTLOG:  duración: 0.013 ms  sentencia: CLOSE c1
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:40:47.432 CESTLOG:  duración: 0.019 ms  sentencia: COMMIT TRANSACTION
+[09066309P 08134385K] ::1(14170) 2025-05-13 12:44:36.137 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(12933) 2025-05-13 12:56:52.488 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(12933) 2025-05-13 12:56:52.488 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(12933) 2025-05-13 12:56:52.488 CESTLOG:  se encontró fin de archivo inesperado en la conexión standby
+[09066309P 08134385K] ::1(12933) 2025-05-13 12:56:52.488 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(59561) 2025-05-13 12:56:52.898 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.775 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.778 CESTLOG:  duración: 5.252 ms
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.779 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.779 CESTLOG:  duración: 0.864 ms
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.781 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.782 CESTLOG:  duración: 1.144 ms
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.783 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.791 CESTLOG:  duración: 7.799 ms
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.792 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.793 CESTLOG:  duración: 1.104 ms
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.793 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.796 CESTLOG:  duración: 3.019 ms
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.798 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.799 CESTLOG:  duración: 1.329 ms
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.800 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.801 CESTERROR:  datos extra después de la última columna esperada
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.801 CESTCONTEXTO:  COPY plazas, línea 1: «1,0001BBB,marca_225,modelo_11,Negro, 356033»
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.801 CESTSENTENCIA:  COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.811 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.811 CESTERROR:  faltan datos en la columna «color»
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.811 CESTCONTEXTO:  COPY vehiculos, línea 1: «1,1,-6,B»
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.811 CESTSENTENCIA:  COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.820 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.823 CESTERROR:  inserción o actualización en la tabla «reservas» viola la llave foránea «reservas_vehiculoid_vehiculos_fkey»
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.823 CESTDETALLE:  La llave (vehiculoid_vehiculos)=(3758323) no está presente en la tabla «vehiculos».
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.823 CESTSENTENCIA:  COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.835 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.837 CESTERROR:  inserción o actualización en la tabla «incidencias» viola la llave foránea «incidencias_reservaid_reservas_fkey»
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.837 CESTDETALLE:  La llave (reservaid_reservas)=(6224377) no está presente en la tabla «reservas».
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.837 CESTSENTENCIA:  COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.851 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.852 CESTERROR:  faltan datos en la columna «reservaid_reservas»
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.852 CESTCONTEXTO:  COPY pagos, línea 1: «1,288.0,2005-03-15 00:00:00,Efectivo»
+[09066309P 08134385K] ::1(15818) 2025-05-13 12:57:11.852 CESTSENTENCIA:  COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K]  2025-05-13 12:57:29.823 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 12:57:31.284 CESTLOG:  checkpoint completo: escritos 14 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.444 s, sync=0.010 s, total=1.461 s; archivos sincronizados=12, más largo=0.003 s, promedio=0.001 s; distancia=18 kB, estimación=13273 kB; lsn=D8/8C0050D8, lsn de redo=D8/8C0050A0
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.434 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.436 CESTLOG:  duración: 2.900 ms
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.437 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.438 CESTLOG:  duración: 1.014 ms
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.439 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.440 CESTLOG:  duración: 1.365 ms
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.442 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.444 CESTLOG:  duración: 2.031 ms
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.445 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.446 CESTLOG:  duración: 1.099 ms
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.447 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.452 CESTLOG:  duración: 4.791 ms
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.466 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.466 CESTLOG:  duración: 0.835 ms
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.477 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.477 CESTERROR:  datos extra después de la última columna esperada
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.477 CESTCONTEXTO:  COPY plazas, línea 1: «1,0001BBB,marca_263,modelo_8,Blanco, 9»
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.477 CESTSENTENCIA:  COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.494 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.494 CESTERROR:  faltan datos en la columna «color»
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.494 CESTCONTEXTO:  COPY vehiculos, línea 1: «1,0,-9,B»
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.494 CESTSENTENCIA:  COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.511 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.512 CESTERROR:  inserción o actualización en la tabla «reservas» viola la llave foránea «reservas_vehiculoid_vehiculos_fkey»
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.512 CESTDETALLE:  La llave (vehiculoid_vehiculos)=(34) no está presente en la tabla «vehiculos».
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.512 CESTSENTENCIA:  COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.534 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.535 CESTERROR:  inserción o actualización en la tabla «incidencias» viola la llave foránea «incidencias_reservaid_reservas_fkey»
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.535 CESTDETALLE:  La llave (reservaid_reservas)=(3) no está presente en la tabla «reservas».
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.535 CESTSENTENCIA:  COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.559 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.561 CESTERROR:  inserción o actualización en la tabla «pagos» viola la llave foránea «pagos_reservaid_reservas_fkey»
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.561 CESTDETALLE:  La llave (reservaid_reservas)=(1) no está presente en la tabla «reservas».
+[09066309P 08134385K] ::1(17041) 2025-05-13 13:09:02.561 CESTSENTENCIA:  COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.374 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.377 CESTLOG:  duración: 6.074 ms
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.379 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.380 CESTLOG:  duración: 1.438 ms
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.381 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.383 CESTLOG:  duración: 1.567 ms
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.384 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.387 CESTLOG:  duración: 2.879 ms
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.388 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.389 CESTLOG:  duración: 1.456 ms
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.391 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.397 CESTLOG:  duración: 6.214 ms
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.398 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.401 CESTLOG:  duración: 2.876 ms
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.403 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.404 CESTLOG:  duración: 1.111 ms
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.405 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.407 CESTERROR:  inserción o actualización en la tabla «vehiculos» viola la llave foránea «vehiculos_clienteid_clientes_fkey»
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.407 CESTDETALLE:  La llave (clienteid_clientes)=(31) no está presente en la tabla «clientes».
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.407 CESTSENTENCIA:  COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.425 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.427 CESTERROR:  inserción o actualización en la tabla «reservas» viola la llave foránea «reservas_vehiculoid_vehiculos_fkey»
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.427 CESTDETALLE:  La llave (vehiculoid_vehiculos)=(34) no está presente en la tabla «vehiculos».
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.427 CESTSENTENCIA:  COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.446 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.447 CESTERROR:  inserción o actualización en la tabla «incidencias» viola la llave foránea «incidencias_reservaid_reservas_fkey»
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.447 CESTDETALLE:  La llave (reservaid_reservas)=(3) no está presente en la tabla «reservas».
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.447 CESTSENTENCIA:  COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.461 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.462 CESTERROR:  inserción o actualización en la tabla «pagos» viola la llave foránea «pagos_reservaid_reservas_fkey»
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.462 CESTDETALLE:  La llave (reservaid_reservas)=(1) no está presente en la tabla «reservas».
+[09066309P 08134385K] ::1(17187) 2025-05-13 13:10:26.462 CESTSENTENCIA:  COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.979 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.980 CESTLOG:  duración: 2.749 ms
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.981 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.982 CESTLOG:  duración: 1.338 ms
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.984 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.985 CESTLOG:  duración: 1.174 ms
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.986 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.987 CESTLOG:  duración: 0.993 ms
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.988 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.991 CESTLOG:  duración: 3.204 ms
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.991 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.996 CESTLOG:  duración: 4.215 ms
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.997 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.998 CESTLOG:  duración: 1.497 ms
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:25.999 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.000 CESTLOG:  duración: 0.629 ms
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.001 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.003 CESTERROR:  inserción o actualización en la tabla «vehiculos» viola la llave foránea «vehiculos_clienteid_clientes_fkey»
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.003 CESTDETALLE:  La llave (clienteid_clientes)=(31) no está presente en la tabla «clientes».
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.003 CESTSENTENCIA:  COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.016 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.018 CESTERROR:  inserción o actualización en la tabla «reservas» viola la llave foránea «reservas_vehiculoid_vehiculos_fkey»
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.018 CESTDETALLE:  La llave (vehiculoid_vehiculos)=(34) no está presente en la tabla «vehiculos».
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.018 CESTSENTENCIA:  COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.030 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.031 CESTERROR:  inserción o actualización en la tabla «incidencias» viola la llave foránea «incidencias_reservaid_reservas_fkey»
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.031 CESTDETALLE:  La llave (reservaid_reservas)=(3) no está presente en la tabla «reservas».
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.031 CESTSENTENCIA:  COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.042 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.043 CESTERROR:  inserción o actualización en la tabla «pagos» viola la llave foránea «pagos_reservaid_reservas_fkey»
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.043 CESTDETALLE:  La llave (reservaid_reservas)=(1) no está presente en la tabla «reservas».
+[09066309P 08134385K] ::1(17383) 2025-05-13 13:12:26.043 CESTSENTENCIA:  COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K]  2025-05-13 13:12:29.316 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 13:12:33.216 CESTLOG:  checkpoint completo: escritos 36 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.872 s, sync=0.019 s, total=3.900 s; archivos sincronizados=31, más largo=0.003 s, promedio=0.001 s; distancia=177 kB, estimación=11963 kB; lsn=D8/8C031660, lsn de redo=D8/8C031628
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.942 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.944 CESTLOG:  duración: 3.852 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.945 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.946 CESTLOG:  duración: 0.826 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.947 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.948 CESTLOG:  duración: 0.927 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.949 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.951 CESTLOG:  duración: 2.032 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.952 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.956 CESTLOG:  duración: 3.522 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.957 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.961 CESTLOG:  duración: 3.944 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.973 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.975 CESTLOG:  duración: 1.553 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.985 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.985 CESTLOG:  duración: 0.626 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.997 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:48.999 CESTLOG:  duración: 2.182 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:49.009 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:49.013 CESTLOG:  duración: 3.475 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:49.021 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:49.023 CESTLOG:  duración: 1.705 ms
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:49.033 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17516) 2025-05-13 13:13:49.035 CESTLOG:  duración: 2.015 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.107 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.110 CESTLOG:  duración: 4.333 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.111 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.113 CESTLOG:  duración: 1.633 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.114 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.117 CESTLOG:  duración: 3.317 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.119 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.121 CESTLOG:  duración: 2.809 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.122 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.125 CESTLOG:  duración: 2.866 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.126 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.130 CESTLOG:  duración: 3.484 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.140 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.141 CESTLOG:  duración: 1.366 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.154 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.155 CESTLOG:  duración: 1.220 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.156 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.159 CESTLOG:  duración: 2.618 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.170 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.173 CESTLOG:  duración: 3.138 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.184 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.186 CESTLOG:  duración: 1.988 ms
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.197 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17672) 2025-05-13 13:15:23.199 CESTLOG:  duración: 2.652 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.931 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.934 CESTLOG:  duración: 5.140 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.936 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.937 CESTLOG:  duración: 1.620 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.939 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.942 CESTLOG:  duración: 3.876 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.944 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.948 CESTLOG:  duración: 4.314 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.949 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.952 CESTLOG:  duración: 2.665 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.953 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.957 CESTLOG:  duración: 4.025 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.971 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.973 CESTLOG:  duración: 1.375 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.983 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.984 CESTLOG:  duración: 1.227 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.985 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:10.988 CESTLOG:  duración: 2.494 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:11.000 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:11.004 CESTLOG:  duración: 3.668 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:11.016 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:11.019 CESTLOG:  duración: 2.945 ms
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:11.030 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:16:11.032 CESTLOG:  duración: 2.013 ms
+[09066309P 08134385K]  2025-05-13 13:17:29.231 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 13:17:34.748 CESTLOG:  checkpoint completo: escritos 51 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.492 s, sync=0.017 s, total=5.517 s; archivos sincronizados=32, más largo=0.002 s, promedio=0.001 s; distancia=322 kB, estimación=10799 kB; lsn=D8/8C081F88, lsn de redo=D8/8C081F18
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:21:12.761 CESTWARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:21:12.761 CESTSENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(17755) 2025-05-13 13:21:12.761 CESTLOG:  duración: 0.951 ms  sentencia: COMMIT;
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.115 CESTLOG:  duración: 0.038 ms  sentencia: SET search_path = pg_catalog
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.115 CESTLOG:  duración: 0.018 ms  sentencia: SET timezone = 'GMT'
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.115 CESTLOG:  duración: 0.014 ms  sentencia: SET datestyle = ISO
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.115 CESTLOG:  duración: 0.013 ms  sentencia: SET intervalstyle = postgres
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.115 CESTLOG:  duración: 0.017 ms  sentencia: SET extra_float_digits = 3
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.116 CESTLOG:  duración: 0.019 ms  sentencia: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.116 CESTLOG:  duración: 0.186 ms  parse: <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.116 CESTLOG:  duración: 0.023 ms  bind <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.119 CESTLOG:  duración: 2.342 ms  ejecutar <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.119 CESTLOG:  duración: 0.052 ms  sentencia: FETCH 100 FROM c1
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.119 CESTLOG:  duración: 0.019 ms  sentencia: CLOSE c1
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:01.119 CESTLOG:  duración: 0.011 ms  sentencia: COMMIT TRANSACTION
+[09066309P 08134385K] ::1(18362) 2025-05-13 13:22:04.677 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K]  2025-05-13 13:30:03.050 CESTLOG:  empezando checkpoint: force wait
+[09066309P 08134385K]  2025-05-13 13:30:03.182 CESTLOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.118 s, sync=0.003 s, total=0.132 s; archivos sincronizados=1, más largo=0.003 s, promedio=0.003 s; distancia=15864 kB, estimación=15864 kB; lsn=D8/8D000060, lsn de redo=D8/8D000028
+[09066309P 08134385K]  2025-05-13 13:35:03.188 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 13:35:03.207 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.006 s, sync=0.001 s, total=0.020 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16384 kB, estimación=16384 kB; lsn=D8/8E000098, lsn de redo=D8/8E000060
+[09066309P 08134385K] ::1(19740) 2025-05-13 13:36:06.547 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19740) 2025-05-13 13:36:06.547 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19741) 2025-05-13 13:36:06.649 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19741) 2025-05-13 13:36:06.649 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19750) 2025-05-13 13:36:11.650 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19750) 2025-05-13 13:36:11.650 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19767) 2025-05-13 13:36:16.679 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19767) 2025-05-13 13:36:16.679 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19790) 2025-05-13 13:36:21.663 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19790) 2025-05-13 13:36:21.663 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19801) 2025-05-13 13:36:26.662 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19801) 2025-05-13 13:36:26.662 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19814) 2025-05-13 13:36:31.676 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19814) 2025-05-13 13:36:31.676 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19823) 2025-05-13 13:36:36.684 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19823) 2025-05-13 13:36:36.684 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19830) 2025-05-13 13:36:41.691 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19830) 2025-05-13 13:36:41.691 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19841) 2025-05-13 13:36:46.895 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19841) 2025-05-13 13:36:46.895 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19850) 2025-05-13 13:36:51.703 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19850) 2025-05-13 13:36:51.703 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19857) 2025-05-13 13:36:56.703 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19857) 2025-05-13 13:36:56.703 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19867) 2025-05-13 13:37:01.836 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19867) 2025-05-13 13:37:01.836 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19877) 2025-05-13 13:37:06.721 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19877) 2025-05-13 13:37:06.721 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19877) 2025-05-13 13:37:06.724 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(19885) 2025-05-13 13:37:11.740 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19885) 2025-05-13 13:37:11.740 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19896) 2025-05-13 13:37:16.741 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19896) 2025-05-13 13:37:16.741 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19908) 2025-05-13 13:37:21.759 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19908) 2025-05-13 13:37:21.759 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19916) 2025-05-13 13:37:26.738 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19916) 2025-05-13 13:37:26.738 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19929) 2025-05-13 13:37:31.750 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19929) 2025-05-13 13:37:31.750 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19938) 2025-05-13 13:37:36.753 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19938) 2025-05-13 13:37:36.753 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19948) 2025-05-13 13:37:41.738 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19948) 2025-05-13 13:37:41.738 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19956) 2025-05-13 13:37:46.746 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19956) 2025-05-13 13:37:46.746 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19963) 2025-05-13 13:37:51.744 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19963) 2025-05-13 13:37:51.744 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19975) 2025-05-13 13:37:56.801 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19975) 2025-05-13 13:37:56.801 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(19975) 2025-05-13 13:37:56.802 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(19987) 2025-05-13 13:38:01.774 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(19987) 2025-05-13 13:38:01.774 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20008) 2025-05-13 13:38:06.763 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20008) 2025-05-13 13:38:06.763 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20020) 2025-05-13 13:38:11.805 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20020) 2025-05-13 13:38:11.805 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20030) 2025-05-13 13:38:16.806 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20030) 2025-05-13 13:38:16.806 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20030) 2025-05-13 13:38:16.806 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20019) 2025-05-13 13:38:18.282 CESTLOG:  duración: 3.749 ms  sentencia: SELECT * FROM clientes;
+[09066309P 08134385K] ::1(20040) 2025-05-13 13:38:21.788 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20040) 2025-05-13 13:38:21.788 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20040) 2025-05-13 13:38:21.789 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20050) 2025-05-13 13:38:26.793 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20050) 2025-05-13 13:38:26.793 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20057) 2025-05-13 13:38:31.816 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20057) 2025-05-13 13:38:31.816 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20065) 2025-05-13 13:38:36.819 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20065) 2025-05-13 13:38:36.819 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20075) 2025-05-13 13:38:41.819 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20075) 2025-05-13 13:38:41.819 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20083) 2025-05-13 13:38:46.831 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20083) 2025-05-13 13:38:46.831 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20091) 2025-05-13 13:38:51.841 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20091) 2025-05-13 13:38:51.841 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20100) 2025-05-13 13:38:56.839 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20100) 2025-05-13 13:38:56.839 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20107) 2025-05-13 13:39:01.853 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20107) 2025-05-13 13:39:01.853 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20118) 2025-05-13 13:39:06.861 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20118) 2025-05-13 13:39:06.861 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20019) 2025-05-13 13:39:09.650 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20205) 2025-05-13 13:40:01.299 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20205) 2025-05-13 13:40:01.299 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20206) 2025-05-13 13:40:01.390 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20206) 2025-05-13 13:40:01.390 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20218) 2025-05-13 13:40:06.393 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20218) 2025-05-13 13:40:06.393 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20226) 2025-05-13 13:40:11.402 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20226) 2025-05-13 13:40:11.402 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20236) 2025-05-13 13:40:16.414 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20236) 2025-05-13 13:40:16.414 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20247) 2025-05-13 13:40:21.417 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20247) 2025-05-13 13:40:21.417 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20256) 2025-05-13 13:40:26.417 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20256) 2025-05-13 13:40:26.417 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20268) 2025-05-13 13:40:31.423 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20268) 2025-05-13 13:40:31.423 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20276) 2025-05-13 13:40:36.436 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20276) 2025-05-13 13:40:36.436 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20284) 2025-05-13 13:40:41.454 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20284) 2025-05-13 13:40:41.454 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20293) 2025-05-13 13:40:46.460 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20293) 2025-05-13 13:40:46.460 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20301) 2025-05-13 13:40:51.446 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20301) 2025-05-13 13:40:51.446 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20311) 2025-05-13 13:40:56.470 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20311) 2025-05-13 13:40:56.470 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20381) 2025-05-13 13:41:35.108 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20381) 2025-05-13 13:41:35.108 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20382) 2025-05-13 13:41:35.204 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20382) 2025-05-13 13:41:35.204 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20391) 2025-05-13 13:41:40.196 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20391) 2025-05-13 13:41:40.196 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20401) 2025-05-13 13:41:45.199 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20401) 2025-05-13 13:41:45.199 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20410) 2025-05-13 13:41:50.203 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20410) 2025-05-13 13:41:50.203 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20420) 2025-05-13 13:41:55.210 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20420) 2025-05-13 13:41:55.210 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20420) 2025-05-13 13:41:55.210 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20429) 2025-05-13 13:42:00.220 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20429) 2025-05-13 13:42:00.220 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20473) 2025-05-13 13:42:21.977 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20473) 2025-05-13 13:42:21.977 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20474) 2025-05-13 13:42:22.063 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20474) 2025-05-13 13:42:22.063 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20486) 2025-05-13 13:42:27.079 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20486) 2025-05-13 13:42:27.079 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20486) 2025-05-13 13:42:27.080 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20494) 2025-05-13 13:42:32.081 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20494) 2025-05-13 13:42:32.081 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20494) 2025-05-13 13:42:32.082 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20529) 2025-05-13 13:42:51.988 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20529) 2025-05-13 13:42:51.988 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20529) 2025-05-13 13:42:51.989 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20530) 2025-05-13 13:42:52.075 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20530) 2025-05-13 13:42:52.075 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20542) 2025-05-13 13:42:57.092 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20542) 2025-05-13 13:42:57.092 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20551) 2025-05-13 13:43:02.100 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20551) 2025-05-13 13:43:02.100 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20566) 2025-05-13 13:43:07.109 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20566) 2025-05-13 13:43:07.109 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20575) 2025-05-13 13:43:12.211 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20575) 2025-05-13 13:43:12.211 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20584) 2025-05-13 13:43:17.107 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20584) 2025-05-13 13:43:17.107 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20594) 2025-05-13 13:43:22.107 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20594) 2025-05-13 13:43:22.107 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20606) 2025-05-13 13:43:27.138 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20606) 2025-05-13 13:43:27.138 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20614) 2025-05-13 13:43:32.148 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20614) 2025-05-13 13:43:32.148 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20623) 2025-05-13 13:43:37.152 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20623) 2025-05-13 13:43:37.152 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20631) 2025-05-13 13:43:42.136 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20631) 2025-05-13 13:43:42.136 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20639) 2025-05-13 13:43:47.148 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20639) 2025-05-13 13:43:47.148 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20652) 2025-05-13 13:43:52.150 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20652) 2025-05-13 13:43:52.150 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20663) 2025-05-13 13:43:57.155 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20663) 2025-05-13 13:43:57.155 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20673) 2025-05-13 13:44:02.155 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20673) 2025-05-13 13:44:02.155 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20683) 2025-05-13 13:44:07.163 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20683) 2025-05-13 13:44:07.163 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20683) 2025-05-13 13:44:07.164 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20692) 2025-05-13 13:44:12.188 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20692) 2025-05-13 13:44:12.188 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20700) 2025-05-13 13:44:17.188 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20700) 2025-05-13 13:44:17.188 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20712) 2025-05-13 13:44:22.205 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20712) 2025-05-13 13:44:22.205 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20722) 2025-05-13 13:44:27.210 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20722) 2025-05-13 13:44:27.210 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20731) 2025-05-13 13:44:32.222 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20731) 2025-05-13 13:44:32.222 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20739) 2025-05-13 13:44:37.226 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20739) 2025-05-13 13:44:37.226 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20748) 2025-05-13 13:44:42.239 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20748) 2025-05-13 13:44:42.239 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20757) 2025-05-13 13:44:47.249 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20757) 2025-05-13 13:44:47.249 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20765) 2025-05-13 13:44:52.254 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20765) 2025-05-13 13:44:52.254 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20765) 2025-05-13 13:44:52.255 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20774) 2025-05-13 13:44:57.298 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20774) 2025-05-13 13:44:57.298 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20782) 2025-05-13 13:45:02.289 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20782) 2025-05-13 13:45:02.289 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20792) 2025-05-13 13:45:07.295 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20792) 2025-05-13 13:45:07.295 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20802) 2025-05-13 13:45:12.297 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20802) 2025-05-13 13:45:12.297 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20810) 2025-05-13 13:45:17.307 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20810) 2025-05-13 13:45:17.307 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20810) 2025-05-13 13:45:17.308 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.592 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.595 CESTLOG:  duración: 4.026 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.596 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.597 CESTLOG:  duración: 1.853 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.599 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.603 CESTLOG:  duración: 3.962 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.604 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.607 CESTLOG:  duración: 3.021 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.608 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.611 CESTLOG:  duración: 2.583 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.611 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.615 CESTLOG:  duración: 3.978 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.617 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.618 CESTLOG:  duración: 1.475 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.630 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.632 CESTLOG:  duración: 2.031 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.642 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.644 CESTLOG:  duración: 1.939 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.655 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.658 CESTLOG:  duración: 3.304 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.668 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.670 CESTLOG:  duración: 2.059 ms
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.681 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(20814) 2025-05-13 13:45:18.683 CESTLOG:  duración: 1.921 ms
+[09066309P 08134385K] ::1(20823) 2025-05-13 13:45:22.319 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20823) 2025-05-13 13:45:22.319 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20832) 2025-05-13 13:45:27.321 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20832) 2025-05-13 13:45:27.321 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20839) 2025-05-13 13:45:32.318 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20839) 2025-05-13 13:45:32.318 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20847) 2025-05-13 13:45:37.335 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20847) 2025-05-13 13:45:37.335 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20858) 2025-05-13 13:45:42.326 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20858) 2025-05-13 13:45:42.326 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20866) 2025-05-13 13:45:47.339 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20866) 2025-05-13 13:45:47.339 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20875) 2025-05-13 13:45:52.342 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20875) 2025-05-13 13:45:52.342 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20883) 2025-05-13 13:45:57.350 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20883) 2025-05-13 13:45:57.350 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20891) 2025-05-13 13:46:02.352 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20891) 2025-05-13 13:46:02.352 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20902) 2025-05-13 13:46:07.363 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20902) 2025-05-13 13:46:07.363 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20910) 2025-05-13 13:46:12.363 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20910) 2025-05-13 13:46:12.363 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20918) 2025-05-13 13:46:17.366 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20918) 2025-05-13 13:46:17.366 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20929) 2025-05-13 13:46:22.382 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20929) 2025-05-13 13:46:22.382 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20942) 2025-05-13 13:46:27.435 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20942) 2025-05-13 13:46:27.435 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20953) 2025-05-13 13:46:32.514 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20953) 2025-05-13 13:46:32.514 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20961) 2025-05-13 13:46:37.454 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20961) 2025-05-13 13:46:37.454 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20971) 2025-05-13 13:46:42.414 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20971) 2025-05-13 13:46:42.414 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20980) 2025-05-13 13:46:47.434 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20980) 2025-05-13 13:46:47.434 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20988) 2025-05-13 13:46:52.533 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20988) 2025-05-13 13:46:52.533 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(20997) 2025-05-13 13:46:57.444 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(20997) 2025-05-13 13:46:57.444 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21006) 2025-05-13 13:47:02.466 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21006) 2025-05-13 13:47:02.466 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21017) 2025-05-13 13:47:07.477 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21017) 2025-05-13 13:47:07.477 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21025) 2025-05-13 13:47:12.499 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21025) 2025-05-13 13:47:12.499 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21033) 2025-05-13 13:47:17.480 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21033) 2025-05-13 13:47:17.480 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21044) 2025-05-13 13:47:22.484 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21044) 2025-05-13 13:47:22.484 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21044) 2025-05-13 13:47:22.485 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(21053) 2025-05-13 13:47:27.488 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21053) 2025-05-13 13:47:27.488 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21061) 2025-05-13 13:47:32.523 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21061) 2025-05-13 13:47:32.523 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21068) 2025-05-13 13:47:37.535 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21068) 2025-05-13 13:47:37.535 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21077) 2025-05-13 13:47:42.547 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21077) 2025-05-13 13:47:42.547 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21085) 2025-05-13 13:47:47.545 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21085) 2025-05-13 13:47:47.545 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21085) 2025-05-13 13:47:47.545 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(21092) 2025-05-13 13:47:52.666 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21092) 2025-05-13 13:47:52.666 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21100) 2025-05-13 13:47:57.539 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21100) 2025-05-13 13:47:57.539 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21111) 2025-05-13 13:48:02.562 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21111) 2025-05-13 13:48:02.562 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21121) 2025-05-13 13:48:07.568 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21121) 2025-05-13 13:48:07.568 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21130) 2025-05-13 13:48:12.566 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21130) 2025-05-13 13:48:12.566 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21142) 2025-05-13 13:48:17.572 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21142) 2025-05-13 13:48:17.572 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21142) 2025-05-13 13:48:17.572 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(21152) 2025-05-13 13:48:22.576 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21152) 2025-05-13 13:48:22.576 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21163) 2025-05-13 13:48:27.590 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21163) 2025-05-13 13:48:27.590 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21171) 2025-05-13 13:48:32.599 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21171) 2025-05-13 13:48:32.599 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21178) 2025-05-13 13:48:37.612 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21178) 2025-05-13 13:48:37.612 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21187) 2025-05-13 13:48:42.622 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21187) 2025-05-13 13:48:42.622 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21195) 2025-05-13 13:48:47.620 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21195) 2025-05-13 13:48:47.620 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21203) 2025-05-13 13:48:52.639 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21203) 2025-05-13 13:48:52.639 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21211) 2025-05-13 13:48:57.637 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21211) 2025-05-13 13:48:57.637 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21221) 2025-05-13 13:49:02.653 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21221) 2025-05-13 13:49:02.653 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21221) 2025-05-13 13:49:02.654 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(21233) 2025-05-13 13:49:07.653 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21233) 2025-05-13 13:49:07.653 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21245) 2025-05-13 13:49:12.695 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21245) 2025-05-13 13:49:12.695 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21245) 2025-05-13 13:49:12.696 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(21252) 2025-05-13 13:49:17.679 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21252) 2025-05-13 13:49:17.679 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21265) 2025-05-13 13:49:22.688 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21265) 2025-05-13 13:49:22.688 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21277) 2025-05-13 13:49:27.692 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21277) 2025-05-13 13:49:27.692 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21284) 2025-05-13 13:49:32.704 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21284) 2025-05-13 13:49:32.704 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21292) 2025-05-13 13:49:37.721 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21292) 2025-05-13 13:49:37.721 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21301) 2025-05-13 13:49:42.837 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21301) 2025-05-13 13:49:42.837 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21310) 2025-05-13 13:49:47.727 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21310) 2025-05-13 13:49:47.727 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21318) 2025-05-13 13:49:52.731 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21318) 2025-05-13 13:49:52.731 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21329) 2025-05-13 13:49:57.848 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21329) 2025-05-13 13:49:57.848 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K] ::1(21342) 2025-05-13 13:50:02.737 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21342) 2025-05-13 13:50:02.737 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K]  2025-05-13 13:50:03.243 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 13:50:07.545 CESTLOG:  checkpoint completo: escritos 40 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.279 s, sync=0.017 s, total=4.302 s; archivos sincronizados=28, más largo=0.006 s, promedio=0.001 s; distancia=175 kB, estimación=14763 kB; lsn=D8/8E02BD98, lsn de redo=D8/8E02BD60
+[09066309P 08134385K] ::1(21352) 2025-05-13 13:50:07.731 CESTERROR:  el segmento de WAL solicitado 00000001000000D80000008C ya ha sido eliminado
+[09066309P 08134385K] ::1(21352) 2025-05-13 13:50:07.731 CESTSENTENCIA:  START_REPLICATION D8/8C000000 TIMELINE 1
+[09066309P 08134385K]  2025-05-13 13:50:57.275 CESTLOG:  empezando checkpoint: force wait
+[09066309P 08134385K]  2025-05-13 13:50:57.296 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.007 s, sync=0.001 s, total=0.021 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16208 kB, estimación=16208 kB; lsn=D8/8F000060, lsn de redo=D8/8F000028
+[09066309P 08134385K]  2025-05-13 13:55:57.296 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 13:55:57.318 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.006 s, sync=0.001 s, total=0.022 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16384 kB, estimación=16384 kB; lsn=D8/90000098, lsn de redo=D8/90000060
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.477 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.479 CESTLOG:  duración: 4.152 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.481 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.482 CESTLOG:  duración: 1.630 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.483 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.486 CESTLOG:  duración: 3.258 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.487 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.491 CESTLOG:  duración: 3.720 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.492 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.496 CESTLOG:  duración: 3.938 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.497 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.501 CESTLOG:  duración: 4.200 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.503 CESTLOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.505 CESTLOG:  duración: 1.685 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.506 CESTLOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.508 CESTLOG:  duración: 2.038 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.509 CESTLOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.512 CESTLOG:  duración: 2.857 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.513 CESTLOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.517 CESTLOG:  duración: 4.220 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.518 CESTLOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.520 CESTLOG:  duración: 2.341 ms
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.521 CESTLOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:56:35.524 CESTLOG:  duración: 2.322 ms
+[09066309P 08134385K] ::1(22227) 2025-05-13 13:59:33.464 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(22227) 2025-05-13 13:59:33.464 CESTSENTENCIA:  START_REPLICATION D8/90000000 TIMELINE 1
+[09066309P 08134385K] ::1(22227) 2025-05-13 13:59:33.464 CESTLOG:  se encontró fin de archivo inesperado en la conexión standby
+[09066309P 08134385K] ::1(22227) 2025-05-13 13:59:33.464 CESTSENTENCIA:  START_REPLICATION D8/90000000 TIMELINE 1
+[09066309P 08134385K] ::1(22003) 2025-05-13 13:59:33.793 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(13309) 2025-05-13 13:59:45.218 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(13430) 2025-05-13 13:59:45.219 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K]  2025-05-13 15:06:13.936 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 15:06:18.531 CESTLOG:  checkpoint completo: escritos 43 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.553 s, sync=0.020 s, total=4.596 s; archivos sincronizados=28, más largo=0.003 s, promedio=0.001 s; distancia=200 kB, estimación=14765 kB; lsn=D8/90032488, lsn de redo=D8/90032450

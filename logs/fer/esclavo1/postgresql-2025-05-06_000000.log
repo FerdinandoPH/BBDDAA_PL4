@@ -1,0 +1,4 @@
+[09066309P 08134385K]  2025-05-06 16:59:27.449 CESTERROR:  cancelando la sentencia debido a una petición del usuario
+[09066309P 08134385K]  2025-05-06 16:59:27.463 CESTLOG:  apagando
+[09066309P 08134385K]  2025-05-06 16:59:27.465 CESTLOG:  empezando checkpoint: shutdown immediate
+[09066309P 08134385K]  2025-05-06 16:59:27.496 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.008 s, sync=0.001 s, total=0.034 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=19284 kB; lsn=D8/8A068B20, lsn de redo=D8/8A068B20

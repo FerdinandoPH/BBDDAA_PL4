@@ -1,0 +1,14 @@
+[09066309P 08134385K]  2025-05-15 10:36:45.550 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-15 10:36:45.552 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+[09066309P 08134385K]  2025-05-15 10:36:45.552 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+[09066309P 08134385K]  2025-05-15 10:36:45.611 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-15 10:36:29 CEST
+[09066309P 08134385K]  2025-05-15 10:36:45.630 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K]  2025-05-15 10:36:50.164 CESTLOG:  empezando checkpoint: force wait
+[09066309P 08134385K]  2025-05-15 10:36:50.210 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.013 s, sync=0.007 s, total=0.048 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=16383 kB, estimación=16383 kB; lsn=D8/90000060, lsn de redo=D8/90000028
+[09066309P 08134385K]  2025-05-15 10:39:11.400 CESTLOG:  se recibió petición de apagado rápido
+[09066309P 08134385K]  2025-05-15 10:39:11.428 CESTLOG:  abortando transacciones activas
+[09066309P 08134385K]  2025-05-15 10:39:11.434 CESTLOG:  proceso ayudante «logical replication launcher» (PID 34632) terminó con código de salida 1
+[09066309P 08134385K]  2025-05-15 10:39:11.436 CESTLOG:  apagando
+[09066309P 08134385K]  2025-05-15 10:39:11.440 CESTLOG:  empezando checkpoint: shutdown immediate
+[09066309P 08134385K]  2025-05-15 10:39:11.471 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.005 s, sync=0.001 s, total=0.036 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16384 kB, estimación=16384 kB; lsn=D8/91000060, lsn de redo=D8/91000060
+[09066309P 08134385K]  2025-05-15 10:39:11.486 CESTLOG:  el sistema de bases de datos está apagado

@@ -1,0 +1,5 @@
+[09066309P 08134385K]  2025-04-26 13:58:01.433 CESTLOG:  el sistema de bases de datos fue apagado en 2025-04-26 13:57:01 CEST
+[09066309P 08134385K]  2025-04-26 13:58:57.591 CESTERROR:  cancelando la sentencia debido a una petición del usuario
+[09066309P 08134385K]  2025-04-26 13:58:57.597 CESTLOG:  apagando
+[09066309P 08134385K]  2025-04-26 13:58:57.598 CESTLOG:  empezando checkpoint: shutdown immediate
+[09066309P 08134385K]  2025-04-26 13:58:57.648 CESTLOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.013 s, sync=0.005 s, total=0.052 s; archivos sincronizados=4, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=D8/80AB7F98, lsn de redo=D8/80AB7F98

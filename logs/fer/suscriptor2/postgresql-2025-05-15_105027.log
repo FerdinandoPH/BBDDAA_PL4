@@ -1,0 +1,79 @@
+[09066309P 08134385K]  2025-05-15 10:50:27.344 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-15 10:50:27.345 CESTLOG:  escuchando en la dirección IPv6 «::», port 5435
+[09066309P 08134385K]  2025-05-15 10:50:27.346 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5435
+[09066309P 08134385K]  2025-05-15 10:50:27.401 CESTLOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-15 10:36:50 CEST
+[09066309P 08134385K]  2025-05-15 10:50:34.946 CESTLOG:  iniciando recuperación de backup con LSN de redo D8/90000028, LSN de checkpoint D8/90000060, en timeline 1
+[09066309P 08134385K]  2025-05-15 10:50:34.963 CESTLOG:  redo comienza en D8/90000028
+[09066309P 08134385K]  2025-05-15 10:50:34.966 CESTLOG:  se completó la recuperación de backup con LSN de redo D8/90000028 y LSN de término D8/90000138
+[09066309P 08134385K]  2025-05-15 10:50:34.967 CESTLOG:  el estado de recuperación consistente fue alcanzado en D8/90000138
+[09066309P 08134385K]  2025-05-15 10:50:34.967 CESTLOG:  redo listo en D8/90000138 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+[09066309P 08134385K]  2025-05-15 10:50:35.006 CESTLOG:  empezando checkpoint: end-of-recovery immediate wait
+[09066309P 08134385K]  2025-05-15 10:50:35.050 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.013 s, sync=0.007 s, total=0.051 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=16384 kB, estimación=16384 kB; lsn=D8/91000028, lsn de redo=D8/91000028
+[09066309P 08134385K]  2025-05-15 10:50:35.069 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.243 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.350 CESTLOG:  duración: 109.125 ms
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.351 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.352 CESTLOG:  duración: 0.479 ms
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.352 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.356 CESTLOG:  duración: 3.956 ms
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.357 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.358 CESTLOG:  duración: 0.977 ms
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.359 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.361 CESTLOG:  duración: 1.917 ms
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.362 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.363 CESTLOG:  duración: 1.555 ms
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.364 CESTERROR:  error de sintaxis en o cerca de «NOT» en carácter 24
+[09066309P 08134385K] ::1(22566) 2025-05-15 10:52:31.364 CESTSENTENCIA:  CREATE SUBSCRIPTION IF NOT EXISTS telpark_sub
+	    CONNECTION 'host=localhost port=5433 dbname=telpark user=postgres password=postgres'
+	    PUBLICATION telpark_pub
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.038 CESTLOG:  sentencia: DELETE FROM pagos;
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.039 CESTLOG:  duración: 2.705 ms
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.040 CESTLOG:  sentencia: DELETE FROM incidencias;
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.040 CESTLOG:  duración: 0.368 ms
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.041 CESTLOG:  sentencia: DELETE FROM reservas;
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.042 CESTLOG:  duración: 0.413 ms
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.042 CESTLOG:  sentencia: DELETE FROM vehiculos;
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.043 CESTLOG:  duración: 0.541 ms
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.044 CESTLOG:  sentencia: DELETE FROM plazas;
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.044 CESTLOG:  duración: 0.430 ms
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.045 CESTLOG:  sentencia: DELETE FROM clientes;
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.046 CESTLOG:  duración: 0.674 ms
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.047 CESTLOG:  sentencia: CREATE SUBSCRIPTION telpark_sub
+	    CONNECTION 'host=localhost port=5433 dbname=telpark user=postgres password=postgres'
+	    PUBLICATION telpark_pub
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:52:39.171 CESTLOG:  duración: 124.068 ms
+[09066309P 08134385K]  2025-05-15 10:52:39.215 CESTLOG:  el ayudante «apply» de replicación lógica para la suscripción «telpark_sub» ha iniciado
+[09066309P 08134385K]  2025-05-15 10:52:39.308 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «pagos» ha iniciado
+[09066309P 08134385K]  2025-05-15 10:52:39.340 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «reservas» ha iniciado
+[09066309P 08134385K]  2025-05-15 10:52:39.450 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «pagos» ha terminado
+[09066309P 08134385K]  2025-05-15 10:52:39.489 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «incidencias» ha iniciado
+[09066309P 08134385K]  2025-05-15 10:52:39.491 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «reservas» ha terminado
+[09066309P 08134385K]  2025-05-15 10:52:39.535 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «clientes» ha iniciado
+[09066309P 08134385K]  2025-05-15 10:52:39.635 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «incidencias» ha terminado
+[09066309P 08134385K]  2025-05-15 10:52:39.679 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «clientes» ha terminado
+[09066309P 08134385K]  2025-05-15 10:52:39.683 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «vehiculos» ha iniciado
+[09066309P 08134385K]  2025-05-15 10:52:39.721 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «plazas» ha iniciado
+[09066309P 08134385K]  2025-05-15 10:52:39.814 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «vehiculos» ha terminado
+[09066309P 08134385K]  2025-05-15 10:52:39.856 CESTLOG:  el ayudante de sincronización de tabla de replicación lógica para la suscripción «telpark_sub», tabla «plazas» ha terminado
+[09066309P 08134385K] ::1(22582) 2025-05-15 10:53:00.170 CESTLOG:  duración: 0.185 ms  sentencia: SELECT * FROM clientes;
+[09066309P 08134385K]  2025-05-15 10:55:34.059 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-15 10:55:38.855 CESTLOG:  checkpoint completo: escritos 42 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.456 s, sync=0.086 s, total=4.796 s; archivos sincronizados=31, más largo=0.004 s, promedio=0.003 s; distancia=150 kB, estimación=14760 kB; lsn=D8/91025980, lsn de redo=D8/91025948
+[09066309P 08134385K]  2025-05-15 11:07:58.957 CESTLOG:  el flujo de datos del publisher ha terminado
+[09066309P 08134385K]  2025-05-15 11:07:58.959 CESTERROR:  no se pudo enviar el mensaje fin-de-flujo al primario: el servidor ha cerrado la conexión inesperadamente
+		Probablemente se debe a que el servidor terminó de manera anormal
+		antes o durante el procesamiento de la petición.
+	no hay COPY alguno en ejecución
+[09066309P 08134385K]  2025-05-15 11:07:58.964 CESTLOG:  proceso ayudante «logical replication worker» (PID 8396) terminó con código de salida 1
+[09066309P 08134385K]  2025-05-15 11:07:58.996 CESTLOG:  el ayudante «apply» de replicación lógica para la suscripción «telpark_sub» ha iniciado
+[09066309P 08134385K]  2025-05-15 11:07:59.029 CESTERROR:  no se pudo connectar con el editor (publisher): falló la conexión al servidor en «localhost» (::1), puerto 5433: FATAL:  el sistema de base de datos está apagándose
+[09066309P 08134385K]  2025-05-15 11:07:59.033 CESTLOG:  proceso ayudante «logical replication worker» (PID 37660) terminó con código de salida 1
+[09066309P 08134385K]  2025-05-15 11:08:04.005 CESTLOG:  el ayudante «apply» de replicación lógica para la suscripción «telpark_sub» ha iniciado
+[09066309P 08134385K]  2025-05-15 11:08:06.837 CESTLOG:  se recibió petición de apagado rápido
+[09066309P 08134385K]  2025-05-15 11:08:06.844 CESTLOG:  abortando transacciones activas
+[09066309P 08134385K]  2025-05-15 11:08:06.844 CESTFATAL:  terminando el proceso de replicación lógica debido a una orden del administrador
+[09066309P 08134385K]  2025-05-15 11:08:06.854 CESTLOG:  proceso ayudante «logical replication launcher» (PID 9044) terminó con código de salida 1
+[09066309P 08134385K]  2025-05-15 11:08:06.854 CESTLOG:  proceso ayudante «logical replication worker» (PID 15076) terminó con código de salida 1
+[09066309P 08134385K]  2025-05-15 11:08:06.855 CESTLOG:  apagando
+[09066309P 08134385K]  2025-05-15 11:08:06.859 CESTLOG:  empezando checkpoint: shutdown immediate
+[09066309P 08134385K]  2025-05-15 11:08:06.884 CESTLOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.005 s, sync=0.001 s, total=0.030 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=13284 kB; lsn=D8/91025A30, lsn de redo=D8/91025A30
+[09066309P 08134385K]  2025-05-15 11:08:06.900 CESTLOG:  el sistema de bases de datos está apagado

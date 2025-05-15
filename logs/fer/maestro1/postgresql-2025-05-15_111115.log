@@ -1,0 +1,36 @@
+[09066309P 08134385K]  2025-05-15 11:11:15.885 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-15 11:10:08 CEST
+[09066309P 08134385K] ::1(25165) 2025-05-15 11:15:35.909 CESTLOG:  duración: 111.747 ms  sentencia: SELECT provincia, COUNT(*) AS total
+	FROM (
+	    SELECT provincia
+	    FROM reservas
+	    JOIN clientes ON reservas.clienteid_clientes = clientes.clienteid
+	    
+	    UNION
+	    
+	    SELECT provincia
+	    FROM telpark_foraneo.reservas
+	    JOIN telpark_foraneo.clientes ON reservas.clienteid_clientes = clientes.clienteid
+	) AS subquery
+	GROUP BY provincia;
+[09066309P 08134385K] ::1(25198) 2025-05-15 11:15:57.652 CESTLOG:  duración: 14.226 ms  sentencia: EXPLAIN SELECT provincia, COUNT(*) AS total
+	FROM (
+	    SELECT provincia
+	    FROM reservas
+	    JOIN clientes ON reservas.clienteid_clientes = clientes.clienteid
+	    
+	    UNION
+	    
+	    SELECT provincia
+	    FROM telpark_foraneo.reservas
+	    JOIN telpark_foraneo.clientes ON reservas.clienteid_clientes = clientes.clienteid
+	) AS subquery
+	GROUP BY provincia;
+[09066309P 08134385K]  2025-05-15 11:16:15.881 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-15 11:16:15.902 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.012 s, sync=0.003 s, total=0.023 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=D8/930001F8, lsn de redo=D8/930001C0
+[09066309P 08134385K] ::1(25198) 2025-05-15 13:42:40.188 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(24722) 2025-05-15 13:42:51.381 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(24722) 2025-05-15 13:42:51.381 CESTSENTENCIA:  START_REPLICATION D8/93000000 TIMELINE 1
+[09066309P 08134385K] ::1(24722) 2025-05-15 13:42:51.381 CESTLOG:  se encontró fin de archivo inesperado en la conexión standby
+[09066309P 08134385K] ::1(24722) 2025-05-15 13:42:51.381 CESTSENTENCIA:  START_REPLICATION D8/93000000 TIMELINE 1

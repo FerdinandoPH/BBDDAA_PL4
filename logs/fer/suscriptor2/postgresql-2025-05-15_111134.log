@@ -1,0 +1,52 @@
+[09066309P 08134385K]  2025-05-15 11:11:34.121 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-15 11:11:34.122 CESTLOG:  escuchando en la dirección IPv6 «::», port 5435
+[09066309P 08134385K]  2025-05-15 11:11:34.122 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5435
+[09066309P 08134385K]  2025-05-15 11:11:34.191 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-15 11:08:06 CEST
+[09066309P 08134385K]  2025-05-15 11:11:34.194 CESTLOG:  recuperado el estado de replicación del nodo 1 a 0/0
+[09066309P 08134385K]  2025-05-15 11:11:34.214 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K]  2025-05-15 11:11:34.286 CESTLOG:  el ayudante «apply» de replicación lógica para la suscripción «telpark_sub» ha iniciado
+[09066309P 08134385K] ::1(24737) 2025-05-15 11:11:35.846 CESTLOG:  duración: 11.244 ms  sentencia: SET DateStyle=ISO; SET client_min_messages=notice; SELECT set_config('bytea_output','hex',false) FROM pg_settings WHERE name = 'bytea_output'; SET client_encoding='utf-8';
+[09066309P 08134385K] ::1(24737) 2025-05-15 11:11:35.846 CESTLOG:  duración: 0.107 ms  sentencia: SELECT version()
+[09066309P 08134385K] ::1(24737) 2025-05-15 11:11:35.848 CESTLOG:  duración: 1.291 ms  sentencia: 
+	SELECT
+	    db.oid as did, db.datname, db.datallowconn,
+	    pg_encoding_to_char(db.encoding) AS serverencoding,
+	    has_database_privilege(db.oid, 'CREATE') as cancreate,
+	    datistemplate
+	FROM
+	    pg_catalog.pg_database db
+	WHERE db.datname = current_database()
+[09066309P 08134385K] ::1(24737) 2025-05-15 11:11:35.848 CESTLOG:  duración: 0.464 ms  sentencia: 
+	        SELECT
+	             gss_authenticated, encrypted
+	        FROM
+	            pg_catalog.pg_stat_gssapi
+	        WHERE pid = pg_backend_pid()
+[09066309P 08134385K] ::1(24737) 2025-05-15 11:11:35.851 CESTLOG:  duración: 2.202 ms  sentencia: 
+	        SELECT
+	            roles.oid as id, roles.rolname as name,
+	            roles.rolsuper as is_superuser,
+	            CASE WHEN roles.rolsuper THEN true ELSE roles.rolcreaterole END as
+	            can_create_role,
+	            CASE WHEN roles.rolsuper THEN true
+	            ELSE roles.rolcreatedb END as can_create_db,
+	            CASE WHEN 'pg_signal_backend'=ANY(ARRAY(WITH RECURSIVE cte AS (
+	            SELECT pg_roles.oid,pg_roles.rolname FROM pg_roles
+	                WHERE pg_roles.oid = roles.oid
+	            UNION ALL
+	            SELECT m.roleid,pgr.rolname FROM cte cte_1
+	                JOIN pg_auth_members m ON m.member = cte_1.oid
+	                JOIN pg_roles pgr ON pgr.oid = m.roleid)
+	            SELECT rolname  FROM cte)) THEN True
+	            ELSE False END as can_signal_backend
+	        FROM
+	            pg_catalog.pg_roles as roles
+	        WHERE
+	            rolname = current_user
+[09066309P 08134385K]  2025-05-15 11:16:34.194 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-15 11:16:34.473 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.017 s, sync=0.008 s, total=0.282 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=0 kB, estimación=0 kB; lsn=D8/91025B18, lsn de redo=D8/91025AE0
+[09066309P 08134385K] ::1(24737) 2025-05-15 13:42:46.557 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K]  2025-05-15 13:42:51.374 CESTLOG:  proceso ayudante «logical replication worker» (PID 19420) fue terminado por una excepción 0xC000013A
+[09066309P 08134385K]  2025-05-15 13:42:51.374 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+[09066309P 08134385K]  2025-05-15 13:42:51.374 CESTLOG:  terminando todos los otros procesos de servidor activos

@@ -1,0 +1,149 @@
+[09066309P 08134385K]  2025-05-15 10:44:51.309 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-15 10:44:51.310 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+[09066309P 08134385K]  2025-05-15 10:44:51.310 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+[09066309P 08134385K]  2025-05-15 10:44:51.368 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-15 10:39:11 CEST
+[09066309P 08134385K]  2025-05-15 10:44:51.394 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K] ::1(22128) 2025-05-15 10:48:29.180 CESTERROR:  error de sintaxis en o cerca de «NOT» en carácter 23
+[09066309P 08134385K] ::1(22128) 2025-05-15 10:48:29.180 CESTSENTENCIA:  CREATE PUBLICATION IF NOT EXISTS telpark_pub
+	    FOR TABLES clientes, plazas, vehiculos, reservas, incidencias, pagos;
+[09066309P 08134385K] ::1(22143) 2025-05-15 10:48:37.433 CESTERROR:  sintaxis de lista de objetos de publicación no válida en carácter 41
+[09066309P 08134385K] ::1(22143) 2025-05-15 10:48:37.433 CESTDETALLE:  Uno de TABLE o TABLES IN SCHEMA debe ser especificado antes de un nombre de tabla o esquema.
+[09066309P 08134385K] ::1(22143) 2025-05-15 10:48:37.433 CESTSENTENCIA:  CREATE PUBLICATION telpark_pub
+	    FOR TABLES clientes, plazas, vehiculos, reservas, incidencias, pagos;
+[09066309P 08134385K] ::1(22174) 2025-05-15 10:48:56.704 CESTLOG:  sentencia: CREATE PUBLICATION telpark_pub
+	    FOR TABLES IN SCHEMA public;
+[09066309P 08134385K] ::1(22174) 2025-05-15 10:48:56.808 CESTLOG:  duración: 105.973 ms
+[09066309P 08134385K]  2025-05-15 10:49:51.368 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-15 10:49:53.206 CESTLOG:  checkpoint completo: escritos 17 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.555 s, sync=0.031 s, total=1.841 s; archivos sincronizados=11, más largo=0.004 s, promedio=0.003 s; distancia=16 kB, estimación=16 kB; lsn=D8/91004360, lsn de redo=D8/91004328
+[09066309P 08134385K] ::1(22583) 2025-05-15 10:52:39.111 CESTLOG:  duración: 2.259 ms  sentencia: SELECT pg_catalog.set_config('search_path', '', false);
+[09066309P 08134385K] ::1(22583) 2025-05-15 10:52:39.117 CESTLOG:  duración: 5.919 ms  sentencia: SELECT t.pubname FROM
+	 pg_catalog.pg_publication t WHERE
+	 t.pubname IN ('telpark_pub')
+[09066309P 08134385K] ::1(22583) 2025-05-15 10:52:39.128 CESTLOG:  duración: 10.502 ms  sentencia: SELECT DISTINCT n.nspname, c.relname, gpt.attrs
+	       FROM pg_class c
+	         JOIN pg_namespace n ON n.oid = c.relnamespace
+	         JOIN ( SELECT (pg_get_publication_tables(VARIADIC array_agg(pubname::text))).*
+	                FROM pg_publication
+	                WHERE pubname IN ( 'telpark_pub' )) AS gpt
+	             ON gpt.relid = c.oid
+	
+[09066309P 08134385K] ::1(22583) 2025-05-15 10:52:39.158 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004410
+[09066309P 08134385K] ::1(22583) 2025-05-15 10:52:39.158 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22583) 2025-05-15 10:52:39.158 CESTSENTENCIA:  CREATE_REPLICATION_SLOT "telpark_sub" LOGICAL pgoutput (SNAPSHOT 'nothing')
+[09066309P 08134385K] ::1(22584) 2025-05-15 10:52:39.267 CESTLOG:  duración: 0.199 ms  sentencia: SELECT pg_catalog.set_config('search_path', '', false);
+[09066309P 08134385K] ::1(22584) 2025-05-15 10:52:39.271 CESTLOG:  iniciando la decodificación lógica para el slot «telpark_sub»
+[09066309P 08134385K] ::1(22584) 2025-05-15 10:52:39.271 CESTDETALLE:  Transacciones en flujo comprometiendo después de D8/91004448, leyendo WAL desde D8/91004410.
+[09066309P 08134385K] ::1(22584) 2025-05-15 10:52:39.271 CESTSENTENCIA:  START_REPLICATION SLOT "telpark_sub" LOGICAL 0/0 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22584) 2025-05-15 10:52:39.272 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004410
+[09066309P 08134385K] ::1(22584) 2025-05-15 10:52:39.272 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22584) 2025-05-15 10:52:39.272 CESTSENTENCIA:  START_REPLICATION SLOT "telpark_sub" LOGICAL 0/0 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.364 CESTLOG:  duración: 0.229 ms  sentencia: SELECT pg_catalog.set_config('search_path', '', false);
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.365 CESTLOG:  duración: 0.023 ms  sentencia: BEGIN READ ONLY ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.391 CESTLOG:  duración: 0.185 ms  sentencia: SELECT pg_catalog.set_config('search_path', '', false);
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.392 CESTLOG:  duración: 0.018 ms  sentencia: BEGIN READ ONLY ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.398 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004448
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.398 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.398 CESTSENTENCIA:  CREATE_REPLICATION_SLOT "pg_125615_sync_117386_7416296873037219172" LOGICAL pgoutput (SNAPSHOT 'use')
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.431 CESTLOG:  duración: 6.227 ms  sentencia: SELECT c.oid, c.relreplident, c.relkind  FROM pg_catalog.pg_class c  INNER JOIN pg_catalog.pg_namespace n        ON (c.relnamespace = n.oid) WHERE n.nspname = 'public'   AND c.relname = 'pagos'
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.435 CESTLOG:  duración: 3.724 ms  sentencia: SELECT DISTINCT  (CASE WHEN (array_length(gpt.attrs, 1) = c.relnatts)   THEN NULL ELSE gpt.attrs END)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt,  pg_class c WHERE gpt.relid = 117386 AND c.oid = gpt.relid   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.439 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004480
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.439 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.439 CESTSENTENCIA:  CREATE_REPLICATION_SLOT "pg_125615_sync_117374_7416296873037219172" LOGICAL pgoutput (SNAPSHOT 'use')
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.441 CESTLOG:  duración: 5.477 ms  sentencia: SELECT a.attnum,       a.attname,       a.atttypid,       a.attnum = ANY(i.indkey)  FROM pg_catalog.pg_attribute a  LEFT JOIN pg_catalog.pg_index i       ON (i.indexrelid = pg_get_replica_identity_index(117386)) WHERE a.attnum > 0::pg_catalog.int2   AND NOT a.attisdropped AND a.attgenerated = ''   AND a.attrelid = 117386 ORDER BY a.attnum
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.442 CESTLOG:  duración: 0.795 ms  sentencia: SELECT DISTINCT pg_get_expr(gpt.qual, gpt.relid)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt WHERE gpt.relid = 117386   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.444 CESTLOG:  duración: 0.711 ms  sentencia: COPY public.pagos (pagoid, cantidad, fechapago, metodo_pago, reservaid_reservas) TO STDOUT
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.445 CESTLOG:  duración: 0.016 ms  sentencia: COMMIT
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.446 CESTLOG:  iniciando la decodificación lógica para el slot «pg_125615_sync_117386_7416296873037219172»
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.446 CESTDETALLE:  Transacciones en flujo comprometiendo después de D8/91004480, leyendo WAL desde D8/91004448.
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.446 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117386_7416296873037219172" LOGICAL D8/91004480 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.446 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004448
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.446 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22586) 2025-05-15 10:52:39.446 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117386_7416296873037219172" LOGICAL D8/91004480 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.468 CESTLOG:  duración: 6.643 ms  sentencia: SELECT c.oid, c.relreplident, c.relkind  FROM pg_catalog.pg_class c  INNER JOIN pg_catalog.pg_namespace n        ON (c.relnamespace = n.oid) WHERE n.nspname = 'public'   AND c.relname = 'reservas'
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.471 CESTLOG:  duración: 2.920 ms  sentencia: SELECT DISTINCT  (CASE WHEN (array_length(gpt.attrs, 1) = c.relnatts)   THEN NULL ELSE gpt.attrs END)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt,  pg_class c WHERE gpt.relid = 117374 AND c.oid = gpt.relid   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.475 CESTLOG:  duración: 3.701 ms  sentencia: SELECT a.attnum,       a.attname,       a.atttypid,       a.attnum = ANY(i.indkey)  FROM pg_catalog.pg_attribute a  LEFT JOIN pg_catalog.pg_index i       ON (i.indexrelid = pg_get_replica_identity_index(117374)) WHERE a.attnum > 0::pg_catalog.int2   AND NOT a.attisdropped AND a.attgenerated = ''   AND a.attrelid = 117374 ORDER BY a.attnum
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.476 CESTLOG:  duración: 0.339 ms  sentencia: SELECT DISTINCT pg_get_expr(gpt.qual, gpt.relid)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt WHERE gpt.relid = 117374   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.477 CESTLOG:  duración: 0.658 ms  sentencia: COPY public.reservas (reservaid, fechainicio, fechafin, vehiculoid_vehiculos, plazaid_plazas, clienteid_clientes) TO STDOUT
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.478 CESTLOG:  duración: 0.018 ms  sentencia: COMMIT
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.488 CESTLOG:  iniciando la decodificación lógica para el slot «pg_125615_sync_117374_7416296873037219172»
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.488 CESTDETALLE:  Transacciones en flujo comprometiendo después de D8/910044B8, leyendo WAL desde D8/91004480.
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.488 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117374_7416296873037219172" LOGICAL D8/910044B8 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.489 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004480
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.489 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22587) 2025-05-15 10:52:39.489 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117374_7416296873037219172" LOGICAL D8/910044B8 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.546 CESTLOG:  duración: 0.228 ms  sentencia: SELECT pg_catalog.set_config('search_path', '', false);
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.547 CESTLOG:  duración: 0.040 ms  sentencia: BEGIN READ ONLY ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.583 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/910044B8
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.583 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.583 CESTSENTENCIA:  CREATE_REPLICATION_SLOT "pg_125615_sync_117379_7416296873037219172" LOGICAL pgoutput (SNAPSHOT 'use')
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.597 CESTLOG:  duración: 0.191 ms  sentencia: SELECT pg_catalog.set_config('search_path', '', false);
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.597 CESTLOG:  duración: 0.019 ms  sentencia: BEGIN READ ONLY ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.612 CESTLOG:  duración: 4.032 ms  sentencia: SELECT c.oid, c.relreplident, c.relkind  FROM pg_catalog.pg_class c  INNER JOIN pg_catalog.pg_namespace n        ON (c.relnamespace = n.oid) WHERE n.nspname = 'public'   AND c.relname = 'incidencias'
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.615 CESTLOG:  duración: 2.268 ms  sentencia: SELECT DISTINCT  (CASE WHEN (array_length(gpt.attrs, 1) = c.relnatts)   THEN NULL ELSE gpt.attrs END)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt,  pg_class c WHERE gpt.relid = 117379 AND c.oid = gpt.relid   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.618 CESTLOG:  duración: 3.087 ms  sentencia: SELECT a.attnum,       a.attname,       a.atttypid,       a.attnum = ANY(i.indkey)  FROM pg_catalog.pg_attribute a  LEFT JOIN pg_catalog.pg_index i       ON (i.indexrelid = pg_get_replica_identity_index(117379)) WHERE a.attnum > 0::pg_catalog.int2   AND NOT a.attisdropped AND a.attgenerated = ''   AND a.attrelid = 117379 ORDER BY a.attnum
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.619 CESTLOG:  duración: 0.331 ms  sentencia: SELECT DISTINCT pg_get_expr(gpt.qual, gpt.relid)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt WHERE gpt.relid = 117379   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.620 CESTLOG:  duración: 0.522 ms  sentencia: COPY public.incidencias (incidenciaid, descripcion, fechaincidencia, estado, reservaid_reservas) TO STDOUT
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.620 CESTLOG:  duración: 0.017 ms  sentencia: COMMIT
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.621 CESTLOG:  iniciando la decodificación lógica para el slot «pg_125615_sync_117379_7416296873037219172»
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.621 CESTDETALLE:  Transacciones en flujo comprometiendo después de D8/910044F0, leyendo WAL desde D8/910044B8.
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.621 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117379_7416296873037219172" LOGICAL D8/910044F0 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.622 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/910044B8
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.622 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22588) 2025-05-15 10:52:39.622 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117379_7416296873037219172" LOGICAL D8/910044F0 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.636 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/910044F0
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.636 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.636 CESTSENTENCIA:  CREATE_REPLICATION_SLOT "pg_125615_sync_117347_7416296873037219172" LOGICAL pgoutput (SNAPSHOT 'use')
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.664 CESTLOG:  duración: 6.663 ms  sentencia: SELECT c.oid, c.relreplident, c.relkind  FROM pg_catalog.pg_class c  INNER JOIN pg_catalog.pg_namespace n        ON (c.relnamespace = n.oid) WHERE n.nspname = 'public'   AND c.relname = 'clientes'
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.668 CESTLOG:  duración: 3.638 ms  sentencia: SELECT DISTINCT  (CASE WHEN (array_length(gpt.attrs, 1) = c.relnatts)   THEN NULL ELSE gpt.attrs END)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt,  pg_class c WHERE gpt.relid = 117347 AND c.oid = gpt.relid   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.672 CESTLOG:  duración: 4.074 ms  sentencia: SELECT a.attnum,       a.attname,       a.atttypid,       a.attnum = ANY(i.indkey)  FROM pg_catalog.pg_attribute a  LEFT JOIN pg_catalog.pg_index i       ON (i.indexrelid = pg_get_replica_identity_index(117347)) WHERE a.attnum > 0::pg_catalog.int2   AND NOT a.attisdropped AND a.attgenerated = ''   AND a.attrelid = 117347 ORDER BY a.attnum
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.673 CESTLOG:  duración: 0.359 ms  sentencia: SELECT DISTINCT pg_get_expr(gpt.qual, gpt.relid)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt WHERE gpt.relid = 117347   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.674 CESTLOG:  duración: 0.662 ms  sentencia: COPY public.clientes (clienteid, nombre, apellido, email, telefono, provincia) TO STDOUT
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.675 CESTLOG:  duración: 0.018 ms  sentencia: COMMIT
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.676 CESTLOG:  iniciando la decodificación lógica para el slot «pg_125615_sync_117347_7416296873037219172»
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.676 CESTDETALLE:  Transacciones en flujo comprometiendo después de D8/91004528, leyendo WAL desde D8/910044F0.
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.676 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117347_7416296873037219172" LOGICAL D8/91004528 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.676 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/910044F0
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.676 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22589) 2025-05-15 10:52:39.676 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117347_7416296873037219172" LOGICAL D8/91004528 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.741 CESTLOG:  duración: 0.214 ms  sentencia: SELECT pg_catalog.set_config('search_path', '', false);
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.741 CESTLOG:  duración: 0.022 ms  sentencia: BEGIN READ ONLY ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.770 CESTLOG:  duración: 0.190 ms  sentencia: SELECT pg_catalog.set_config('search_path', '', false);
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.771 CESTLOG:  duración: 0.019 ms  sentencia: BEGIN READ ONLY ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.776 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004528
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.776 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.776 CESTSENTENCIA:  CREATE_REPLICATION_SLOT "pg_125615_sync_117358_7416296873037219172" LOGICAL pgoutput (SNAPSHOT 'use')
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.801 CESTLOG:  duración: 4.048 ms  sentencia: SELECT c.oid, c.relreplident, c.relkind  FROM pg_catalog.pg_class c  INNER JOIN pg_catalog.pg_namespace n        ON (c.relnamespace = n.oid) WHERE n.nspname = 'public'   AND c.relname = 'vehiculos'
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.803 CESTLOG:  duración: 2.395 ms  sentencia: SELECT DISTINCT  (CASE WHEN (array_length(gpt.attrs, 1) = c.relnatts)   THEN NULL ELSE gpt.attrs END)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt,  pg_class c WHERE gpt.relid = 117358 AND c.oid = gpt.relid   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.807 CESTLOG:  duración: 2.989 ms  sentencia: SELECT a.attnum,       a.attname,       a.atttypid,       a.attnum = ANY(i.indkey)  FROM pg_catalog.pg_attribute a  LEFT JOIN pg_catalog.pg_index i       ON (i.indexrelid = pg_get_replica_identity_index(117358)) WHERE a.attnum > 0::pg_catalog.int2   AND NOT a.attisdropped AND a.attgenerated = ''   AND a.attrelid = 117358 ORDER BY a.attnum
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.807 CESTLOG:  duración: 0.372 ms  sentencia: SELECT DISTINCT pg_get_expr(gpt.qual, gpt.relid)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt WHERE gpt.relid = 117358   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.808 CESTLOG:  duración: 0.534 ms  sentencia: COPY public.vehiculos (vehiculoid, matricula, marca, modelo, color, clienteid_clientes) TO STDOUT
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.809 CESTLOG:  duración: 0.026 ms  sentencia: COMMIT
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.810 CESTLOG:  iniciando la decodificación lógica para el slot «pg_125615_sync_117358_7416296873037219172»
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.810 CESTDETALLE:  Transacciones en flujo comprometiendo después de D8/91004560, leyendo WAL desde D8/91004528.
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.810 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117358_7416296873037219172" LOGICAL D8/91004560 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.810 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004528
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.810 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22591) 2025-05-15 10:52:39.810 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117358_7416296873037219172" LOGICAL D8/91004560 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.815 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004560
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.815 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.815 CESTSENTENCIA:  CREATE_REPLICATION_SLOT "pg_125615_sync_117367_7416296873037219172" LOGICAL pgoutput (SNAPSHOT 'use')
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.841 CESTLOG:  duración: 4.922 ms  sentencia: SELECT c.oid, c.relreplident, c.relkind  FROM pg_catalog.pg_class c  INNER JOIN pg_catalog.pg_namespace n        ON (c.relnamespace = n.oid) WHERE n.nspname = 'public'   AND c.relname = 'plazas'
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.844 CESTLOG:  duración: 2.410 ms  sentencia: SELECT DISTINCT  (CASE WHEN (array_length(gpt.attrs, 1) = c.relnatts)   THEN NULL ELSE gpt.attrs END)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt,  pg_class c WHERE gpt.relid = 117367 AND c.oid = gpt.relid   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.847 CESTLOG:  duración: 3.326 ms  sentencia: SELECT a.attnum,       a.attname,       a.atttypid,       a.attnum = ANY(i.indkey)  FROM pg_catalog.pg_attribute a  LEFT JOIN pg_catalog.pg_index i       ON (i.indexrelid = pg_get_replica_identity_index(117367)) WHERE a.attnum > 0::pg_catalog.int2   AND NOT a.attisdropped AND a.attgenerated = ''   AND a.attrelid = 117367 ORDER BY a.attnum
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.848 CESTLOG:  duración: 0.460 ms  sentencia: SELECT DISTINCT pg_get_expr(gpt.qual, gpt.relid)  FROM pg_publication p,  LATERAL pg_get_publication_tables(p.pubname) gpt WHERE gpt.relid = 117367   AND p.pubname IN ( 'telpark_pub' )
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.849 CESTLOG:  duración: 1.041 ms  sentencia: COPY public.plazas (plazaid, numero, nivel, seccion) TO STDOUT
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.851 CESTLOG:  duración: 0.029 ms  sentencia: COMMIT
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.852 CESTLOG:  iniciando la decodificación lógica para el slot «pg_125615_sync_117367_7416296873037219172»
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.852 CESTDETALLE:  Transacciones en flujo comprometiendo después de D8/91004598, leyendo WAL desde D8/91004560.
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.852 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117367_7416296873037219172" LOGICAL D8/91004598 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.853 CESTLOG:  la decodificación lógica encontró un punto consistente en D8/91004560
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.853 CESTDETALLE:  No hay transacciones en ejecución.
+[09066309P 08134385K] ::1(22592) 2025-05-15 10:52:39.853 CESTSENTENCIA:  START_REPLICATION SLOT "pg_125615_sync_117367_7416296873037219172" LOGICAL D8/91004598 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+[09066309P 08134385K]  2025-05-15 11:07:58.941 CESTLOG:  se recibió petición de apagado rápido
+[09066309P 08134385K]  2025-05-15 11:07:58.947 CESTLOG:  abortando transacciones activas
+[09066309P 08134385K]  2025-05-15 11:07:58.953 CESTLOG:  proceso ayudante «logical replication launcher» (PID 18516) terminó con código de salida 1
+[09066309P 08134385K]  2025-05-15 11:07:58.954 CESTLOG:  apagando
+[09066309P 08134385K]  2025-05-15 11:07:58.973 CESTLOG:  empezando checkpoint: shutdown immediate
+[09066309P 08134385K]  2025-05-15 11:07:59.013 CESTLOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.008 s, sync=0.011 s, total=0.045 s; archivos sincronizados=4, más largo=0.003 s, promedio=0.003 s; distancia=0 kB, estimación=15 kB; lsn=D8/91004598, lsn de redo=D8/91004598
+[09066309P 08134385K] ::1(24334) 2025-05-15 11:07:59.029 CESTFATAL:  el sistema de base de datos está apagándose
+[09066309P 08134385K]  2025-05-15 11:07:59.043 CESTLOG:  el sistema de bases de datos está apagado

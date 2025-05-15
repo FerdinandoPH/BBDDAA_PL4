@@ -1,0 +1,29 @@
+[09066309P 08134385K]  2025-05-13 13:32:11.407 CESTLOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K]  2025-05-13 13:32:11.408 CESTLOG:  escuchando en la dirección IPv6 «::», port 5433
+[09066309P 08134385K]  2025-05-13 13:32:11.408 CESTLOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+[09066309P 08134385K]  2025-05-13 13:32:11.481 CESTLOG:  el sistema de bases de datos fue apagado en 2025-05-13 13:22:04 CEST
+[09066309P 08134385K]  2025-05-13 13:32:11.505 CESTLOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K]  2025-05-13 13:32:17.023 CESTLOG:  empezando checkpoint: force wait
+[09066309P 08134385K]  2025-05-13 13:32:17.070 CESTLOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.014 s, sync=0.007 s, total=0.050 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=15900 kB, estimación=15900 kB; lsn=D8/8B000060, lsn de redo=D8/8B000028
+[09066309P 08134385K]  2025-05-13 13:37:17.082 CESTLOG:  empezando checkpoint: time
+[09066309P 08134385K]  2025-05-13 13:37:17.806 CESTLOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.673 s, sync=0.021 s, total=0.725 s; archivos sincronizados=7, más largo=0.005 s, promedio=0.003 s; distancia=16384 kB, estimación=16384 kB; lsn=D8/8C000098, lsn de redo=D8/8C000060
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.679 CESTLOG:  duración: 0.044 ms  sentencia: SET search_path = pg_catalog
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.679 CESTLOG:  duración: 0.022 ms  sentencia: SET timezone = 'GMT'
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.680 CESTLOG:  duración: 0.016 ms  sentencia: SET datestyle = ISO
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.680 CESTLOG:  duración: 0.017 ms  sentencia: SET intervalstyle = postgres
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.680 CESTLOG:  duración: 0.022 ms  sentencia: SET extra_float_digits = 3
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.680 CESTLOG:  duración: 0.018 ms  sentencia: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.682 CESTLOG:  duración: 1.869 ms  parse: <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.682 CESTLOG:  duración: 0.020 ms  bind <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.687 CESTLOG:  duración: 4.800 ms  ejecutar <unnamed>: DECLARE c1 CURSOR FOR
+	SELECT clienteid, nombre, apellido, email, telefono, provincia FROM public.clientes
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.688 CESTLOG:  duración: 0.101 ms  sentencia: FETCH 100 FROM c1
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.688 CESTLOG:  duración: 0.016 ms  sentencia: CLOSE c1
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:38:56.688 CESTLOG:  duración: 0.015 ms  sentencia: COMMIT TRANSACTION
+[09066309P 08134385K] ::1(20099) 2025-05-13 13:39:05.963 CESTLOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K]  2025-05-13 13:39:09.325 CESTLOG:  proceso ayudante «logical replication launcher» (PID 25084) fue terminado por una excepción 0xC000013A
+[09066309P 08134385K]  2025-05-13 13:39:09.325 CESTHINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+[09066309P 08134385K]  2025-05-13 13:39:09.325 CESTLOG:  terminando todos los otros procesos de servidor activos
