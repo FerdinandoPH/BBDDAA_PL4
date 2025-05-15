@@ -1,0 +1,26 @@
+08134385K 09066309P; ; 2025-02-17 12:31:22.446 CET [8760] LOG:  el sistema de bases de datos fue apagado en 2025-02-17 12:30:49 CET
+08134385K 09066309P; ; 2025-02-17 12:36:22.459 CET [1292] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-02-17 12:36:22.488 CET [1292] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.006 s, sync=0.004 s, total=0.033 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=1/853FBAA8, lsn de redo=1/853FBA70
+08134385K 09066309P; ::1(57032); 2025-02-18 12:24:38.429 CET [13392] ERROR:  cancelando la sentencia debido a una petición del usuario
+08134385K 09066309P; ::1(57032); 2025-02-18 12:24:38.429 CET [13392] SENTENCIA:  Select * From productos Where precio >= 3000;
+08134385K 09066309P; ::1(57032); 2025-02-18 12:26:02.112 CET [13392] ERROR:  opción de EXPLAIN «analize» no reconocida en carácter 10
+08134385K 09066309P; ::1(57032); 2025-02-18 12:26:02.112 CET [13392] SENTENCIA:  Explain (analize, buffers) Select count(*) From productos Where precio = 3000;
+08134385K 09066309P; ::1(57395); 2025-02-18 12:34:03.978 CET [16056] ERROR:  no existe la relación «productos» en carácter 49
+08134385K 09066309P; ::1(57395); 2025-02-18 12:34:03.978 CET [16056] SENTENCIA:  Explain (analyze, buffers) Select count(*) From productos Where precio = 3000;
+08134385K 09066309P; ::1(57694); 2025-02-18 13:04:46.645 CET [13800] ERROR:  no existe la columna «io_object_name» en carácter 8
+08134385K 09066309P; ::1(57694); 2025-02-18 13:04:46.645 CET [13800] SENTENCIA:  SELECT io_object_name, blks_hit, blks_read 
+	FROM pg_stat_io 
+	WHERE io_object_name = 'productos' AND backend_type = 'backend';
+08134385K 09066309P; ::1(57694); 2025-02-18 13:07:05.355 CET [13800] ERROR:  no existe la columna «io_context» en carácter 8
+08134385K 09066309P; ::1(57694); 2025-02-18 13:07:05.355 CET [13800] HINT:  Probablemente quiera hacer referencia a la columna «pg_stat_io.context».
+08134385K 09066309P; ::1(57694); 2025-02-18 13:07:05.355 CET [13800] SENTENCIA:  SELECT io_context, blks_hit, blks_read 
+	FROM pg_stat_io 
+	WHERE relid = 22124 AND backend_type = 'backend';
+08134385K 09066309P; ::1(57694); 2025-02-18 13:07:31.213 CET [13800] ERROR:  no existe la columna «blks_hit» en carácter 8
+08134385K 09066309P; ::1(57694); 2025-02-18 13:07:31.213 CET [13800] SENTENCIA:  SELECT blks_hit, blks_read 
+	FROM pg_stat_io 
+	WHERE io_object_name = 'productos' AND backend_type = 'backend';
+08134385K 09066309P; ::1(57694); 2025-02-18 13:10:13.237 CET [13800] ERROR:  no existe la columna «blks_read» en carácter 8
+08134385K 09066309P; ::1(57694); 2025-02-18 13:10:13.237 CET [13800] SENTENCIA:  SELECT blks_read, blks_hit 
+	FROM pg_stat_io 
+	WHERE relid = 22124 AND backend_type = 'backend';

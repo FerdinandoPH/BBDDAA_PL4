@@ -1,0 +1,12 @@
+08134385K 09066309P; ; 2025-02-04 13:32:48.660 CET [33056] LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-02-04 13:32:48.662 CET [33056] LOG:  escuchando en la dirección IPv6 «::», port 5432
+08134385K 09066309P; ; 2025-02-04 13:32:48.662 CET [33056] LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5432
+08134385K 09066309P; ; 2025-02-04 13:32:48.719 CET [32644] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-02-04 13:18:19 CET
+08134385K 09066309P; ; 2025-02-04 13:32:50.831 CET [32644] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+08134385K 09066309P; ; 2025-02-04 13:32:50.839 CET [32644] LOG:  redo comienza en 0/EEAFA80
+08134385K 09066309P; ; 2025-02-04 13:32:50.844 CET [32644] LOG:  largo de registro no válido en 0/EEB2550: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-02-04 13:32:50.844 CET [32644] LOG:  redo listo en 0/EEB2518 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+08134385K 09066309P; ; 2025-02-04 13:32:50.854 CET [29664] LOG:  empezando checkpoint: end-of-recovery immediate wait
+08134385K 09066309P; ; 2025-02-04 13:32:50.881 CET [29664] LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.008 s, sync=0.008 s, total=0.032 s; archivos sincronizados=7, más largo=0.002 s, promedio=0.002 s; distancia=10 kB, estimación=10 kB; lsn=0/EEB2550, lsn de redo=0/EEB2550
+08134385K 09066309P; ; 2025-02-04 13:32:50.909 CET [33056] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+08134385K 09066309P; ; 2025-02-04 14:01:35.741 CET [33056] LOG:  se recibió petición de apagado rápido

@@ -1,0 +1,53 @@
+08134385K 09066309P; ::1(61210); 2025-03-11 13:51:21.542 CET [24236] ERROR:  error de sintaxis en o cerca de «NOT» en carácter 20
+08134385K 09066309P; ::1(61210); 2025-03-11 13:51:21.542 CET [24236] SENTENCIA:  CREATE DATABASE IF NOT EXISTS investigar;
+08134385K 09066309P; ::1(61211); 2025-03-11 13:51:21.618 CET [7196] FATAL:  no existe la base de datos «investigar»
+08134385K 09066309P; ::1(61320); 2025-03-11 13:55:41.841 CET [11912] LOG:  sentencia: CREATE DATABASE investigar;
+08134385K 09066309P; ::1(61336); 2025-03-11 13:55:58.960 CET [16564] LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores(
+	    codigo_investigador NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    apellidos TEXT,
+	    salario NUMERIC
+	);
+08134385K 09066309P; ::1(61336); 2025-03-11 13:55:59.009 CET [16564] LOG:  sentencia: CREATE TABLE IF NOT EXISTS contratos(
+	    codigo_contrato NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    entidad TEXT,
+	    coste NUMERIC
+	);
+08134385K 09066309P; ::1(61336); 2025-03-11 13:55:59.019 CET [16564] LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores_contratos(
+	    codigo_investigador NUMERIC,
+	    codigo_contrato NUMERIC,
+	    horas NUMERIC,
+	    PRIMARY KEY (codigo_investigador, codigo_contrato)
+	);
+08134385K 09066309P; ::1(61336); 2025-03-11 13:55:59.033 CET [16564] LOG:  sentencia: ALTER TABLE investigadores_contratos
+	ADD FOREIGN KEY (codigo_investigador) REFERENCES investigadores(codigo_investigador) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(61336); 2025-03-11 13:55:59.054 CET [16564] ERROR:  error de sintaxis en o cerca de «ATLER» en carácter 1
+08134385K 09066309P; ::1(61336); 2025-03-11 13:55:59.054 CET [16564] SENTENCIA:  ATLER TABLE investigadores_contratos
+	ADD FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(61378); 2025-03-11 13:56:41.065 CET [5756] LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores(
+	    codigo_investigador NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    apellidos TEXT,
+	    salario NUMERIC
+	);
+08134385K 09066309P; ::1(61378); 2025-03-11 13:56:41.074 CET [5756] LOG:  sentencia: CREATE TABLE IF NOT EXISTS contratos(
+	    codigo_contrato NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    entidad TEXT,
+	    coste NUMERIC
+	);
+08134385K 09066309P; ::1(61378); 2025-03-11 13:56:41.081 CET [5756] LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores_contratos(
+	    codigo_investigador NUMERIC,
+	    codigo_contrato NUMERIC,
+	    horas NUMERIC,
+	    PRIMARY KEY (codigo_investigador, codigo_contrato)
+	);
+08134385K 09066309P; ::1(61378); 2025-03-11 13:56:41.088 CET [5756] LOG:  sentencia: ALTER TABLE investigadores_contratos
+	ADD FOREIGN KEY (codigo_investigador) REFERENCES investigadores(codigo_investigador) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(61378); 2025-03-11 13:56:41.108 CET [5756] LOG:  sentencia: ALTER TABLE investigadores_contratos
+	ADD FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(61378); 2025-03-11 13:57:03.399 CET [5756] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ; 2025-03-11 14:23:00.277 CET [8704] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-03-11 14:24:51.291 CET [8704] LOG:  checkpoint completo: escritos 982 búfers (6.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=109.997 s, sync=0.851 s, total=111.016 s; archivos sincronizados=312, más largo=0.012 s, promedio=0.003 s; distancia=4649 kB, estimación=437268 kB; lsn=5/1E374880, lsn de redo=5/1E374848

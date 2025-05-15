@@ -1,0 +1,15 @@
+08134385K 09066309P; ; 2025-05-15 10:08:28.088 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 10:08:28.089 CEST LOG:  escuchando en la dirección IPv6 «::», port 5433
+08134385K 09066309P; ; 2025-05-15 10:08:28.090 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+08134385K 09066309P; ; 2025-05-15 10:08:28.170 CEST LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-13 13:25:34 CEST
+08134385K 09066309P; ; 2025-05-15 10:08:38.236 CEST LOG:  sincronizando el directorio de datos (fsync), transcurrido: 10.06 s, ruta actual: ./base/5/3764
+08134385K 09066309P; ; 2025-05-15 10:08:39.707 CEST LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+08134385K 09066309P; ; 2025-05-15 10:08:39.718 CEST LOG:  redo comienza en 9/8D092CF8
+08134385K 09066309P; ; 2025-05-15 10:08:39.718 CEST LOG:  largo de registro no válido en 9/8D092DE0: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-05-15 10:08:39.718 CEST LOG:  redo listo en 9/8D092DA8 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+08134385K 09066309P; ; 2025-05-15 10:08:39.732 CEST LOG:  empezando checkpoint: end-of-recovery immediate wait
+08134385K 09066309P; ; 2025-05-15 10:08:39.749 CEST LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.004 s, total=0.022 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=9/8D092DE0, lsn de redo=9/8D092DE0
+08134385K 09066309P; ; 2025-05-15 10:08:39.771 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones
+08134385K 09066309P; ; 2025-05-15 10:09:45.513 CEST LOG:  proceso ayudante «logical replication launcher» (PID 38240) fue terminado por una excepción 0xC000013A
+08134385K 09066309P; ; 2025-05-15 10:09:45.513 CEST HINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+08134385K 09066309P; ; 2025-05-15 10:09:45.513 CEST LOG:  terminando todos los otros procesos de servidor activos

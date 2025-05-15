@@ -1,0 +1,99 @@
+08134385K 09066309P; ::1(60941); 2025-04-22 12:45:59.903 CEST LOG:  sentencia: INSERT INTO clientes VALUES(-1, 'cNuevo', 'aNuevo', 'mail@mail.com', 0, 'Madrid');
+08134385K 09066309P; ::1(60941); 2025-04-22 12:45:59.911 CEST ERROR:  no existe la relación «clientes» en carácter 13
+08134385K 09066309P; ::1(60941); 2025-04-22 12:45:59.911 CEST SENTENCIA:  INSERT INTO clientes VALUES(-1, 'cNuevo', 'aNuevo', 'mail@mail.com', 0, 'Madrid');
+08134385K 09066309P; ::1(61028); 2025-04-22 12:46:14.941 CEST LOG:  sentencia: INSERT INTO clientes VALUES(-1, 'cNuevo', 'aNuevo', 'mail@mail.com', 0, 'Madrid');
+08134385K 09066309P; ::1(61028); 2025-04-22 12:48:08.755 CEST LOG:  sentencia: INSERT INTO vehiculos VALUES(-1, '1234QQQ', 'miMarca', 'miModelo', 'Azul', -1);
+08134385K 09066309P; ; 2025-04-22 12:50:43.825 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-04-22 12:50:44.854 CEST LOG:  checkpoint completo: escritos 10 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.996 s, sync=0.014 s, total=1.037 s; archivos sincronizados=10, más largo=0.005 s, promedio=0.002 s; distancia=46 kB, estimación=46 kB; lsn=9/8AE99B28, lsn de redo=9/8AE99AF0
+08134385K 09066309P; ::1(61028); 2025-04-22 12:51:33.511 CEST LOG:  sentencia: DELETE FROM clientes WHERE clienteid = -1;
+08134385K 09066309P; ::1(61028); 2025-04-22 12:51:33.523 CEST ERROR:  update o delete en «clientes» viola la llave foránea «vehiculos_clienteid_clientes_fkey» en la tabla «vehiculos»
+08134385K 09066309P; ::1(61028); 2025-04-22 12:51:33.523 CEST DETALLE:  La llave (clienteid)=(-1) todavía es referida desde la tabla «vehiculos».
+08134385K 09066309P; ::1(61028); 2025-04-22 12:51:33.523 CEST SENTENCIA:  DELETE FROM clientes WHERE clienteid = -1;
+08134385K 09066309P; ::1(61028); 2025-04-22 12:52:04.055 CEST LOG:  sentencia: DELETE FROM vehiculos WHERE vehiculosid = -1;
+08134385K 09066309P; ::1(61028); 2025-04-22 12:52:04.055 CEST ERROR:  no existe la columna «vehiculosid» en carácter 29
+08134385K 09066309P; ::1(61028); 2025-04-22 12:52:04.055 CEST HINT:  Probablemente quiera hacer referencia a la columna «vehiculos.vehiculoid».
+08134385K 09066309P; ::1(61028); 2025-04-22 12:52:04.055 CEST SENTENCIA:  DELETE FROM vehiculos WHERE vehiculosid = -1;
+08134385K 09066309P; ::1(61028); 2025-04-22 12:52:10.754 CEST LOG:  sentencia: DELETE FROM vehiculos WHERE vehiculoid = -1;
+08134385K 09066309P; ::1(61028); 2025-04-22 12:52:34.921 CEST LOG:  sentencia: DELETE FROM clientes WHERE clienteid = -1;
+08134385K 09066309P; ; 2025-04-22 12:55:43.862 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-04-22 12:55:44.111 CEST LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.217 s, sync=0.009 s, total=0.249 s; archivos sincronizados=3, más largo=0.006 s, promedio=0.003 s; distancia=16 kB, estimación=43 kB; lsn=9/8AE9DEA0, lsn de redo=9/8AE9DE68
+08134385K 09066309P; ::1(61028); 2025-04-22 12:57:44.397 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(62188); 2025-04-22 13:03:24.439 CEST LOG:  sentencia: DROP DATABASE IF EXISTS telpark;
+08134385K 09066309P; ; 2025-04-22 13:03:24.447 CEST LOG:  empezando checkpoint: immediate force wait
+08134385K 09066309P; ; 2025-04-22 13:03:24.458 CEST LOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.002 s, total=0.012 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=2 kB, estimación=39 kB; lsn=9/8AE9E898, lsn de redo=9/8AE9E860
+08134385K 09066309P; ::1(62188); 2025-04-22 13:03:24.768 CEST LOG:  sentencia: CREATE DATABASE telpark;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.256 CEST LOG:  sentencia: CREATE TABLE IF NOT EXISTS clientes(
+	    clienteid INTEGER PRIMARY KEY,
+	    nombre TEXT NOT NULL,
+	    apellido TEXT NOT NULL,
+	    email TEXT UNIQUE NOT NULL,
+	    telefono INTEGER UNIQUE NOT NULL,
+	    provincia TEXT NOT NULL
+	);
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.287 CEST LOG:  sentencia: CREATE TABLE IF NOT EXISTS vehiculos(
+	    vehiculoid INTEGER PRIMARY KEY,
+	    matricula TEXT UNIQUE NOT NULL,
+	    marca TEXT NOT NULL,
+	    modelo TEXT NOT NULL,
+	    color TEXT NOT NULL,
+	    clienteid_clientes INTEGER
+	);
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.299 CEST LOG:  sentencia: CREATE TABLE IF NOT EXISTS plazas(
+	    plazaid INTEGER PRIMARY KEY,
+	    numero INTEGER NOT NULL,
+	    nivel INTEGER NOT NULL,
+	    seccion TEXT NOT NULL
+	);
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.309 CEST LOG:  sentencia: CREATE TABLE IF NOT EXISTS reservas(
+	    reservaid INTEGER PRIMARY KEY,
+	    fechainicio TIMESTAMP NOT NULL,
+	    fechafin TIMESTAMP NOT NULL,
+	    vehiculoid_vehiculos INTEGER,
+	    plazaid_plazas INTEGER,
+	    clienteid_clientes INTEGER
+	);
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.315 CEST LOG:  sentencia: CREATE TABLE IF NOT EXISTS incidencias(
+	    incidenciaid INTEGER PRIMARY KEY,
+	    descripcion TEXT NOT NULL,
+	    fechaincidencia TIMESTAMP NOT NULL,
+	    estado TEXT NOT NULL,
+	    reservaid_reservas INTEGER
+	);
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.321 CEST LOG:  sentencia: CREATE TABLE IF NOT EXISTS pagos(
+	    pagoid INTEGER PRIMARY KEY,
+	    cantidad NUMERIC(10, 2) NOT NULL,
+	    fechapago TIMESTAMP NOT NULL,
+	    metodo_pago TEXT NOT NULL,
+	    reservaid_reservas INTEGER
+	);
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.330 CEST LOG:  sentencia: ALTER TABLE vehiculos
+	ADD FOREIGN KEY (clienteid_clientes) REFERENCES clientes(clienteid) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.339 CEST LOG:  sentencia: ALTER TABLE reservas
+	ADD FOREIGN KEY (vehiculoid_vehiculos) REFERENCES vehiculos(vehiculoid) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.341 CEST LOG:  sentencia: ALTER TABLE reservas
+	ADD FOREIGN KEY (plazaid_plazas) REFERENCES plazas(plazaid) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.345 CEST LOG:  sentencia: ALTER TABLE reservas
+	ADD FOREIGN KEY (clienteid_clientes) REFERENCES clientes(clienteid) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.347 CEST LOG:  sentencia: ALTER TABLE incidencias
+	ADD FOREIGN KEY (reservaid_reservas) REFERENCES reservas(reservaid) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:03:25.349 CEST LOG:  sentencia: ALTER TABLE pagos
+	ADD FOREIGN KEY (reservaid_reservas) REFERENCES reservas(reservaid) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:08:08.300 CEST LOG:  sentencia: INSERT INTO clientes VALUES(1, 'cliente_1', 'apellido_1', 'cliente_1@example.ex', 600000001, 'Madrid');
+08134385K 09066309P; ; 2025-04-22 13:08:24.470 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-04-22 13:10:12.259 CEST LOG:  checkpoint completo: escritos 992 búfers (6.1%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=107.543 s, sync=0.228 s, total=107.790 s; archivos sincronizados=325, más largo=0.005 s, promedio=0.001 s; distancia=4707 kB, estimación=4707 kB; lsn=9/8B337848, lsn de redo=9/8B337810
+08134385K 09066309P; ::1(62191); 2025-04-22 13:10:26.472 CEST LOG:  sentencia: INSERT INTO vehiculos VALUES(1, '0000AAA', 'marca_1', 'modelo_1', 'Azul', 1);
+08134385K 09066309P; ; 2025-04-22 13:13:24.271 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-04-22 13:13:25.063 CEST LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.766 s, sync=0.012 s, total=0.792 s; archivos sincronizados=6, más largo=0.006 s, promedio=0.002 s; distancia=0 kB, estimación=4237 kB; lsn=9/8B337BE0, lsn de redo=9/8B337BA8
+08134385K 09066309P; ::1(62191); 2025-04-22 13:13:34.715 CEST LOG:  sentencia: DELETE FROM clientes;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:13:34.716 CEST ERROR:  update o delete en «clientes» viola la llave foránea «vehiculos_clienteid_clientes_fkey» en la tabla «vehiculos»
+08134385K 09066309P; ::1(62191); 2025-04-22 13:13:34.716 CEST DETALLE:  La llave (clienteid)=(1) todavía es referida desde la tabla «vehiculos».
+08134385K 09066309P; ::1(62191); 2025-04-22 13:13:34.716 CEST SENTENCIA:  DELETE FROM clientes;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:13:43.084 CEST LOG:  sentencia: DELETE FROM vehiculos;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:13:44.761 CEST LOG:  sentencia: DELETE FROM clientes;
+08134385K 09066309P; ::1(62191); 2025-04-22 13:13:57.384 CEST LOG:  sentencia: INSERT INTO clientes VALUES(1, 'cliente_1', 'apellido_1', 'cliente_1@example.ex', 600000001, 'Madrid');
+08134385K 09066309P; ::1(62191); 2025-04-22 13:14:02.052 CEST LOG:  sentencia: INSERT INTO vehiculos VALUES(1, '0000AAA', 'marca_1', 'modelo_1', 'Azul', 1);
+08134385K 09066309P; ; 2025-04-22 13:18:24.070 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-04-22 13:18:25.009 CEST LOG:  checkpoint completo: escritos 9 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.869 s, sync=0.017 s, total=0.940 s; archivos sincronizados=9, más largo=0.006 s, promedio=0.002 s; distancia=1 kB, estimación=3813 kB; lsn=9/8B3383B8, lsn de redo=9/8B338380
+08134385K 09066309P; ::1(63713); 2025-04-22 13:57:00.604 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

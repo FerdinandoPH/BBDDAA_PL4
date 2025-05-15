@@ -1,0 +1,24 @@
+08134385K 09066309P; ; 2025-05-15 10:10:16.145 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 10:10:16.147 CEST LOG:  escuchando en la dirección IPv6 «::», port 5433
+08134385K 09066309P; ; 2025-05-15 10:10:16.147 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+08134385K 09066309P; ; 2025-05-15 10:10:16.206 CEST LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-15 10:08:39 CEST
+08134385K 09066309P; ; 2025-05-15 10:10:17.366 CEST LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+08134385K 09066309P; ; 2025-05-15 10:10:17.372 CEST LOG:  redo comienza en 9/8D092E58
+08134385K 09066309P; ; 2025-05-15 10:10:17.372 CEST LOG:  largo de registro no válido en 9/8D092E90: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-05-15 10:10:17.372 CEST LOG:  redo listo en 9/8D092E58 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+08134385K 09066309P; ; 2025-05-15 10:10:17.381 CEST LOG:  empezando checkpoint: end-of-recovery immediate wait
+08134385K 09066309P; ; 2025-05-15 10:10:17.395 CEST LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.003 s, total=0.018 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=9/8D092E90, lsn de redo=9/8D092E90
+08134385K 09066309P; ; 2025-05-15 10:10:17.418 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones
+08134385K 09066309P; ; 2025-05-15 10:20:17.414 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 10:20:18.190 CEST LOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.673 s, sync=0.046 s, total=0.778 s; archivos sincronizados=6, más largo=0.040 s, promedio=0.008 s; distancia=5 kB, estimación=5 kB; lsn=9/8D094650, lsn de redo=9/8D094618
+08134385K 09066309P; ; 2025-05-15 10:53:15.284 CEST LOG:  empezando checkpoint: force wait
+08134385K 09066309P; ; 2025-05-15 10:53:15.328 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.002 s, sync=0.001 s, total=0.044 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=15790 kB, estimación=15790 kB; lsn=9/8E000060, lsn de redo=9/8E000028
+08134385K 09066309P; ; 2025-05-15 10:58:15.332 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 10:58:15.413 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.002 s, sync=0.001 s, total=0.082 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16384 kB, estimación=16384 kB; lsn=9/8F000098, lsn de redo=9/8F000060
+08134385K 09066309P; ; 2025-05-15 11:29:49.492 CEST LOG:  se recibió petición de apagado rápido
+08134385K 09066309P; ; 2025-05-15 11:29:49.497 CEST LOG:  abortando transacciones activas
+08134385K 09066309P; ; 2025-05-15 11:29:49.522 CEST LOG:  proceso ayudante «logical replication launcher» (PID 46636) terminó con código de salida 1
+08134385K 09066309P; ; 2025-05-15 11:29:49.525 CEST LOG:  apagando
+08134385K 09066309P; ; 2025-05-15 11:29:49.528 CEST LOG:  empezando checkpoint: shutdown immediate
+08134385K 09066309P; ; 2025-05-15 11:29:49.548 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.001 s, total=0.023 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=14745 kB; lsn=9/8F000148, lsn de redo=9/8F000148
+08134385K 09066309P; ; 2025-05-15 11:29:49.596 CEST LOG:  el sistema de bases de datos está apagado

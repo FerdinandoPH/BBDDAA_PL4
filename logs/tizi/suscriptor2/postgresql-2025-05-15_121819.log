@@ -1,0 +1,21 @@
+08134385K 09066309P; ; 2025-05-15 12:18:19.773 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 12:18:19.774 CEST LOG:  escuchando en la dirección IPv6 «::», port 5435
+08134385K 09066309P; ; 2025-05-15 12:18:19.774 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5435
+08134385K 09066309P; ; 2025-05-15 12:18:19.919 CEST LOG:  el sistema de bases de datos fue apagado durante la recuperación en 2025-05-15 12:16:57 CEST
+08134385K 09066309P; ; 2025-05-15 12:18:19.921 CEST LOG:  entrando al modo standby
+08134385K 09066309P; ; 2025-05-15 12:18:19.930 CEST LOG:  el estado de recuperación consistente fue alcanzado en 9/8F006178
+08134385K 09066309P; ; 2025-05-15 12:18:19.930 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones de sólo lectura
+08134385K 09066309P; ; 2025-05-15 12:18:19.930 CEST LOG:  largo de registro no válido en 9/8F006178: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-05-15 12:18:20.115 CEST LOG:  iniciando el flujo de WAL desde el primario en 9/8F000000 en el timeline 1
+08134385K 09066309P; ; 2025-05-15 12:18:20.117 CEST LOG:  redo comienza en 9/8F006178
+08134385K 09066309P; ; 2025-05-15 12:23:19.820 CEST LOG:  empezando restartpoint: time
+08134385K 09066309P; ; 2025-05-15 12:23:19.946 CEST LOG:  restartpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.108 s, sync=0.003 s, total=0.129 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=3 kB, estimación=3 kB; lsn=9/8F006FC8, lsn de redo=9/8F006F90
+08134385K 09066309P; ; 2025-05-15 12:23:19.946 CEST LOG:  restartpoint de recuperación en 9/8F006F90
+08134385K 09066309P; ; 2025-05-15 12:23:19.946 CEST DETALLE:  Última transacción completada al tiempo de registro 2025-05-15 12:17:59.291544+02.
+08134385K 09066309P; ; 2025-05-15 12:32:16.473 CEST FATAL:  no se pudo recibir datos desde el flujo de WAL: el servidor ha cerrado la conexión inesperadamente
+		Probablemente se debe a que el servidor terminó de manera anormal
+		antes o durante el procesamiento de la petición.
+08134385K 09066309P; ; 2025-05-15 12:32:16.474 CEST LOG:  largo de registro no válido en 9/8F007078: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-05-15 12:32:16.483 CEST LOG:  proceso de inicio (PID 57972) fue terminado por una excepción 0xC000013A
+08134385K 09066309P; ; 2025-05-15 12:32:16.483 CEST HINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+08134385K 09066309P; ; 2025-05-15 12:32:16.483 CEST LOG:  terminando todos los otros procesos de servidor activos

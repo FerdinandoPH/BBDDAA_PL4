@@ -1,0 +1,170 @@
+08134385K 09066309P; ::1(50900); 2025-02-25 12:48:27.939 CET [14716] LOG:  sentencia: CREATE TABLE productos3(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	) PARTITION BY RANGE(precio);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:48:27.984 CET [14716] ERROR:  las restricciones unique en tablas particionadas deben incluir todas las columnas de particionamiento
+08134385K 09066309P; ::1(50900); 2025-02-25 12:48:27.984 CET [14716] DETALLE:  La restricción PRIMARY KEY en la tabla «productos3» no incluye la columna «precio» que es parte de la llave de particionamiento.
+08134385K 09066309P; ::1(50900); 2025-02-25 12:48:27.984 CET [14716] SENTENCIA:  CREATE TABLE productos3(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	) PARTITION BY RANGE(precio);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.143 CET [14716] LOG:  sentencia: CREATE TABLE productos3(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	) PARTITION BY RANGE(precio);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.143 CET [14716] ERROR:  las restricciones unique en tablas particionadas deben incluir todas las columnas de particionamiento
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.143 CET [14716] DETALLE:  La restricción PRIMARY KEY en la tabla «productos3» no incluye la columna «precio» que es parte de la llave de particionamiento.
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.143 CET [14716] SENTENCIA:  CREATE TABLE productos3(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	) PARTITION BY RANGE(precio);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.152 CET [14716] LOG:  sentencia: CREATE TABLE productos3_0 PARTITION OF productos3 FOR VALUES FROM (1) TO (501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.152 CET [14716] ERROR:  no existe la relación «productos3»
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.152 CET [14716] SENTENCIA:  CREATE TABLE productos3_0 PARTITION OF productos3 FOR VALUES FROM (1) TO (501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.175 CET [14716] LOG:  sentencia: CREATE TABLE productos3_500 PARTITION OF productos3 FOR VALUES FROM (501) TO (1001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.175 CET [14716] ERROR:  no existe la relación «productos3»
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.175 CET [14716] SENTENCIA:  CREATE TABLE productos3_500 PARTITION OF productos3 FOR VALUES FROM (501) TO (1001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.205 CET [14716] LOG:  sentencia: CREATE TABLE productos3_1000 PARTITION OF productos3 FOR VALUES FROM (1001) TO (1501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.205 CET [14716] ERROR:  no existe la relación «productos3»
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.205 CET [14716] SENTENCIA:  CREATE TABLE productos3_1000 PARTITION OF productos3 FOR VALUES FROM (1001) TO (1501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.222 CET [14716] LOG:  sentencia: CREATE TABLE productos3_1500 PARTITION OF productos3 FOR VALUES FROM (1501) TO (2001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.222 CET [14716] ERROR:  no existe la relación «productos3»
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.222 CET [14716] SENTENCIA:  CREATE TABLE productos3_1500 PARTITION OF productos3 FOR VALUES FROM (1501) TO (2001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.254 CET [14716] LOG:  sentencia: CREATE TABLE productos3_2000 PARTITION OF productos3 FOR VALUES FROM (2001) TO (2501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.255 CET [14716] ERROR:  no existe la relación «productos3»
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.255 CET [14716] SENTENCIA:  CREATE TABLE productos3_2000 PARTITION OF productos3 FOR VALUES FROM (2001) TO (2501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.285 CET [14716] LOG:  sentencia: CREATE TABLE productos3_2500 PARTITION OF productos3 FOR VALUES FROM (2501) TO (3001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.285 CET [14716] ERROR:  no existe la relación «productos3»
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.285 CET [14716] SENTENCIA:  CREATE TABLE productos3_2500 PARTITION OF productos3 FOR VALUES FROM (2501) TO (3001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.317 CET [14716] LOG:  sentencia: CREATE TABLE productos3_3000 PARTITION OF productos3 FOR VALUES FROM (3001) TO (3501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.317 CET [14716] ERROR:  no existe la relación «productos3»
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.317 CET [14716] SENTENCIA:  CREATE TABLE productos3_3000 PARTITION OF productos3 FOR VALUES FROM (3001) TO (3501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.337 CET [14716] LOG:  sentencia: CREATE TABLE productos3_3500 PARTITION OF productos3 FOR VALUES FROM (3501) TO (4001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.337 CET [14716] ERROR:  no existe la relación «productos3»
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.337 CET [14716] SENTENCIA:  CREATE TABLE productos3_3500 PARTITION OF productos3 FOR VALUES FROM (3501) TO (4001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.365 CET [14716] LOG:  sentencia: CREATE TABLE productos3_4000 PARTITION OF productos3 FOR VALUES FROM (4001) TO (4501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.366 CET [14716] ERROR:  no existe la relación «productos3»
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:17.366 CET [14716] SENTENCIA:  CREATE TABLE productos3_4000 PARTITION OF productos3 FOR VALUES FROM (4001) TO (4501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:25.850 CET [14716] LOG:  sentencia: CREATE TABLE productos3_4500 PARTITION OF productos3 FOR VALUES FROM (4501) TO (5001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:25.850 CET [14716] ERROR:  no existe la relación «productos3»
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:25.850 CET [14716] SENTENCIA:  CREATE TABLE productos3_4500 PARTITION OF productos3 FOR VALUES FROM (4501) TO (5001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:34.955 CET [14716] LOG:  sentencia: CREATE TABLE productos3(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	) PARTITION BY RANGE(precio);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:34.955 CET [14716] ERROR:  las restricciones unique en tablas particionadas deben incluir todas las columnas de particionamiento
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:34.955 CET [14716] DETALLE:  La restricción PRIMARY KEY en la tabla «productos3» no incluye la columna «precio» que es parte de la llave de particionamiento.
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:34.955 CET [14716] SENTENCIA:  CREATE TABLE productos3(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	) PARTITION BY RANGE(precio);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:51.525 CET [14716] LOG:  sentencia: CREATE TABLE productos3(
+	    producto_id INTEGER,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	) PARTITION BY RANGE(precio);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:59.329 CET [14716] LOG:  sentencia: CREATE TABLE productos3_0 PARTITION OF productos3 FOR VALUES FROM (1) TO (501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:59.360 CET [14716] LOG:  sentencia: CREATE TABLE productos3_500 PARTITION OF productos3 FOR VALUES FROM (501) TO (1001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:59.375 CET [14716] LOG:  sentencia: CREATE TABLE productos3_1000 PARTITION OF productos3 FOR VALUES FROM (1001) TO (1501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:59.391 CET [14716] LOG:  sentencia: CREATE TABLE productos3_1500 PARTITION OF productos3 FOR VALUES FROM (1501) TO (2001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:59.407 CET [14716] LOG:  sentencia: CREATE TABLE productos3_2000 PARTITION OF productos3 FOR VALUES FROM (2001) TO (2501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:59.439 CET [14716] LOG:  sentencia: CREATE TABLE productos3_2500 PARTITION OF productos3 FOR VALUES FROM (2501) TO (3001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:59.456 CET [14716] LOG:  sentencia: CREATE TABLE productos3_3000 PARTITION OF productos3 FOR VALUES FROM (3001) TO (3501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:59.486 CET [14716] LOG:  sentencia: CREATE TABLE productos3_3500 PARTITION OF productos3 FOR VALUES FROM (3501) TO (4001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:49:59.501 CET [14716] LOG:  sentencia: CREATE TABLE productos3_4000 PARTITION OF productos3 FOR VALUES FROM (4001) TO (4501);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:50:34.955 CET [14716] LOG:  sentencia: CREATE TABLE productos3_4500 PARTITION OF productos3 FOR VALUES FROM (4501) TO (5001);
+08134385K 09066309P; ::1(50900); 2025-02-25 12:51:10.145 CET [14716] LOG:  sentencia: COPY  productos3 FROM STDIN DELIMITER ',' CSV;
+08134385K 09066309P; ; 2025-02-25 12:51:31.078 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 12:51:53.473 CET [10840] LOG:  checkpoint completo: escritos 2002 búfers (12.2%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=20.112 s, sync=1.298 s, total=22.396 s; archivos sincronizados=45, más largo=0.259 s, promedio=0.029 s; distancia=539461 kB, estimación=539461 kB; lsn=1/C5C55B58, lsn de redo=1/A62CD138
+08134385K 09066309P; ; 2025-02-25 12:51:53.674 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 22 segundos)
+08134385K 09066309P; ; 2025-02-25 12:51:53.674 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 12:51:53.674 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ::1(50900); 2025-02-25 12:54:37.727 CET [14716] WARNING:  no hay una transacción en curso
+08134385K 09066309P; ; 2025-02-25 12:56:23.325 CET [10840] LOG:  checkpoint completo: escritos 4766 búfers (29.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.398 s, sync=0.099 s, total=269.651 s; archivos sincronizados=27, más largo=0.049 s, promedio=0.004 s; distancia=541379 kB, estimación=541379 kB; lsn=1/CAB4F100, lsn de redo=1/C737DFB8
+08134385K 09066309P; ; 2025-02-25 12:56:53.507 CET [10840] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-02-25 13:01:23.129 CET [10840] LOG:  checkpoint completo: escritos 6259 búfers (38.2%); 0 archivos WAL añadidos, 0 eliminados, 3 reciclados; write=269.512 s, sync=0.048 s, total=269.623 s; archivos sincronizados=36, más largo=0.003 s, promedio=0.002 s; distancia=58045 kB, estimación=493046 kB; lsn=1/CB03D900, lsn de redo=1/CAC2D6B8
+08134385K 09066309P; ::1(50900); 2025-02-25 14:03:20.641 CET [14716] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(53934); 2025-02-25 15:48:30.931 CET [1512] LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_producto_id ON productos USING hash (producto_id);
+08134385K 09066309P; ; 2025-02-25 15:49:47.825 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 15:50:14.318 CET [10840] LOG:  checkpoint completo: escritos 52 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.727 s, sync=0.501 s, total=26.494 s; archivos sincronizados=23, más largo=0.452 s, promedio=0.022 s; distancia=529833 kB, estimación=529833 kB; lsn=2/95A5608, lsn de redo=1/EB197CE8
+08134385K 09066309P; ; 2025-02-25 15:50:16.474 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+08134385K 09066309P; ; 2025-02-25 15:50:16.474 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 15:50:16.475 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 15:50:42.939 CET [10840] LOG:  checkpoint completo: escritos 140 búfers (0.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.834 s, sync=0.261 s, total=26.465 s; archivos sincronizados=1, más largo=0.261 s, promedio=0.261 s; distancia=540368 kB, estimación=540368 kB; lsn=2/2A0C4358, lsn de redo=2/C14C040
+08134385K 09066309P; ; 2025-02-25 15:50:45.206 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+08134385K 09066309P; ; 2025-02-25 15:50:45.206 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 15:50:45.206 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 15:55:15.331 CET [10840] LOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.827 s, sync=0.002 s, total=270.126 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=540647 kB, estimación=540647 kB; lsn=2/374C2828, lsn de redo=2/2D146030
+08134385K 09066309P; ::1(53934); 2025-02-25 16:58:28.686 CET [1512] LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_tree_producto_id_2 ON productos(precio);
+08134385K 09066309P; ; 2025-02-25 17:00:45.441 CET [10840] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-02-25 17:05:15.336 CET [10840] LOG:  checkpoint completo: escritos 6314 búfers (38.5%); 0 archivos WAL añadidos, 0 eliminados, 19 reciclados; write=269.579 s, sync=0.068 s, total=269.896 s; archivos sincronizados=16, más largo=0.041 s, promedio=0.005 s; distancia=321333 kB, estimación=518716 kB; lsn=2/40B13530, lsn de redo=2/40B134F8
+08134385K 09066309P; ::1(53934); 2025-02-25 17:15:13.404 CET [1512] LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+08134385K 09066309P; ; 2025-02-25 17:15:45.359 CET [10840] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-02-25 17:15:48.811 CET [10840] LOG:  checkpoint completo: escritos 32 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.373 s, sync=0.061 s, total=3.453 s; archivos sincronizados=16, más largo=0.042 s, promedio=0.004 s; distancia=195 kB, estimación=466864 kB; lsn=2/40B444D0, lsn de redo=2/40B44498
+08134385K 09066309P; ; 2025-02-25 17:20:45.819 CET [10840] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-02-25 17:20:45.887 CET [10840] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.002 s, total=0.069 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=7 kB, estimación=420178 kB; lsn=2/40B46288, lsn de redo=2/40B46250
+08134385K 09066309P; ::1(59911); 2025-02-25 18:25:45.592 CET [22844] LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_producto_id;
+08134385K 09066309P; ::1(59911); 2025-02-25 18:25:45.599 CET [22844] LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_producto_id;
+08134385K 09066309P; ::1(59911); 2025-02-25 18:25:45.682 CET [22844] LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_precio;
+08134385K 09066309P; ::1(59911); 2025-02-25 18:25:45.686 CET [22844] LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_precio;
+08134385K 09066309P; ::1(59911); 2025-02-25 18:25:45.689 CET [22844] LOG:  sentencia: DROP TABLE IF EXISTS productos;
+08134385K 09066309P; ::1(59911); 2025-02-25 18:25:45.944 CET [22844] LOG:  sentencia: CREATE TABLE productos(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	);
+08134385K 09066309P; ::1(59911); 2025-02-25 18:25:45.977 CET [22844] LOG:  sentencia: COPY  productos FROM STDIN DELIMITER ',' CSV;
+08134385K 09066309P; ; 2025-02-25 18:25:45.997 CET [10840] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-02-25 18:26:00.757 CET [10840] LOG:  checkpoint completo: escritos 78 búfers (0.5%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=14.460 s, sync=0.283 s, total=14.761 s; archivos sincronizados=26, más largo=0.165 s, promedio=0.011 s; distancia=1266 kB, estimación=378287 kB; lsn=2/5F1FB698, lsn de redo=2/40C82B50
+08134385K 09066309P; ; 2025-02-25 18:26:01.642 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+08134385K 09066309P; ; 2025-02-25 18:26:01.642 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 18:26:01.642 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 18:26:14.975 CET [10840] LOG:  checkpoint completo: escritos 8479 búfers (51.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=12.394 s, sync=0.437 s, total=13.334 s; archivos sincronizados=2, más largo=0.401 s, promedio=0.219 s; distancia=531399 kB, estimación=531399 kB; lsn=2/7F9F6770, lsn de redo=2/61374758
+08134385K 09066309P; ; 2025-02-25 18:26:15.811 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+08134385K 09066309P; ; 2025-02-25 18:26:15.811 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 18:26:15.811 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 18:26:28.185 CET [10840] LOG:  checkpoint completo: escritos 12284 búfers (75.0%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=11.187 s, sync=0.531 s, total=12.374 s; archivos sincronizados=2, más largo=0.273 s, promedio=0.266 s; distancia=540759 kB, estimación=540759 kB; lsn=2/A1000118, lsn de redo=2/8238A628
+08134385K 09066309P; ; 2025-02-25 18:26:28.764 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+08134385K 09066309P; ; 2025-02-25 18:26:28.764 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 18:26:28.764 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 18:26:40.396 CET [10840] LOG:  checkpoint completo: escritos 12909 búfers (78.8%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=10.673 s, sync=0.597 s, total=11.633 s; archivos sincronizados=4, más largo=0.439 s, promedio=0.150 s; distancia=541140 kB, estimación=541140 kB; lsn=2/C21A6260, lsn de redo=2/A33FF6E0
+08134385K 09066309P; ; 2025-02-25 18:26:40.841 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 12 segundos)
+08134385K 09066309P; ; 2025-02-25 18:26:40.841 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 18:26:40.841 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 18:26:52.406 CET [10840] LOG:  checkpoint completo: escritos 13233 búfers (80.8%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=10.431 s, sync=0.534 s, total=11.566 s; archivos sincronizados=2, más largo=0.319 s, promedio=0.267 s; distancia=538687 kB, estimación=540894 kB; lsn=2/E33AA2B0, lsn de redo=2/C420F6C8
+08134385K 09066309P; ; 2025-02-25 18:26:52.878 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 12 segundos)
+08134385K 09066309P; ; 2025-02-25 18:26:52.878 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 18:26:52.878 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ::1(59911); 2025-02-25 18:26:53.202 CET [22844] LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_producto_id ON productos USING hash (producto_id);
+08134385K 09066309P; ; 2025-02-25 18:27:23.336 CET [10840] LOG:  checkpoint completo: escritos 217 búfers (1.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=30.136 s, sync=0.123 s, total=30.458 s; archivos sincronizados=16, más largo=0.109 s, promedio=0.008 s; distancia=540319 kB, estimación=540837 kB; lsn=3/3150A68, lsn de redo=2/E51B73F8
+08134385K 09066309P; ; 2025-02-25 18:27:24.630 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 18:27:39.273 CET [10840] LOG:  checkpoint completo: escritos 1218 búfers (7.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=14.014 s, sync=0.299 s, total=14.643 s; archivos sincronizados=1, más largo=0.299 s, promedio=0.299 s; distancia=540651 kB, estimación=540818 kB; lsn=3/24139358, lsn de redo=3/61B2058
+08134385K 09066309P; ; 2025-02-25 18:27:40.462 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+08134385K 09066309P; ; 2025-02-25 18:27:40.462 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 18:27:40.462 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 18:27:54.014 CET [10840] LOG:  checkpoint completo: escritos 4870 búfers (29.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=12.843 s, sync=0.373 s, total=13.553 s; archivos sincronizados=1, más largo=0.373 s, promedio=0.373 s; distancia=540113 kB, estimación=540748 kB; lsn=3/45823FE0, lsn de redo=3/27126788
+08134385K 09066309P; ; 2025-02-25 18:27:54.964 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+08134385K 09066309P; ; 2025-02-25 18:27:54.964 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 18:27:54.966 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-25 18:28:08.146 CET [10840] LOG:  checkpoint completo: escritos 6683 búfers (40.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=12.377 s, sync=0.482 s, total=13.182 s; archivos sincronizados=1, más largo=0.482 s, promedio=0.482 s; distancia=543594 kB, estimación=543594 kB; lsn=3/66CC40C0, lsn de redo=3/484010B0
+08134385K 09066309P; ; 2025-02-25 18:28:08.928 CET [10840] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+08134385K 09066309P; ; 2025-02-25 18:28:08.928 CET [10840] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-25 18:28:08.928 CET [10840] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ::1(59911); 2025-02-25 18:28:13.790 CET [22844] LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_tree_precio ON productos(precio);
+08134385K 09066309P; ; 2025-02-25 18:32:38.238 CET [10840] LOG:  checkpoint completo: escritos 5679 búfers (34.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.073 s, sync=0.096 s, total=269.310 s; archivos sincronizados=6, más largo=0.068 s, promedio=0.016 s; distancia=539044 kB, estimación=543139 kB; lsn=3/7E68AEB8, lsn de redo=3/6926A2E8
+08134385K 09066309P; ; 2025-02-25 18:33:08.233 CET [10840] LOG:  empezando checkpoint: time

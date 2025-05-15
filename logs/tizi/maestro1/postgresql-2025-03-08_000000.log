@@ -1,0 +1,30 @@
+08134385K 09066309P; ::1(62889); 2025-03-08 13:23:47.224 CET [9764] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(56735); 2025-03-08 17:48:23.796 CET [8428] LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_producto_id;
+08134385K 09066309P; ::1(56735); 2025-03-08 17:48:23.842 CET [8428] LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_precio;
+08134385K 09066309P; ::1(56735); 2025-03-08 17:48:23.847 CET [8428] LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_precio;
+08134385K 09066309P; ::1(56735); 2025-03-08 17:48:23.853 CET [8428] LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_multi ON productos(stock, precio);
+08134385K 09066309P; ; 2025-03-08 17:48:36.903 CET [8704] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-03-08 17:48:37.937 CET [8704] LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 9 reciclados; write=0.832 s, sync=0.011 s, total=1.035 s; archivos sincronizados=9, más largo=0.002 s, promedio=0.002 s; distancia=158248 kB, estimación=502227 kB; lsn=4/E2AFA1F0, lsn de redo=4/E2AFA1B8
+08134385K 09066309P; ::1(56735); 2025-03-08 17:49:06.162 CET [8428] LOG:  sentencia: DROP INDEX idx_multi;
+08134385K 09066309P; ::1(56762); 2025-03-08 17:49:18.457 CET [18384] LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_producto_id;
+08134385K 09066309P; ::1(56762); 2025-03-08 17:49:18.461 CET [18384] LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_precio;
+08134385K 09066309P; ::1(56762); 2025-03-08 17:49:18.466 CET [18384] LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_precio;
+08134385K 09066309P; ::1(56762); 2025-03-08 17:49:18.474 CET [18384] LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_multi ON productos(stock, precio);
+08134385K 09066309P; ; 2025-03-08 17:53:36.952 CET [8704] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-03-08 17:53:38.964 CET [8704] LOG:  checkpoint completo: escritos 16 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 30 reciclados; write=1.638 s, sync=0.082 s, total=2.012 s; archivos sincronizados=15, más largo=0.041 s, promedio=0.006 s; distancia=485347 kB, estimación=500539 kB; lsn=5/4F3148, lsn de redo=5/4F3110
+08134385K 09066309P; ; 2025-03-08 18:08:36.981 CET [8704] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-03-08 18:08:37.050 CET [8704] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.007 s, total=0.070 s; archivos sincronizados=4, más largo=0.003 s, promedio=0.002 s; distancia=3 kB, estimación=450485 kB; lsn=5/4F3FD8, lsn de redo=5/4F3FA0
+08134385K 09066309P; ::1(58174); 2025-03-08 18:30:05.402 CET [7180] LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_producto_id;
+08134385K 09066309P; ::1(58174); 2025-03-08 18:30:05.419 CET [7180] LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_precio;
+08134385K 09066309P; ::1(58174); 2025-03-08 18:30:05.430 CET [7180] LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_precio;
+08134385K 09066309P; ::1(58174); 2025-03-08 18:30:05.440 CET [7180] LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_multi ON productos(stock, precio);
+08134385K 09066309P; ::1(58174); 2025-03-08 18:30:21.740 CET [7180] LOG:  sentencia: DROP INDEX idx_multi;
+08134385K 09066309P; ::1(58178); 2025-03-08 18:30:25.755 CET [13420] LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_producto_id;
+08134385K 09066309P; ::1(58178); 2025-03-08 18:30:25.766 CET [13420] LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_precio;
+08134385K 09066309P; ::1(58178); 2025-03-08 18:30:25.774 CET [13420] LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_precio;
+08134385K 09066309P; ::1(58178); 2025-03-08 18:30:25.786 CET [13420] LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_multi ON productos(stock, precio);
+08134385K 09066309P; ; 2025-03-08 18:31:36.526 CET [8704] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-03-08 18:31:38.321 CET [8704] LOG:  checkpoint completo: escritos 14 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 29 reciclados; write=1.419 s, sync=0.061 s, total=1.796 s; archivos sincronizados=15, más largo=0.040 s, promedio=0.005 s; distancia=485336 kB, estimación=485336 kB; lsn=5/1DEEA348, lsn de redo=5/1DEEA310
+08134385K 09066309P; ::1(58781); 2025-03-08 18:48:09.028 CET [17412] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

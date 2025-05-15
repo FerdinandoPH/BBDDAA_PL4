@@ -1,0 +1,7 @@
+08134385K 09066309P; ; 2025-02-18 15:40:54.563 CET [1844] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-02-17 12:36:22 CET
+08134385K 09066309P; ; 2025-02-18 15:40:56.164 CET [1844] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+08134385K 09066309P; ; 2025-02-18 15:40:56.170 CET [1844] LOG:  redo comienza en 1/853FBA70
+08134385K 09066309P; ; 2025-02-18 15:40:56.170 CET [1844] LOG:  largo de registro no válido en 1/853FBB58: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-02-18 15:40:56.170 CET [1844] LOG:  redo listo en 1/853FBB20 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+08134385K 09066309P; ; 2025-02-18 15:40:56.175 CET [8516] LOG:  empezando checkpoint: end-of-recovery immediate wait
+08134385K 09066309P; ; 2025-02-18 15:40:56.187 CET [8516] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.003 s, total=0.015 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=1/853FBB58, lsn de redo=1/853FBB58

@@ -1,0 +1,25 @@
+08134385K 09066309P; ; 2025-05-15 11:00:51.108 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 11:00:51.109 CEST LOG:  escuchando en la dirección IPv6 «::», port 5434
+08134385K 09066309P; ; 2025-05-15 11:00:51.109 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5434
+08134385K 09066309P; ; 2025-05-15 11:00:51.182 CEST LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-15 10:47:28 CEST
+08134385K 09066309P; ; 2025-05-15 11:00:52.044 CEST LOG:  entrando al modo standby
+08134385K 09066309P; ; 2025-05-15 11:00:52.045 CEST LOG:  iniciando recuperación de backup con LSN de redo 9/92000028, LSN de checkpoint 9/92000060, en timeline 1
+08134385K 09066309P; ; 2025-05-15 11:00:52.071 CEST LOG:  redo comienza en 9/92000028
+08134385K 09066309P; ; 2025-05-15 11:00:52.075 CEST LOG:  se completó la recuperación de backup con LSN de redo 9/92000028 y LSN de término 9/92000138
+08134385K 09066309P; ; 2025-05-15 11:00:52.075 CEST LOG:  el estado de recuperación consistente fue alcanzado en 9/92000138
+08134385K 09066309P; ; 2025-05-15 11:00:52.076 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones de sólo lectura
+08134385K 09066309P; ; 2025-05-15 11:00:52.204 CEST LOG:  iniciando el flujo de WAL desde el primario en 9/93000000 en el timeline 1
+08134385K 09066309P; ::1(52831); 2025-05-15 11:05:43.881 CEST LOG:  sentencia: DELETE FROM clientes WHERE clienteid=0;
+08134385K 09066309P; ::1(52831); 2025-05-15 11:05:43.890 CEST ERROR:  no se puede ejecutar DELETE en una transacción de sólo lectura
+08134385K 09066309P; ::1(52831); 2025-05-15 11:05:43.890 CEST SENTENCIA:  DELETE FROM clientes WHERE clienteid=0;
+08134385K 09066309P; ; 2025-05-15 11:05:51.182 CEST LOG:  empezando restartpoint: time
+08134385K 09066309P; ; 2025-05-15 11:05:52.170 CEST LOG:  restartpoint completo: escritos 10 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.876 s, sync=0.050 s, total=0.995 s; archivos sincronizados=7, más largo=0.040 s, promedio=0.008 s; distancia=16384 kB, estimación=16384 kB; lsn=9/93000098, lsn de redo=9/93000060
+08134385K 09066309P; ; 2025-05-15 11:05:52.171 CEST LOG:  restartpoint de recuperación en 9/93000060
+08134385K 09066309P; ; 2025-05-15 11:05:52.171 CEST DETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:04:24.857155+02.
+08134385K 09066309P; ; 2025-05-15 11:10:51.184 CEST LOG:  empezando restartpoint: time
+08134385K 09066309P; ; 2025-05-15 11:10:51.583 CEST LOG:  restartpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.336 s, sync=0.007 s, total=0.400 s; archivos sincronizados=4, más largo=0.002 s, promedio=0.002 s; distancia=16 kB, estimación=14747 kB; lsn=9/930040C0, lsn de redo=9/93004088
+08134385K 09066309P; ; 2025-05-15 11:10:51.583 CEST LOG:  restartpoint de recuperación en 9/93004088
+08134385K 09066309P; ; 2025-05-15 11:10:51.583 CEST DETALLE:  Última transacción completada al tiempo de registro 2025-05-15 11:06:06.717448+02.
+08134385K 09066309P; ; 2025-05-15 12:32:16.516 CEST LOG:  proceso receptor de WAL (PID 13256) fue terminado por una excepción 0xC000013A
+08134385K 09066309P; ; 2025-05-15 12:32:16.516 CEST HINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+08134385K 09066309P; ; 2025-05-15 12:32:16.516 CEST LOG:  terminando todos los otros procesos de servidor activos

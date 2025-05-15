@@ -1,0 +1,9 @@
+2025-02-04 13:10:17.551 CET [3568] FATAL:  no existe la base de datos «tienda»
+2025-02-04 13:10:40.779 CET [7148] FATAL:  no existe la base de datos «tiendadb»
+2025-02-04 13:14:43.438 CET [7724] ERROR:  el nuevo registro para la relación «grupos» viola la restricción «check» «grupos_enlace_check»
+2025-02-04 13:14:43.438 CET [7724] DETALLE:  La fila que falla contiene (a, http//:test.com).
+2025-02-04 13:14:43.438 CET [7724] SENTENCIA:  INSERT INTO tienda.Grupos VALUES('a', 'http//:test.com');
+2025-02-04 13:15:43.783 CET [7724] WARNING:  no hay una transacción en curso
+2025-02-04 13:18:18.980 CET [8832] LOG:  apagando
+2025-02-04 13:18:18.986 CET [8832] LOG:  empezando checkpoint: shutdown immediate
+2025-02-04 13:18:19.034 CET [8832] LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.022 s, sync=0.010 s, total=0.053 s; archivos sincronizados=8, más largo=0.002 s, promedio=0.002 s; distancia=10 kB, estimación=7312 kB; lsn=0/EEAFA08, lsn de redo=0/EEAFA08

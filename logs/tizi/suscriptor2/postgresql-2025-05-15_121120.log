@@ -1,0 +1,47 @@
+08134385K 09066309P; ; 2025-05-15 12:11:20.972 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 12:11:20.973 CEST LOG:  escuchando en la dirección IPv6 «::», port 5435
+08134385K 09066309P; ; 2025-05-15 12:11:20.974 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5435
+08134385K 09066309P; ; 2025-05-15 12:11:21.023 CEST LOG:  el sistema de bases de datos fue apagado durante la recuperación en 2025-05-15 12:08:57 CEST
+08134385K 09066309P; ; 2025-05-15 12:11:21.025 CEST LOG:  entrando al modo standby
+08134385K 09066309P; ; 2025-05-15 12:11:21.031 CEST LOG:  redo comienza en 9/8F004658
+08134385K 09066309P; ; 2025-05-15 12:11:21.031 CEST LOG:  el estado de recuperación consistente fue alcanzado en 9/8F004690
+08134385K 09066309P; ; 2025-05-15 12:11:21.032 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones de sólo lectura
+08134385K 09066309P; ; 2025-05-15 12:11:21.032 CEST LOG:  largo de registro no válido en 9/8F004690: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-05-15 12:11:21.217 CEST LOG:  iniciando el flujo de WAL desde el primario en 9/8F000000 en el timeline 1
+08134385K 09066309P; ; 2025-05-15 12:16:21.031 CEST LOG:  empezando restartpoint: time
+08134385K 09066309P; ; 2025-05-15 12:16:21.486 CEST LOG:  restartpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.435 s, sync=0.005 s, total=0.459 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.001 s; distancia=6 kB, estimación=6 kB; lsn=9/8F006050, lsn de redo=9/8F006018
+08134385K 09066309P; ; 2025-05-15 12:16:21.486 CEST LOG:  restartpoint de recuperación en 9/8F006018
+08134385K 09066309P; ; 2025-05-15 12:16:21.486 CEST DETALLE:  Última transacción completada al tiempo de registro 2025-05-15 12:11:06.40555+02.
+08134385K 09066309P; ; 2025-05-15 12:16:28.067 CEST LOG:  replicación terminada por el servidor primario
+08134385K 09066309P; ; 2025-05-15 12:16:28.067 CEST DETALLE:  Se alcanzó el fin de WAL en el timeline 1 en la posición 9/8F006178.
+08134385K 09066309P; ; 2025-05-15 12:16:28.067 CEST FATAL:  no se pudo enviar el mensaje fin-de-flujo al primario: el servidor ha cerrado la conexión inesperadamente
+		Probablemente se debe a que el servidor terminó de manera anormal
+		antes o durante el procesamiento de la petición.
+	no hay COPY alguno en ejecución
+08134385K 09066309P; ; 2025-05-15 12:16:28.069 CEST LOG:  largo de registro no válido en 9/8F006178: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-05-15 12:16:32.203 CEST FATAL:  no se pudo conectar al servidor primario: falló la conexión al servidor en «localhost» (::1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+	falló la conexión al servidor en «localhost» (127.0.0.1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+08134385K 09066309P; ; 2025-05-15 12:16:32.203 CEST LOG:  waiting for WAL to become available at 9/8F006190
+08134385K 09066309P; ; 2025-05-15 12:16:37.232 CEST FATAL:  no se pudo conectar al servidor primario: falló la conexión al servidor en «localhost» (::1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+	falló la conexión al servidor en «localhost» (127.0.0.1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+08134385K 09066309P; ; 2025-05-15 12:16:37.233 CEST LOG:  waiting for WAL to become available at 9/8F006190
+08134385K 09066309P; ; 2025-05-15 12:16:42.204 CEST FATAL:  no se pudo conectar al servidor primario: falló la conexión al servidor en «localhost» (::1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+	falló la conexión al servidor en «localhost» (127.0.0.1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+08134385K 09066309P; ; 2025-05-15 12:16:42.204 CEST LOG:  waiting for WAL to become available at 9/8F006190
+08134385K 09066309P; ; 2025-05-15 12:16:43.284 CEST LOG:  iniciando el flujo de WAL desde el primario en 9/8F000000 en el timeline 1
+08134385K 09066309P; ; 2025-05-15 12:16:57.126 CEST LOG:  se recibió petición de apagado rápido
+08134385K 09066309P; ; 2025-05-15 12:16:57.131 CEST LOG:  abortando transacciones activas
+08134385K 09066309P; ; 2025-05-15 12:16:57.132 CEST FATAL:  terminando el proceso walreceiver debido a una orden del administrador
+08134385K 09066309P; ::1(55992); 2025-05-15 12:16:57.134 CEST FATAL:  terminando la conexión debido a una orden del administrador
+08134385K 09066309P; ; 2025-05-15 12:16:57.140 CEST LOG:  apagando
+08134385K 09066309P; ; 2025-05-15 12:16:57.140 CEST LOG:  empezando restartpoint: shutdown immediate
+08134385K 09066309P; ; 2025-05-15 12:16:57.149 CEST LOG:  restartpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.010 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=5 kB; lsn=9/8F006100, lsn de redo=9/8F006100
+08134385K 09066309P; ; 2025-05-15 12:16:57.149 CEST LOG:  restartpoint de recuperación en 9/8F006100
+08134385K 09066309P; ; 2025-05-15 12:16:57.149 CEST DETALLE:  Última transacción completada al tiempo de registro 2025-05-15 12:11:06.40555+02.
+08134385K 09066309P; ; 2025-05-15 12:16:57.160 CEST LOG:  el sistema de bases de datos está apagado

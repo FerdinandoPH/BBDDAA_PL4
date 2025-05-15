@@ -1,0 +1,14 @@
+08134385K 09066309P; ; 2025-05-15 12:33:03.673 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 12:33:03.674 CEST LOG:  escuchando en la dirección IPv6 «::», port 5434
+08134385K 09066309P; ; 2025-05-15 12:33:03.674 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5434
+08134385K 09066309P; ; 2025-05-15 12:33:03.729 CEST LOG:  el sistema de bases de datos fue interrumpido durante la recuperación en el instante de registro 2025-05-15 11:07:28 CEST
+08134385K 09066309P; ; 2025-05-15 12:33:03.729 CEST HINT:  Si esto ha ocurrido más de una vez, algunos datos podrían estar corruptos y podría ser necesario escoger un punto de recuperación anterior.
+08134385K 09066309P; ; 2025-05-15 12:33:04.838 CEST LOG:  entrando al modo standby
+08134385K 09066309P; ; 2025-05-15 12:33:04.844 CEST LOG:  redo comienza en 9/93004088
+08134385K 09066309P; ; 2025-05-15 12:33:04.844 CEST LOG:  el estado de recuperación consistente fue alcanzado en 9/93004170
+08134385K 09066309P; ; 2025-05-15 12:33:04.844 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones de sólo lectura
+08134385K 09066309P; ; 2025-05-15 12:33:04.844 CEST LOG:  largo de registro no válido en 9/93004170: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-05-15 12:33:04.921 CEST LOG:  iniciando el flujo de WAL desde el primario en 9/93000000 en el timeline 1
+08134385K 09066309P; ; 2025-05-15 13:43:13.645 CEST LOG:  proceso receptor de WAL (PID 52140) fue terminado por una excepción 0xC000013A
+08134385K 09066309P; ; 2025-05-15 13:43:13.645 CEST HINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+08134385K 09066309P; ; 2025-05-15 13:43:13.646 CEST LOG:  terminando todos los otros procesos de servidor activos

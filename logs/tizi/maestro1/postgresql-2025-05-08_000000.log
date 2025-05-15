@@ -1,0 +1,96 @@
+08134385K 09066309P; ::1(64255); 2025-05-13 12:38:11.733 CEST FATAL:  la autentificación password falló para el usuario «postgres»
+08134385K 09066309P; ::1(64255); 2025-05-13 12:38:11.733 CEST DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+08134385K 09066309P; ::1(64279); 2025-05-13 12:38:35.442 CEST FATAL:  la autentificación password falló para el usuario «postgres»
+08134385K 09066309P; ::1(64279); 2025-05-13 12:38:35.442 CEST DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+08134385K 09066309P; ::1(64312); 2025-05-13 12:39:01.041 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(64330); 2025-05-13 12:39:14.194 CEST LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS postgres_fdw;
+08134385K 09066309P; ::1(64330); 2025-05-13 12:39:14.228 CEST LOG:  sentencia: DROP SCHEMA IF EXISTS telpark_foraneo CASCADE;
+08134385K 09066309P; ::1(64330); 2025-05-13 12:39:14.233 CEST LOG:  sentencia: DROP SERVER IF EXISTS maestro2 CASCADE;
+08134385K 09066309P; ::1(64330); 2025-05-13 12:39:14.236 CEST LOG:  sentencia: CREATE SERVER IF NOT EXISTS maestro2
+	    FOREIGN DATA WRAPPER postgres_fdw
+	    OPTIONS (host 'localhost', port '5433', dbname 'telpark');
+08134385K 09066309P; ::1(64330); 2025-05-13 12:39:14.239 CEST LOG:  sentencia: CREATE USER MAPPING IF NOT EXISTS FOR postgres
+	    SERVER maestro2
+	    OPTIONS (user 'postgres', password 'Gaturro2005');
+08134385K 09066309P; ::1(64330); 2025-05-13 12:39:14.241 CEST LOG:  sentencia: CREATE SCHEMA IF NOT EXISTS telpark_foraneo;
+08134385K 09066309P; ::1(64330); 2025-05-13 12:39:14.244 CEST LOG:  sentencia: IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro2
+	    INTO telpark_foraneo;
+08134385K 09066309P; ; 2025-05-13 12:41:13.424 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-13 12:41:19.908 CEST LOG:  checkpoint completo: escritos 60 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=6.407 s, sync=0.054 s, total=6.488 s; archivos sincronizados=43, más largo=0.005 s, promedio=0.002 s; distancia=184 kB, estimación=20466 kB; lsn=9/9107BBD0, lsn de redo=9/9107BB98
+08134385K 09066309P; ::1(64603); 2025-05-13 12:42:28.430 CEST ERROR:  error de sintaxis en o cerca de «telpark_foraneo» en carácter 126
+08134385K 09066309P; ::1(64603); 2025-05-13 12:42:28.430 CEST SENTENCIA:  SELECT provincia, COUNT(*) AS total
+	FROM (reservas JOIN clientes ON reservas.clienteid_clientes = clientes.clineteid) UNION (telpark_foraneo.reservas JOIN telpark_foraneo.clientes ON reservas.clienteid_clientes = clientes.clineteid)
+	GROUP BY provincia;
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.680 CEST LOG:  sentencia: DELETE FROM pagos;
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.687 CEST LOG:  sentencia: DELETE FROM incidencias;
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.689 CEST LOG:  sentencia: DELETE FROM reservas;
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.690 CEST LOG:  sentencia: DELETE FROM vehiculos;
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.697 CEST LOG:  sentencia: DELETE FROM plazas;
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.699 CEST LOG:  sentencia: DELETE FROM clientes;
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.714 CEST LOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.726 CEST LOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.735 CEST LOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.748 CEST LOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.762 CEST LOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+08134385K 09066309P; ::1(50506); 2025-05-13 13:23:37.777 CEST LOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+08134385K 09066309P; ; 2025-05-13 13:26:14.002 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-13 13:26:17.419 CEST LOG:  checkpoint completo: escritos 32 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.370 s, sync=0.034 s, total=3.418 s; archivos sincronizados=28, más largo=0.006 s, promedio=0.002 s; distancia=64 kB, estimación=18426 kB; lsn=9/9108BF40, lsn de redo=9/9108BF08
+08134385K 09066309P; ::1(51099); 2025-05-13 13:37:10.177 CEST ERROR:  no existe la relación «cientes» en carácter 15
+08134385K 09066309P; ::1(51099); 2025-05-13 13:37:10.177 CEST SENTENCIA:  SELECT * FROM cientes;
+08134385K 09066309P; ::1(57195); 2025-05-13 13:45:32.404 CEST LOG:  sentencia: DELETE FROM pagos;
+08134385K 09066309P; ::1(57195); 2025-05-13 13:45:32.408 CEST LOG:  sentencia: DELETE FROM incidencias;
+08134385K 09066309P; ::1(57195); 2025-05-13 13:45:32.410 CEST LOG:  sentencia: DELETE FROM reservas;
+08134385K 09066309P; ::1(57195); 2025-05-13 13:45:32.412 CEST LOG:  sentencia: DELETE FROM vehiculos;
+08134385K 09066309P; ::1(57195); 2025-05-13 13:45:32.417 CEST LOG:  sentencia: DELETE FROM plazas;
+08134385K 09066309P; ::1(57195); 2025-05-13 13:45:32.420 CEST LOG:  sentencia: DELETE FROM clientes;
+08134385K 09066309P; ; 2025-05-13 13:46:14.443 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-13 13:46:15.239 CEST LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.761 s, sync=0.015 s, total=0.796 s; archivos sincronizados=8, más largo=0.005 s, promedio=0.002 s; distancia=30 kB, estimación=16586 kB; lsn=9/91093A20, lsn de redo=9/910939E8
+08134385K 09066309P; ::1(57195); 2025-05-13 13:47:33.663 CEST LOG:  sentencia: INSERT INTO clientes VALUES(0, Fulanito, Fulanez, fulano@example.ex, 600000000, Lugo);
+08134385K 09066309P; ::1(57195); 2025-05-13 13:47:33.663 CEST ERROR:  no existe la columna «fulanito» en carácter 32
+08134385K 09066309P; ::1(57195); 2025-05-13 13:47:33.663 CEST SENTENCIA:  INSERT INTO clientes VALUES(0, Fulanito, Fulanez, fulano@example.ex, 600000000, Lugo);
+08134385K 09066309P; ::1(57195); 2025-05-13 13:47:58.803 CEST LOG:  sentencia: INSERT INTO clientes VALUES(0, 'Fulanito', 'Fulanez', 'fulano@example.ex', 600000000, 'Lugo');
+08134385K 09066309P; ; 2025-05-13 13:51:14.247 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-13 13:51:14.929 CEST LOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.651 s, sync=0.013 s, total=0.682 s; archivos sincronizados=7, más largo=0.007 s, promedio=0.002 s; distancia=15 kB, estimación=14929 kB; lsn=9/910979E0, lsn de redo=9/910979A8
+08134385K 09066309P; ::1(57525); 2025-05-13 13:52:17.990 CEST LOG:  sentencia: DELETE FROM clientes;
+08134385K 09066309P; ::1(57525); 2025-05-13 13:52:17.992 CEST ERROR:  no existe la relación «clientes» en carácter 13
+08134385K 09066309P; ::1(57525); 2025-05-13 13:52:17.992 CEST SENTENCIA:  DELETE FROM clientes;
+08134385K 09066309P; ::1(57525); 2025-05-13 13:52:32.369 CEST ERROR:  no existe la relación «clientes» en carácter 15
+08134385K 09066309P; ::1(57525); 2025-05-13 13:52:32.369 CEST SENTENCIA:  SELECT * FROM clientes;
+08134385K 09066309P; ::1(57544); 2025-05-13 13:52:45.843 CEST LOG:  sentencia: DELETE FROM clientes;
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.100 CEST LOG:  sentencia: DELETE FROM pagos;
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.103 CEST LOG:  sentencia: DELETE FROM incidencias;
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.105 CEST LOG:  sentencia: DELETE FROM reservas;
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.107 CEST LOG:  sentencia: DELETE FROM vehiculos;
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.111 CEST LOG:  sentencia: DELETE FROM plazas;
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.114 CEST LOG:  sentencia: DELETE FROM clientes;
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.116 CEST LOG:  sentencia: COPY  clientes FROM STDIN DELIMITER ',';
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.119 CEST LOG:  sentencia: COPY  plazas FROM STDIN DELIMITER ',';
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.121 CEST LOG:  sentencia: COPY  vehiculos FROM STDIN DELIMITER ',';
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.128 CEST LOG:  sentencia: COPY  reservas FROM STDIN DELIMITER ',';
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.133 CEST LOG:  sentencia: COPY  incidencias FROM STDIN DELIMITER ',';
+08134385K 09066309P; ::1(57562); 2025-05-13 13:53:14.135 CEST LOG:  sentencia: COPY  pagos FROM STDIN DELIMITER ',';
+08134385K 09066309P; ; 2025-05-13 13:56:14.934 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-13 13:56:17.023 CEST LOG:  checkpoint completo: escritos 19 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.964 s, sync=0.066 s, total=2.090 s; archivos sincronizados=18, más largo=0.041 s, promedio=0.004 s; distancia=86 kB, estimación=13445 kB; lsn=9/910AD3D0, lsn de redo=9/910AD398
+08134385K 09066309P; ::1(50820); 2025-05-15 10:14:50.401 CEST ERROR:  no existe la relación «clientes» en carácter 15
+08134385K 09066309P; ::1(50820); 2025-05-15 10:14:50.401 CEST SENTENCIA:  SELECT * FROM clientes;
+08134385K 09066309P; ::1(51193); 2025-05-15 10:18:55.316 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ; 2025-05-15 10:47:28.353 CEST LOG:  empezando checkpoint: force wait
+08134385K 09066309P; ; 2025-05-15 10:47:28.474 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.016 s, sync=0.001 s, total=0.127 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=15691 kB, estimación=15691 kB; lsn=9/92000060, lsn de redo=9/92000028
+08134385K 09066309P; ; 2025-05-15 10:52:28.487 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 10:52:28.575 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.002 s, sync=0.001 s, total=0.089 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=16384 kB, estimación=16384 kB; lsn=9/93000098, lsn de redo=9/93000060
+08134385K 09066309P; ::1(52886); 2025-05-15 11:04:24.838 CEST LOG:  sentencia: INSERT INTO clientes VALUES(0, 'cliente_0', 'apellido_0', 'cliente_0@example.ex', 600000000, 'Madrid');
+08134385K 09066309P; ::1(52886); 2025-05-15 11:06:06.642 CEST LOG:  sentencia: DELETE FROM clientes WHERE clienteid=0;
+08134385K 09066309P; ; 2025-05-15 11:07:28.598 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 11:07:29.477 CEST LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.769 s, sync=0.051 s, total=0.879 s; archivos sincronizados=7, más largo=0.042 s, promedio=0.008 s; distancia=16 kB, estimación=14747 kB; lsn=9/930040C0, lsn de redo=9/93004088
+08134385K 09066309P; ::1(53809); 2025-05-15 11:30:06.691 CEST FATAL:  la autentificación password falló para el usuario «postgres»
+08134385K 09066309P; ::1(53809); 2025-05-15 11:30:06.691 CEST DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+08134385K 09066309P; ::1(53832); 2025-05-15 11:30:41.384 CEST ERROR:  could not connect to server "maestro2"
+08134385K 09066309P; ::1(53832); 2025-05-15 11:30:41.384 CEST DETALLE:  falló la conexión al servidor en «localhost» (::1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+	falló la conexión al servidor en «localhost» (127.0.0.1), puerto 5433: Connection refused (0x0000274D/10061)
+		¿Está el servidor en ejecución en ese host y aceptando conexiones TCP/IP?
+08134385K 09066309P; ::1(53832); 2025-05-15 11:30:41.384 CEST SENTENCIA:  SELECT * FROM telpark_foraneo.clientes;
+08134385K 09066309P; ::1(54363); 2025-05-15 11:40:55.558 CEST LOG:  sentencia: INSERT INTO telpark_foraneo.clientes VALUES(100, 'clientes_100', 'apellido_100', 'cliente_100@example.ex', 600000100, 'Madrid');

@@ -1,0 +1,4 @@
+08134385K 09066309P; ; 2025-03-20 17:11:50.626 CET ERROR:  cancelando la sentencia debido a una petición del usuario
+08134385K 09066309P; ; 2025-03-20 17:11:50.632 CET LOG:  apagando
+08134385K 09066309P; ; 2025-03-20 17:11:50.634 CET LOG:  empezando checkpoint: shutdown immediate
+08134385K 09066309P; ; 2025-03-20 17:11:50.651 CET LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.001 s, total=0.019 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=1283822 kB; lsn=6/758305E8, lsn de redo=6/758305E8

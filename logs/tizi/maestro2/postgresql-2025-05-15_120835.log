@@ -1,0 +1,15 @@
+08134385K 09066309P; ; 2025-05-15 12:08:35.253 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 12:08:35.254 CEST LOG:  escuchando en la dirección IPv6 «::», port 5433
+08134385K 09066309P; ; 2025-05-15 12:08:35.254 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+08134385K 09066309P; ; 2025-05-15 12:08:35.307 CEST LOG:  el sistema de bases de datos fue apagado en 2025-05-15 12:04:13 CEST
+08134385K 09066309P; ; 2025-05-15 12:08:35.326 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones
+08134385K 09066309P; ::1(55902); 2025-05-15 12:11:06.397 CEST LOG:  sentencia: INSERT INTO clientes VALUES(100, 'cliente_100', 'apellido_100', 'cliente_100@example.ex', 600000100, 'Madrid');
+08134385K 09066309P; ; 2025-05-15 12:13:35.310 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 12:13:35.771 CEST LOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.435 s, sync=0.010 s, total=0.465 s; archivos sincronizados=6, más largo=0.002 s, promedio=0.002 s; distancia=6 kB, estimación=6 kB; lsn=9/8F006050, lsn de redo=9/8F006018
+08134385K 09066309P; ; 2025-05-15 12:16:28.007 CEST LOG:  se recibió petición de apagado rápido
+08134385K 09066309P; ; 2025-05-15 12:16:28.012 CEST LOG:  abortando transacciones activas
+08134385K 09066309P; ; 2025-05-15 12:16:28.020 CEST LOG:  proceso ayudante «logical replication launcher» (PID 7892) terminó con código de salida 1
+08134385K 09066309P; ; 2025-05-15 12:16:28.020 CEST LOG:  apagando
+08134385K 09066309P; ; 2025-05-15 12:16:28.047 CEST LOG:  empezando checkpoint: shutdown immediate
+08134385K 09066309P; ; 2025-05-15 12:16:28.056 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.011 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=5 kB; lsn=9/8F006100, lsn de redo=9/8F006100
+08134385K 09066309P; ; 2025-05-15 12:16:28.074 CEST LOG:  el sistema de bases de datos está apagado

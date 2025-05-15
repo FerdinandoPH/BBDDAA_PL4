@@ -1,0 +1,30 @@
+08134385K 09066309P; ; 2025-05-15 11:31:31.560 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 11:31:31.562 CEST LOG:  escuchando en la dirección IPv6 «::», port 5433
+08134385K 09066309P; ; 2025-05-15 11:31:31.562 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+08134385K 09066309P; ; 2025-05-15 11:31:31.627 CEST LOG:  el sistema de bases de datos fue apagado en 2025-05-15 11:29:49 CEST
+08134385K 09066309P; ; 2025-05-15 11:31:31.662 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones
+08134385K 09066309P; ::1(53998); 2025-05-15 11:33:57.397 CEST LOG:  sentencia: INSERT INTO clientes VALUES(100, cliente_100, apellido_100, 'cliente_100@example.ex', 600000100, 'Madrid');
+08134385K 09066309P; ::1(53998); 2025-05-15 11:33:57.442 CEST ERROR:  no existe la columna «cliente_100» en carácter 34
+08134385K 09066309P; ::1(53998); 2025-05-15 11:33:57.442 CEST SENTENCIA:  INSERT INTO clientes VALUES(100, cliente_100, apellido_100, 'cliente_100@example.ex', 600000100, 'Madrid');
+08134385K 09066309P; ::1(53998); 2025-05-15 11:34:59.535 CEST LOG:  sentencia: INSERT INTO clientes VALUES(100, 'cliente_100', 'apellido_100', 'cliente_100@example.ex', 600000100, 'Madrid');
+08134385K 09066309P; ::1(53998); 2025-05-15 11:35:31.501 CEST LOG:  sentencia: DELETE FROM clientes WHERE clienteid=100;
+08134385K 09066309P; ; 2025-05-15 11:36:31.633 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 11:36:32.254 CEST LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.555 s, sync=0.048 s, total=0.627 s; archivos sincronizados=7, más largo=0.040 s, promedio=0.007 s; distancia=6 kB, estimación=6 kB; lsn=9/8F001AE0, lsn de redo=9/8F001AA8
+08134385K 09066309P; ::1(54416); 2025-05-15 11:40:55.693 CEST LOG:  ejecutar pgsql_fdw_prep_1: INSERT INTO public.clientes(clienteid, nombre, apellido, email, telefono, provincia) VALUES ($1, $2, $3, $4, $5, $6)
+08134385K 09066309P; ::1(54416); 2025-05-15 11:40:55.693 CEST DETALLE:  parámetros: $1 = '100', $2 = 'clientes_100', $3 = 'apellido_100', $4 = 'cliente_100@example.ex', $5 = '600000100', $6 = 'Madrid'
+08134385K 09066309P; ; 2025-05-15 11:41:31.261 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 11:41:31.755 CEST LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.433 s, sync=0.027 s, total=0.495 s; archivos sincronizados=5, más largo=0.013 s, promedio=0.006 s; distancia=6 kB, estimación=6 kB; lsn=9/8F003498, lsn de redo=9/8F003460
+08134385K 09066309P; ::1(54416); 2025-05-15 11:41:37.149 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(54448); 2025-05-15 11:41:42.549 CEST FATAL:  la autentificación password falló para el usuario «postgres»
+08134385K 09066309P; ::1(54448); 2025-05-15 11:41:42.549 CEST DETALLE:  La conexión coincidió con el archivo «C:/LabBD_GII/Maestro2/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+08134385K 09066309P; ::1(54461); 2025-05-15 11:42:16.164 CEST LOG:  sentencia: DELETE FROM clientes WHERE clienteid=100;
+08134385K 09066309P; ; 2025-05-15 11:46:31.766 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 11:46:31.906 CEST LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.109 s, sync=0.012 s, total=0.140 s; archivos sincronizados=2, más largo=0.009 s, promedio=0.006 s; distancia=3 kB, estimación=6 kB; lsn=9/8F004320, lsn de redo=9/8F0042E8
+08134385K 09066309P; ; 2025-05-15 11:56:01.004 CEST LOG:  se recibió petición de apagado rápido
+08134385K 09066309P; ; 2025-05-15 11:56:01.009 CEST LOG:  abortando transacciones activas
+08134385K 09066309P; ; 2025-05-15 11:56:01.016 CEST LOG:  proceso ayudante «logical replication launcher» (PID 22736) terminó con código de salida 1
+08134385K 09066309P; ; 2025-05-15 11:56:01.017 CEST LOG:  apagando
+08134385K 09066309P; ; 2025-05-15 11:56:01.033 CEST LOG:  empezando checkpoint: shutdown immediate
+08134385K 09066309P; ; 2025-05-15 11:56:01.041 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.011 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=5 kB; lsn=9/8F0043D0, lsn de redo=9/8F0043D0
+08134385K 09066309P; ; 2025-05-15 11:56:01.058 CEST LOG:  el sistema de bases de datos está apagado

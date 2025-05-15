@@ -1,0 +1,5 @@
+08134385K 09066309P; ; 2025-02-13 11:50:43.515 CET [7364] LOG:  el sistema de bases de datos fue apagado en 2025-02-13 11:50:09 CET
+08134385K 09066309P; ; 2025-02-13 11:51:13.331 CET [7472] ERROR:  cancelando la sentencia debido a una petición del usuario
+08134385K 09066309P; ; 2025-02-13 11:51:13.335 CET [7348] LOG:  apagando
+08134385K 09066309P; ; 2025-02-13 11:51:13.337 CET [7348] LOG:  empezando checkpoint: shutdown immediate
+08134385K 09066309P; ; 2025-02-13 11:51:13.352 CET [7348] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.002 s, total=0.017 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=1/853FB5E0, lsn de redo=1/853FB5E0

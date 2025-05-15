@@ -1,0 +1,86 @@
+08134385K 09066309P; ; 2025-05-15 12:34:25.084 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 12:34:25.085 CEST LOG:  escuchando en la dirección IPv6 «::», port 5433
+08134385K 09066309P; ; 2025-05-15 12:34:25.085 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+08134385K 09066309P; ; 2025-05-15 12:34:25.145 CEST LOG:  el sistema de bases de datos fue interrumpido durante la recuperación en 2025-05-15 12:32:17 CEST
+08134385K 09066309P; ; 2025-05-15 12:34:25.145 CEST HINT:  Esto probablemente significa que algunos datos están corruptos y tendrá que usar el respaldo más reciente para la recuperación.
+08134385K 09066309P; ; 2025-05-15 12:34:26.458 CEST LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+08134385K 09066309P; ; 2025-05-15 12:34:26.462 CEST LOG:  redo comienza en 9/8F006F90
+08134385K 09066309P; ; 2025-05-15 12:34:26.462 CEST LOG:  largo de registro no válido en 9/8F007078: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-05-15 12:34:26.463 CEST LOG:  redo listo en 9/8F007040 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+08134385K 09066309P; ; 2025-05-15 12:34:26.470 CEST LOG:  empezando checkpoint: end-of-recovery immediate wait
+08134385K 09066309P; ; 2025-05-15 12:34:26.486 CEST LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.004 s, total=0.020 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=9/8F007078, lsn de redo=9/8F007078
+08134385K 09066309P; ; 2025-05-15 12:34:26.504 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones
+08134385K 09066309P; ::1(57151); 2025-05-15 12:36:02.977 CEST LOG:  sentencia: CREATE PUBLICATION telpark_pub
+	    FOR TABLES IN SCHEMA public;
+08134385K 09066309P; ::1(57204); 2025-05-15 12:36:40.550 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B7B0
+08134385K 09066309P; ::1(57204); 2025-05-15 12:36:40.550 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57204); 2025-05-15 12:36:40.550 CEST SENTENCIA:  CREATE_REPLICATION_SLOT "telpark_sub" LOGICAL pgoutput (SNAPSHOT 'nothing')
+08134385K 09066309P; ::1(57205); 2025-05-15 12:36:40.762 CEST LOG:  iniciando la decodificación lógica para el slot «telpark_sub»
+08134385K 09066309P; ::1(57205); 2025-05-15 12:36:40.762 CEST DETALLE:  Transacciones en flujo comprometiendo después de 9/8F00B7E8, leyendo WAL desde 9/8F00B7B0.
+08134385K 09066309P; ::1(57205); 2025-05-15 12:36:40.762 CEST SENTENCIA:  START_REPLICATION SLOT "telpark_sub" LOGICAL 0/0 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57205); 2025-05-15 12:36:40.763 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B7B0
+08134385K 09066309P; ::1(57205); 2025-05-15 12:36:40.763 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57205); 2025-05-15 12:36:40.763 CEST SENTENCIA:  START_REPLICATION SLOT "telpark_sub" LOGICAL 0/0 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57207); 2025-05-15 12:36:40.895 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B7E8
+08134385K 09066309P; ::1(57207); 2025-05-15 12:36:40.895 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57207); 2025-05-15 12:36:40.895 CEST SENTENCIA:  CREATE_REPLICATION_SLOT "pg_55287_sync_30739_7433788095607800516" LOGICAL pgoutput (SNAPSHOT 'use')
+08134385K 09066309P; ::1(57207); 2025-05-15 12:36:40.926 CEST LOG:  iniciando la decodificación lógica para el slot «pg_55287_sync_30739_7433788095607800516»
+08134385K 09066309P; ::1(57207); 2025-05-15 12:36:40.926 CEST DETALLE:  Transacciones en flujo comprometiendo después de 9/8F00B820, leyendo WAL desde 9/8F00B7E8.
+08134385K 09066309P; ::1(57207); 2025-05-15 12:36:40.926 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30739_7433788095607800516" LOGICAL 9/8F00B820 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57207); 2025-05-15 12:36:40.926 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B7E8
+08134385K 09066309P; ::1(57207); 2025-05-15 12:36:40.926 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57207); 2025-05-15 12:36:40.926 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30739_7433788095607800516" LOGICAL 9/8F00B820 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57206); 2025-05-15 12:36:40.974 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B820
+08134385K 09066309P; ::1(57206); 2025-05-15 12:36:40.974 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57206); 2025-05-15 12:36:40.974 CEST SENTENCIA:  CREATE_REPLICATION_SLOT "pg_55287_sync_30751_7433788095607800516" LOGICAL pgoutput (SNAPSHOT 'use')
+08134385K 09066309P; ::1(57206); 2025-05-15 12:36:40.995 CEST LOG:  iniciando la decodificación lógica para el slot «pg_55287_sync_30751_7433788095607800516»
+08134385K 09066309P; ::1(57206); 2025-05-15 12:36:40.995 CEST DETALLE:  Transacciones en flujo comprometiendo después de 9/8F00B858, leyendo WAL desde 9/8F00B820.
+08134385K 09066309P; ::1(57206); 2025-05-15 12:36:40.995 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30751_7433788095607800516" LOGICAL 9/8F00B858 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57206); 2025-05-15 12:36:40.996 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B820
+08134385K 09066309P; ::1(57206); 2025-05-15 12:36:40.996 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57206); 2025-05-15 12:36:40.996 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30751_7433788095607800516" LOGICAL 9/8F00B858 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57213); 2025-05-15 12:36:41.042 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B858
+08134385K 09066309P; ::1(57213); 2025-05-15 12:36:41.042 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57213); 2025-05-15 12:36:41.042 CEST SENTENCIA:  CREATE_REPLICATION_SLOT "pg_55287_sync_30744_7433788095607800516" LOGICAL pgoutput (SNAPSHOT 'use')
+08134385K 09066309P; ::1(57213); 2025-05-15 12:36:41.062 CEST LOG:  iniciando la decodificación lógica para el slot «pg_55287_sync_30744_7433788095607800516»
+08134385K 09066309P; ::1(57213); 2025-05-15 12:36:41.062 CEST DETALLE:  Transacciones en flujo comprometiendo después de 9/8F00B890, leyendo WAL desde 9/8F00B858.
+08134385K 09066309P; ::1(57213); 2025-05-15 12:36:41.062 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30744_7433788095607800516" LOGICAL 9/8F00B890 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57213); 2025-05-15 12:36:41.063 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B858
+08134385K 09066309P; ::1(57213); 2025-05-15 12:36:41.063 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57213); 2025-05-15 12:36:41.063 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30744_7433788095607800516" LOGICAL 9/8F00B890 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57218); 2025-05-15 12:36:41.111 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B890
+08134385K 09066309P; ::1(57218); 2025-05-15 12:36:41.111 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57218); 2025-05-15 12:36:41.111 CEST SENTENCIA:  CREATE_REPLICATION_SLOT "pg_55287_sync_30712_7433788095607800516" LOGICAL pgoutput (SNAPSHOT 'use')
+08134385K 09066309P; ::1(57218); 2025-05-15 12:36:41.132 CEST LOG:  iniciando la decodificación lógica para el slot «pg_55287_sync_30712_7433788095607800516»
+08134385K 09066309P; ::1(57218); 2025-05-15 12:36:41.132 CEST DETALLE:  Transacciones en flujo comprometiendo después de 9/8F00B8C8, leyendo WAL desde 9/8F00B890.
+08134385K 09066309P; ::1(57218); 2025-05-15 12:36:41.132 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30712_7433788095607800516" LOGICAL 9/8F00B8C8 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57218); 2025-05-15 12:36:41.132 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B890
+08134385K 09066309P; ::1(57218); 2025-05-15 12:36:41.132 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57218); 2025-05-15 12:36:41.132 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30712_7433788095607800516" LOGICAL 9/8F00B8C8 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57223); 2025-05-15 12:36:41.177 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B8C8
+08134385K 09066309P; ::1(57223); 2025-05-15 12:36:41.177 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57223); 2025-05-15 12:36:41.177 CEST SENTENCIA:  CREATE_REPLICATION_SLOT "pg_55287_sync_30723_7433788095607800516" LOGICAL pgoutput (SNAPSHOT 'use')
+08134385K 09066309P; ::1(57223); 2025-05-15 12:36:41.197 CEST LOG:  iniciando la decodificación lógica para el slot «pg_55287_sync_30723_7433788095607800516»
+08134385K 09066309P; ::1(57223); 2025-05-15 12:36:41.197 CEST DETALLE:  Transacciones en flujo comprometiendo después de 9/8F00B900, leyendo WAL desde 9/8F00B8C8.
+08134385K 09066309P; ::1(57223); 2025-05-15 12:36:41.197 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30723_7433788095607800516" LOGICAL 9/8F00B900 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57223); 2025-05-15 12:36:41.198 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B8C8
+08134385K 09066309P; ::1(57223); 2025-05-15 12:36:41.198 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57223); 2025-05-15 12:36:41.198 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30723_7433788095607800516" LOGICAL 9/8F00B900 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57224); 2025-05-15 12:36:41.241 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B900
+08134385K 09066309P; ::1(57224); 2025-05-15 12:36:41.241 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57224); 2025-05-15 12:36:41.241 CEST SENTENCIA:  CREATE_REPLICATION_SLOT "pg_55287_sync_30732_7433788095607800516" LOGICAL pgoutput (SNAPSHOT 'use')
+08134385K 09066309P; ::1(57224); 2025-05-15 12:36:41.259 CEST LOG:  iniciando la decodificación lógica para el slot «pg_55287_sync_30732_7433788095607800516»
+08134385K 09066309P; ::1(57224); 2025-05-15 12:36:41.259 CEST DETALLE:  Transacciones en flujo comprometiendo después de 9/8F00B938, leyendo WAL desde 9/8F00B900.
+08134385K 09066309P; ::1(57224); 2025-05-15 12:36:41.259 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30732_7433788095607800516" LOGICAL 9/8F00B938 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ::1(57224); 2025-05-15 12:36:41.259 CEST LOG:  la decodificación lógica encontró un punto consistente en 9/8F00B900
+08134385K 09066309P; ::1(57224); 2025-05-15 12:36:41.259 CEST DETALLE:  No hay transacciones en ejecución.
+08134385K 09066309P; ::1(57224); 2025-05-15 12:36:41.259 CEST SENTENCIA:  START_REPLICATION SLOT "pg_55287_sync_30732_7433788095607800516" LOGICAL 9/8F00B938 (proto_version '4', origin 'any', publication_names '"telpark_pub"')
+08134385K 09066309P; ; 2025-05-15 12:39:26.487 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 12:39:28.364 CEST LOG:  checkpoint completo: escritos 18 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.846 s, sync=0.018 s, total=1.877 s; archivos sincronizados=13, más largo=0.005 s, promedio=0.002 s; distancia=18 kB, estimación=18 kB; lsn=9/8F00B970, lsn de redo=9/8F00B938
+08134385K 09066309P; ; 2025-05-15 12:41:31.921 CEST LOG:  se recibió petición de apagado rápido
+08134385K 09066309P; ; 2025-05-15 12:41:31.924 CEST LOG:  abortando transacciones activas
+08134385K 09066309P; ; 2025-05-15 12:41:31.931 CEST LOG:  proceso ayudante «logical replication launcher» (PID 42416) terminó con código de salida 1
+08134385K 09066309P; ; 2025-05-15 12:41:31.931 CEST LOG:  apagando
+08134385K 09066309P; ; 2025-05-15 12:41:31.954 CEST LOG:  empezando checkpoint: shutdown immediate
+08134385K 09066309P; ; 2025-05-15 12:41:31.963 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.012 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=16 kB; lsn=9/8F00BA20, lsn de redo=9/8F00BA20
+08134385K 09066309P; ; 2025-05-15 12:41:31.972 CEST LOG:  el sistema de bases de datos está apagado

@@ -1,0 +1,10 @@
+08134385K 09066309P; ::1(53380); 2025-04-08 12:39:03.094 CEST ERROR:  no existe la columna «investigadores» en carácter 42
+08134385K 09066309P; ::1(53380); 2025-04-08 12:39:03.094 CEST SENTENCIA:  Select * From pg_stats Where tablename = investigadores;
+08134385K 09066309P; ::1(53380); 2025-04-08 12:40:27.216 CEST ERROR:  error de sintaxis en o cerca de «:» en carácter 25
+08134385K 09066309P; ::1(53380); 2025-04-08 12:40:27.216 CEST SENTENCIA:  Select * From pg_stat_io:
+	;
+08134385K 09066309P; ::1(53380); 2025-04-08 12:44:38.189 CEST ERROR:  la función pg_size_pretty(unknown) no es única en carácter 8
+08134385K 09066309P; ::1(53380); 2025-04-08 12:44:38.189 CEST HINT:  No se pudo escoger la función más adecuada. Puede ser necesario agregar conversiones explícitas de tipos.
+08134385K 09066309P; ::1(53380); 2025-04-08 12:44:38.189 CEST SENTENCIA:  Select pg_size_pretty('investigadores');
+08134385K 09066309P; ::1(53380); 2025-04-08 20:06:18.144 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

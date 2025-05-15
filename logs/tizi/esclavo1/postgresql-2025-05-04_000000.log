@@ -1,0 +1,97 @@
+08134385K 09066309P; ; 2025-05-06 12:54:03.242 CEST LOG:  empezando checkpoint: force wait
+08134385K 09066309P; ; 2025-05-06 12:54:03.292 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.006 s, sync=0.002 s, total=0.055 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=13087 kB, estimación=13087 kB; lsn=9/8C000060, lsn de redo=9/8C000028
+08134385K 09066309P; ; 2025-05-06 12:54:57.499 CEST LOG:  empezando checkpoint: force wait
+08134385K 09066309P; ; 2025-05-06 12:54:57.528 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 2 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.030 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=32768 kB, estimación=32768 kB; lsn=9/8E000060, lsn de redo=9/8E000028
+08134385K 09066309P; ; 2025-05-06 12:55:51.270 CEST LOG:  empezando checkpoint: force wait
+08134385K 09066309P; ; 2025-05-06 12:55:51.288 CEST LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 2 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.018 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=32768 kB, estimación=32768 kB; lsn=9/90000060, lsn de redo=9/90000028
+08134385K 09066309P; ; 2025-05-06 13:00:51.292 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-06 13:00:52.208 CEST LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=0.868 s, sync=0.017 s, total=0.917 s; archivos sincronizados=4, más largo=0.009 s, promedio=0.005 s; distancia=16421 kB, estimación=31133 kB; lsn=9/91009588, lsn de redo=9/91009550
+08134385K 09066309P; ::1(49331); 2025-05-06 13:25:20.948 CEST LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS postgres_fdw;
+08134385K 09066309P; ::1(49331); 2025-05-06 13:25:21.016 CEST LOG:  sentencia: CREATE SERVER IF NOT EXISTS maestro1
+	    FOREIGN DATA WRAPPER postgres_fdw
+	    OPTIONS (host 'localhost', port '5432', dbname 'telpark');
+08134385K 09066309P; ::1(49331); 2025-05-06 13:25:21.019 CEST LOG:  sentencia: CREATE USER MAPPING IF NOT EXISTS FOR postgres
+	    SERVER maestro1
+	    OPTIONS (user 'postgres', password 'postgres');
+08134385K 09066309P; ::1(49331); 2025-05-06 13:25:21.021 CEST LOG:  sentencia: CREATE SCHEMA IF NOT EXISTS telpark_foraneo;
+08134385K 09066309P; ::1(49331); 2025-05-06 13:25:21.025 CEST LOG:  sentencia: IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro1
+	    INTO telpark_foraneo
+08134385K 09066309P; ::1(49332); 2025-05-06 13:25:21.181 CEST FATAL:  la autentificación password falló para el usuario «postgres»
+08134385K 09066309P; ::1(49332); 2025-05-06 13:25:21.181 CEST DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+08134385K 09066309P; ::1(49331); 2025-05-06 13:25:21.188 CEST ERROR:  could not connect to server "maestro1"
+08134385K 09066309P; ::1(49331); 2025-05-06 13:25:21.188 CEST DETALLE:  falló la conexión al servidor en «localhost» (::1), puerto 5432: FATAL:  la autentificación password falló para el usuario «postgres»
+08134385K 09066309P; ::1(49331); 2025-05-06 13:25:21.188 CEST SENTENCIA:  IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro1
+	    INTO telpark_foraneo
+08134385K 09066309P; ; 2025-05-06 13:25:51.243 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-06 13:25:55.437 CEST LOG:  checkpoint completo: escritos 39 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.127 s, sync=0.041 s, total=4.194 s; archivos sincronizados=28, más largo=0.004 s, promedio=0.002 s; distancia=91 kB, estimación=28029 kB; lsn=9/91020280, lsn de redo=9/91020248
+08134385K 09066309P; ::1(49331); 2025-05-06 13:29:38.172 CEST ERROR:  no existe la relación «telpark_foraneo.clientes» en carácter 15
+08134385K 09066309P; ::1(49331); 2025-05-06 13:29:38.172 CEST SENTENCIA:  SELECT * FROM telpark_foraneo.clientes;
+08134385K 09066309P; ::1(49857); 2025-05-06 13:29:57.891 CEST LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS postgres_fdw;
+08134385K 09066309P; ::1(49857); 2025-05-06 13:29:57.897 CEST LOG:  sentencia: CREATE SERVER IF NOT EXISTS maestro1
+	    FOREIGN DATA WRAPPER postgres_fdw
+	    OPTIONS (host 'localhost', port '5433', dbname 'telpark');
+08134385K 09066309P; ::1(49857); 2025-05-06 13:29:57.901 CEST LOG:  sentencia: CREATE USER MAPPING IF NOT EXISTS FOR postgres
+	    SERVER maestro1
+	    OPTIONS (user 'postgres', password 'postgres');
+08134385K 09066309P; ::1(49857); 2025-05-06 13:29:57.905 CEST LOG:  sentencia: CREATE SCHEMA IF NOT EXISTS telpark_foraneo;
+08134385K 09066309P; ::1(49857); 2025-05-06 13:29:57.909 CEST LOG:  sentencia: IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro1
+	    INTO telpark_foraneo
+08134385K 09066309P; ::1(49858); 2025-05-06 13:29:57.961 CEST FATAL:  la autentificación password falló para el usuario «postgres»
+08134385K 09066309P; ::1(49858); 2025-05-06 13:29:57.961 CEST DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+08134385K 09066309P; ::1(49857); 2025-05-06 13:29:57.961 CEST ERROR:  could not connect to server "maestro1"
+08134385K 09066309P; ::1(49857); 2025-05-06 13:29:57.961 CEST DETALLE:  falló la conexión al servidor en «localhost» (::1), puerto 5432: FATAL:  la autentificación password falló para el usuario «postgres»
+08134385K 09066309P; ::1(49857); 2025-05-06 13:29:57.961 CEST SENTENCIA:  IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro1
+	    INTO telpark_foraneo
+08134385K 09066309P; ::1(49891); 2025-05-06 13:30:30.792 CEST LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS postgres_fdw;
+08134385K 09066309P; ::1(49891); 2025-05-06 13:30:30.796 CEST LOG:  sentencia: CREATE SERVER IF NOT EXISTS maestro1
+	    FOREIGN DATA WRAPPER postgres_fdw
+	    OPTIONS (host 'localhost', port '5433', dbname 'telpark');
+08134385K 09066309P; ::1(49891); 2025-05-06 13:30:30.800 CEST LOG:  sentencia: CREATE USER MAPPING IF NOT EXISTS FOR postgres
+	    SERVER maestro1
+	    OPTIONS (user 'postgres', password 'Gaturro2005');
+08134385K 09066309P; ::1(49891); 2025-05-06 13:30:30.805 CEST LOG:  sentencia: CREATE SCHEMA IF NOT EXISTS telpark_foraneo;
+08134385K 09066309P; ::1(49891); 2025-05-06 13:30:30.809 CEST LOG:  sentencia: IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro1
+	    INTO telpark_foraneo
+08134385K 09066309P; ::1(49894); 2025-05-06 13:30:30.861 CEST FATAL:  la autentificación password falló para el usuario «postgres»
+08134385K 09066309P; ::1(49894); 2025-05-06 13:30:30.861 CEST DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+08134385K 09066309P; ::1(49891); 2025-05-06 13:30:30.862 CEST ERROR:  could not connect to server "maestro1"
+08134385K 09066309P; ::1(49891); 2025-05-06 13:30:30.862 CEST DETALLE:  falló la conexión al servidor en «localhost» (::1), puerto 5432: FATAL:  la autentificación password falló para el usuario «postgres»
+08134385K 09066309P; ::1(49891); 2025-05-06 13:30:30.862 CEST SENTENCIA:  IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro1
+	    INTO telpark_foraneo
+08134385K 09066309P; ::1(49891); 2025-05-06 13:31:36.054 CEST ERROR:  error de sintaxis en o cerca de «SEREVER» en carácter 8
+08134385K 09066309P; ::1(49891); 2025-05-06 13:31:36.054 CEST SENTENCIA:  DELETE SEREVER maestro1;
+08134385K 09066309P; ::1(49891); 2025-05-06 13:31:40.351 CEST ERROR:  error de sintaxis en o cerca de «SERVER» en carácter 8
+08134385K 09066309P; ::1(49891); 2025-05-06 13:31:40.351 CEST SENTENCIA:  DELETE SERVER maestro1;
+08134385K 09066309P; ::1(49891); 2025-05-06 13:31:54.551 CEST LOG:  sentencia: DROP SERVER maestro1;
+08134385K 09066309P; ::1(49891); 2025-05-06 13:31:54.557 CEST ERROR:  no se puede eliminar servidor maestro1 porque otros objetos dependen de él
+08134385K 09066309P; ::1(49891); 2025-05-06 13:31:54.557 CEST DETALLE:  mapeo para el usuario postgres en el servidor maestro1 depende de servidor maestro1
+08134385K 09066309P; ::1(49891); 2025-05-06 13:31:54.557 CEST HINT:  Use DROP ... CASCADE para eliminar además los objetos dependientes.
+08134385K 09066309P; ::1(49891); 2025-05-06 13:31:54.557 CEST SENTENCIA:  DROP SERVER maestro1;
+08134385K 09066309P; ::1(49891); 2025-05-06 13:32:02.370 CEST LOG:  sentencia: DROP SERVER maestro1 CASCADE;
+08134385K 09066309P; ::1(50016); 2025-05-06 13:32:16.467 CEST LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS postgres_fdw;
+08134385K 09066309P; ::1(50016); 2025-05-06 13:32:16.473 CEST LOG:  sentencia: CREATE SERVER IF NOT EXISTS maestro1
+	    FOREIGN DATA WRAPPER postgres_fdw
+	    OPTIONS (host 'localhost', port '5433', dbname 'telpark');
+08134385K 09066309P; ::1(50016); 2025-05-06 13:32:16.507 CEST LOG:  sentencia: CREATE USER MAPPING IF NOT EXISTS FOR postgres
+	    SERVER maestro1
+	    OPTIONS (user 'postgres', password 'Gaturro2005');
+08134385K 09066309P; ::1(50016); 2025-05-06 13:32:16.511 CEST LOG:  sentencia: CREATE SCHEMA IF NOT EXISTS telpark_foraneo;
+08134385K 09066309P; ::1(50016); 2025-05-06 13:32:16.521 CEST LOG:  sentencia: IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro1
+	    INTO telpark_foraneo
+08134385K 09066309P; ; 2025-05-06 13:35:51.455 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-06 13:35:56.495 CEST LOG:  checkpoint completo: escritos 47 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.000 s, sync=0.026 s, total=5.041 s; archivos sincronizados=28, más largo=0.002 s, promedio=0.001 s; distancia=172 kB, estimación=25243 kB; lsn=9/9104B5A0, lsn de redo=9/9104B568
+08134385K 09066309P; ; 2025-05-06 13:45:51.515 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-06 13:45:51.874 CEST LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.329 s, sync=0.011 s, total=0.359 s; archivos sincronizados=3, más largo=0.004 s, promedio=0.004 s; distancia=8 kB, estimación=22720 kB; lsn=9/9104D828, lsn de redo=9/9104D7F0
+08134385K 09066309P; ::1(50671); 2025-05-06 13:52:32.837 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(51373); 2025-05-06 13:56:28.930 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(50782); 2025-05-06 13:57:09.179 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

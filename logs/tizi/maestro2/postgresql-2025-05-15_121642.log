@@ -1,0 +1,12 @@
+08134385K 09066309P; ; 2025-05-15 12:16:42.459 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 12:16:42.460 CEST LOG:  escuchando en la dirección IPv6 «::», port 5433
+08134385K 09066309P; ; 2025-05-15 12:16:42.460 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+08134385K 09066309P; ; 2025-05-15 12:16:42.510 CEST LOG:  el sistema de bases de datos fue apagado en 2025-05-15 12:16:28 CEST
+08134385K 09066309P; ; 2025-05-15 12:16:42.530 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones
+08134385K 09066309P; ::1(56254); 2025-05-15 12:17:59.285 CEST LOG:  sentencia: DELETE FROM clientes WHERE clienteid=100;
+08134385K 09066309P; ; 2025-05-15 12:21:42.506 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 12:21:42.639 CEST LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.109 s, sync=0.009 s, total=0.138 s; archivos sincronizados=3, más largo=0.004 s, promedio=0.003 s; distancia=3 kB, estimación=3 kB; lsn=9/8F006FC8, lsn de redo=9/8F006F90
+08134385K 09066309P; ; 2025-05-15 12:32:16.469 CEST LOG:  proceso de servidor (PID 73676) fue terminado por una excepción 0xC000013A
+08134385K 09066309P; ; 2025-05-15 12:32:16.469 CEST HINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+08134385K 09066309P; ; 2025-05-15 12:32:16.469 CEST LOG:  terminando todos los otros procesos de servidor activos
+08134385K 09066309P; ; 2025-05-15 12:32:16.479 CEST LOG:  todos los procesos fueron terminados; reinicializando

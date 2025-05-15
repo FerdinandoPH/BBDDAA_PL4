@@ -1,0 +1,9 @@
+Tiziano Biondo 08134385K, Fernando Pérez 09066309P; ; 2025-02-04 13:18:19.234 CET [31212] LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+Tiziano Biondo 08134385K, Fernando Pérez 09066309P; ; 2025-02-04 13:18:19.235 CET [31212] LOG:  escuchando en la dirección IPv6 «::», port 5432
+Tiziano Biondo 08134385K, Fernando Pérez 09066309P; ; 2025-02-04 13:18:19.236 CET [31212] LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5432
+Tiziano Biondo 08134385K, Fernando Pérez 09066309P; ; 2025-02-04 13:18:19.307 CET [31560] LOG:  el sistema de bases de datos fue apagado en 2025-02-04 13:18:19 CET
+Tiziano Biondo 08134385K, Fernando Pérez 09066309P; ; 2025-02-04 13:18:19.342 CET [31212] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+Tiziano Biondo 08134385K, Fernando Pérez 09066309P; ::1(50648); 2025-02-04 13:18:57.085 CET [23984] LOG:  sentencia: INSERT INTO tienda.Grupos VALUES('b', 'http://test.com');
+Tiziano Biondo 08134385K, Fernando Pérez 09066309P; ::1(50648); 2025-02-04 13:22:48.015 CET [23984] LOG:  sentencia: DELETE FROM tienda.Grupos WHERE nombre='a' OR nombre='b';
+Tiziano Biondo 08134385K, Fernando Pérez 09066309P; ; 2025-02-04 13:23:11.682 CET [31212] LOG:  se recibió petición de apagado rápido
+Tiziano Biondo 08134385K, Fernando Pérez 09066309P; ::1(50648); 2025-02-04 13:23:11.689 CET [23984] FATAL:  terminando la conexión debido al término inesperado de postmaster

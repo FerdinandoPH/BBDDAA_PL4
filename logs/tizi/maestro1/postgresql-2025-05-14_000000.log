@@ -1,0 +1,12 @@
+08134385K 09066309P; ::1(52783); 2025-05-15 12:32:16.516 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(52783); 2025-05-15 12:32:16.516 CEST SENTENCIA:  START_REPLICATION 9/93000000 TIMELINE 1
+08134385K 09066309P; ::1(52783); 2025-05-15 12:32:16.516 CEST LOG:  se encontró fin de archivo inesperado en la conexión standby
+08134385K 09066309P; ::1(52783); 2025-05-15 12:32:16.516 CEST SENTENCIA:  START_REPLICATION 9/93000000 TIMELINE 1
+08134385K 09066309P; ::1(58256); 2025-05-15 12:59:46.484 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(56998); 2025-05-15 13:43:13.643 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(56998); 2025-05-15 13:43:13.643 CEST SENTENCIA:  START_REPLICATION 9/93000000 TIMELINE 1
+08134385K 09066309P; ::1(56998); 2025-05-15 13:43:13.643 CEST LOG:  se encontró fin de archivo inesperado en la conexión standby
+08134385K 09066309P; ::1(56998); 2025-05-15 13:43:13.643 CEST SENTENCIA:  START_REPLICATION 9/93000000 TIMELINE 1

@@ -1,0 +1,107 @@
+08134385K 09066309P; ::1(51814); 2025-03-18 12:15:01.995 CET [5076] LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores(
+	    codigo_investigador NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    apellidos TEXT,
+	    salario NUMERIC
+	);
+08134385K 09066309P; ::1(51814); 2025-03-18 12:15:02.010 CET [5076] LOG:  sentencia: CREATE TABLE IF NOT EXISTS contratos(
+	    codigo_contrato NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    entidad TEXT,
+	    coste NUMERIC
+	);
+08134385K 09066309P; ::1(51814); 2025-03-18 12:15:02.014 CET [5076] LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores_contratos(
+	    codigo_investigador NUMERIC,
+	    codigo_contrato NUMERIC,
+	    horas NUMERIC,
+	    PRIMARY KEY (codigo_investigador, codigo_contrato)
+	);
+08134385K 09066309P; ::1(51814); 2025-03-18 12:15:02.029 CET [5076] LOG:  sentencia: COPY  investigadores FROM STDIN DELIMITER ','
+08134385K 09066309P; ::1(51814); 2025-03-18 12:15:14.284 CET [5076] LOG:  sentencia: COPY  contratos FROM STDIN DELIMITER ','
+08134385K 09066309P; ::1(51814); 2025-03-18 12:15:15.263 CET [5076] LOG:  sentencia: COPY  investigadores_contratos FROM STDIN DELIMITER ','
+08134385K 09066309P; ; 2025-03-18 12:15:25.526 CET [8448] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-03-18 12:16:06.820 CET [8448] LOG:  checkpoint completo: escritos 2184 búfers (13.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=40.163 s, sync=0.896 s, total=41.297 s; archivos sincronizados=13, más largo=0.729 s, promedio=0.069 s; distancia=540429 kB, estimación=540429 kB; lsn=5/5D2B11E0, lsn de redo=5/3F3381E0
+08134385K 09066309P; ; 2025-03-18 12:16:13.542 CET [8448] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-03-18 12:17:17.168 CET [8448] LOG:  checkpoint completo: escritos 2767 búfers (16.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=62.084 s, sync=0.803 s, total=63.626 s; archivos sincronizados=7, más largo=0.755 s, promedio=0.115 s; distancia=537875 kB, estimación=540174 kB; lsn=5/7DDA9AE8, lsn de redo=5/6007D180
+08134385K 09066309P; ; 2025-03-18 12:17:27.112 CET [8448] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-03-18 12:21:58.037 CET [8448] LOG:  checkpoint completo: escritos 1360 búfers (8.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.898 s, sync=0.749 s, total=270.927 s; archivos sincronizados=7, más largo=0.728 s, promedio=0.107 s; distancia=544273 kB, estimación=544273 kB; lsn=5/98733250, lsn de redo=5/814017A0
+08134385K 09066309P; ; 2025-03-18 12:22:27.243 CET [8448] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-03-18 12:25:06.991 CET [8448] LOG:  checkpoint completo: escritos 150 búfers (0.9%); 0 archivos WAL añadidos, 0 eliminados, 23 reciclados; write=158.617 s, sync=0.929 s, total=159.749 s; archivos sincronizados=2, más largo=0.925 s, promedio=0.464 s; distancia=385918 kB, estimación=528438 kB; lsn=5/A78EEE88, lsn de redo=5/98CE1330
+08134385K 09066309P; ::1(51814); 2025-03-18 12:25:32.378 CET [5076] LOG:  sentencia: ALTER TABLE investigadores_contratos
+	ADD FOREIGN KEY (codigo_investigador) REFERENCES investigadores(codigo_investigador) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(51814); 2025-03-18 12:25:41.614 CET [5076] LOG:  sentencia: ALTER TABLE investigadores_contratos
+	ADD FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato) ON DELETE RESTRICT;
+08134385K 09066309P; ; 2025-03-18 12:27:27.453 CET [8448] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-03-18 12:31:43.970 CET [8448] LOG:  checkpoint completo: escritos 2332 búfers (14.2%); 0 archivos WAL añadidos, 0 eliminados, 15 reciclados; write=256.383 s, sync=0.028 s, total=256.517 s; archivos sincronizados=25, más largo=0.005 s, promedio=0.002 s; distancia=246046 kB, estimación=500198 kB; lsn=5/A7E3F568, lsn de redo=5/A7D28C60
+08134385K 09066309P; ::1(52855); 2025-03-18 12:33:17.291 CET [14624] LOG:  sentencia: DROP DATABASE IF EXISTS investigar;
+08134385K 09066309P; ; 2025-03-18 12:33:17.305 CET [8448] LOG:  empezando checkpoint: immediate force wait
+08134385K 09066309P; ; 2025-03-18 12:33:17.322 CET [8448] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.004 s, total=0.018 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=1121 kB, estimación=450291 kB; lsn=5/A7E412F8, lsn de redo=5/A7E412C0
+08134385K 09066309P; ::1(52855); 2025-03-18 12:33:17.526 CET [14624] LOG:  sentencia: CREATE DATABASE investigar;
+08134385K 09066309P; ::1(52858); 2025-03-18 12:33:18.019 CET [9812] ERROR:  el parámetro «max_wal_size» no se puede cambiar en este momento
+08134385K 09066309P; ::1(52858); 2025-03-18 12:33:18.019 CET [9812] SENTENCIA:  SET max_wal_size = '4GB';
+08134385K 09066309P; ::1(52858); 2025-03-18 12:33:18.024 CET [9812] LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores(
+	    codigo_investigador NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    apellidos TEXT,
+	    salario NUMERIC
+	);
+08134385K 09066309P; ::1(52858); 2025-03-18 12:33:18.041 CET [9812] LOG:  sentencia: CREATE TABLE IF NOT EXISTS contratos(
+	    codigo_contrato NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    entidad TEXT,
+	    coste NUMERIC
+	);
+08134385K 09066309P; ::1(52858); 2025-03-18 12:33:18.047 CET [9812] LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores_contratos(
+	    codigo_investigador NUMERIC,
+	    codigo_contrato NUMERIC,
+	    horas NUMERIC,
+	    PRIMARY KEY (codigo_investigador, codigo_contrato)
+	);
+08134385K 09066309P; ::1(52858); 2025-03-18 12:33:18.067 CET [9812] LOG:  sentencia: COPY  investigadores FROM STDIN DELIMITER ','
+08134385K 09066309P; ::1(52858); 2025-03-18 12:33:34.127 CET [9812] LOG:  sentencia: COPY  contratos FROM STDIN DELIMITER ','
+08134385K 09066309P; ::1(52858); 2025-03-18 12:33:35.401 CET [9812] LOG:  sentencia: COPY  investigadores_contratos FROM STDIN DELIMITER ','
+08134385K 09066309P; ; 2025-03-18 12:33:45.968 CET [8448] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 28 segundos)
+08134385K 09066309P; ; 2025-03-18 12:33:45.968 CET [8448] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-03-18 12:33:45.968 CET [8448] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-03-18 12:34:27.210 CET [8448] LOG:  checkpoint completo: escritos 4920 búfers (30.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=39.996 s, sync=0.967 s, total=41.242 s; archivos sincronizados=316, más largo=0.457 s, promedio=0.004 s; distancia=527345 kB, estimación=527345 kB; lsn=5/E6205298, lsn de redo=5/C813D708
+08134385K 09066309P; ; 2025-03-18 12:34:33.786 CET [8448] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-03-18 12:35:31.596 CET [8448] LOG:  checkpoint completo: escritos 2798 búfers (17.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=56.153 s, sync=1.393 s, total=57.810 s; archivos sincronizados=12, más largo=1.340 s, promedio=0.117 s; distancia=539559 kB, estimación=539559 kB; lsn=6/6EBDD78, lsn de redo=5/E9027570
+08134385K 09066309P; ; 2025-03-18 12:35:40.949 CET [8448] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ::1(52858); 2025-03-18 12:35:43.686 CET [9812] LOG:  sentencia: ALTER TABLE investigadores_contratos
+	ADD FOREIGN KEY (codigo_investigador) REFERENCES investigadores(codigo_investigador) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(52858); 2025-03-18 12:35:51.953 CET [9812] LOG:  sentencia: ALTER TABLE investigadores_contratos
+	ADD FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(52858); 2025-03-18 12:35:58.778 CET [9812] ERROR:  el parámetro «max_wal_size» no se puede cambiar en este momento
+08134385K 09066309P; ::1(52858); 2025-03-18 12:35:58.778 CET [9812] SENTENCIA:  SET max_wal_size = '1GB';
+08134385K 09066309P; ::1(53017); 2025-03-18 12:38:04.140 CET [14840] LOG:  sentencia: DROP DATABASE IF EXISTS investigar;
+08134385K 09066309P; ; 2025-03-18 12:38:04.142 CET [12592] FATAL:  terminando el proceso autovacuum debido a una orden del administrador
+08134385K 09066309P; ; 2025-03-18 12:38:04.142 CET [12592] CONTEXTO:  recorriendo el bloque 50892 de la relación «public.investigadores_contratos»
+08134385K 09066309P; ; 2025-03-18 12:38:04.450 CET [8448] LOG:  checkpoint completo: escritos 2410 búfers (14.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=143.297 s, sync=0.006 s, total=143.501 s; archivos sincronizados=4, más largo=0.003 s, promedio=0.002 s; distancia=540934 kB, estimación=540934 kB; lsn=6/150D3C10, lsn de redo=6/A068FA8
+08134385K 09066309P; ; 2025-03-18 12:38:04.450 CET [8448] LOG:  empezando checkpoint: immediate force wait
+08134385K 09066309P; ; 2025-03-18 12:38:04.549 CET [8448] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 11 reciclados; write=0.003 s, sync=0.004 s, total=0.100 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.002 s; distancia=180651 kB, estimación=504906 kB; lsn=6/150D3CC0, lsn de redo=6/150D3C88
+08134385K 09066309P; ::1(53017); 2025-03-18 12:38:04.712 CET [14840] LOG:  sentencia: CREATE DATABASE investigar;
+08134385K 09066309P; ::1(53019); 2025-03-18 12:38:05.009 CET [6188] LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores(
+	    codigo_investigador NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    apellidos TEXT,
+	    salario NUMERIC
+	);
+08134385K 09066309P; ::1(53019); 2025-03-18 12:38:05.021 CET [6188] LOG:  sentencia: CREATE TABLE IF NOT EXISTS contratos(
+	    codigo_contrato NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    entidad TEXT,
+	    coste NUMERIC
+	);
+08134385K 09066309P; ::1(53019); 2025-03-18 12:38:05.027 CET [6188] LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores_contratos(
+	    codigo_investigador NUMERIC,
+	    codigo_contrato NUMERIC,
+	    horas NUMERIC,
+	    PRIMARY KEY (codigo_investigador, codigo_contrato)
+	);
+08134385K 09066309P; ::1(53019); 2025-03-18 12:38:05.036 CET [6188] LOG:  sentencia: COPY  investigadores FROM STDIN DELIMITER ','
+08134385K 09066309P; ::1(53019); 2025-03-18 12:38:09.405 CET [6188] ERROR:  cancelando la sentencia debido a una petición del usuario
+08134385K 09066309P; ::1(53019); 2025-03-18 12:38:09.405 CET [6188] CONTEXTO:  COPY investigadores, línea 1200000: « 1200000,nombre1200000,apellidos1200000,106797.0»
+08134385K 09066309P; ::1(53019); 2025-03-18 12:38:09.405 CET [6188] SENTENCIA:  COPY  investigadores FROM STDIN DELIMITER ','
+08134385K 09066309P; ; 2025-03-18 12:39:26.223 CET [8448] LOG:  apagando
+08134385K 09066309P; ; 2025-03-18 12:39:26.225 CET [8448] LOG:  empezando checkpoint: shutdown immediate
+08134385K 09066309P; ; 2025-03-18 12:39:26.675 CET [8448] LOG:  checkpoint completo: escritos 4273 búfers (26.1%); 0 archivos WAL añadidos, 2 eliminados, 7 reciclados; write=0.111 s, sync=0.273 s, total=0.453 s; archivos sincronizados=314, más largo=0.022 s, promedio=0.001 s; distancia=153930 kB, estimación=469808 kB; lsn=6/1E7266A0, lsn de redo=6/1E7266A0

@@ -9,5 +9,5 @@ DELETE FROM plazas;
 DELETE FROM clientes;
 
 CREATE SUBSCRIPTION telpark_sub
-    CONNECTION 'host=localhost port=5433 dbname=telpark user=postgres password=postgres'
+    CONNECTION 'host=localhost port=5433 dbname=telpark user=postgres password=Gaturro2005'
     PUBLICATION telpark_pub

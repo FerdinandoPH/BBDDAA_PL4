@@ -1,0 +1,55 @@
+08134385K 09066309P; ; 2025-05-06 13:05:28.602 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-06 13:05:28.604 CEST LOG:  escuchando en la dirección IPv6 «::», port 5433
+08134385K 09066309P; ; 2025-05-06 13:05:28.604 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+08134385K 09066309P; ; 2025-05-06 13:05:28.654 CEST LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-06 12:54:03 CEST
+08134385K 09066309P; ; 2025-05-06 13:05:29.184 CEST LOG:  iniciando recuperación de backup con LSN de redo 9/8C000028, LSN de checkpoint 9/8C000060, en timeline 1
+08134385K 09066309P; ; 2025-05-06 13:05:29.191 CEST LOG:  redo comienza en 9/8C000028
+08134385K 09066309P; ; 2025-05-06 13:05:29.193 CEST LOG:  se completó la recuperación de backup con LSN de redo 9/8C000028 y LSN de término 9/8C000138
+08134385K 09066309P; ; 2025-05-06 13:05:29.193 CEST LOG:  el estado de recuperación consistente fue alcanzado en 9/8C000138
+08134385K 09066309P; ; 2025-05-06 13:05:29.193 CEST LOG:  redo listo en 9/8C000138 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+08134385K 09066309P; ; 2025-05-06 13:05:29.251 CEST LOG:  empezando checkpoint: end-of-recovery immediate wait
+08134385K 09066309P; ; 2025-05-06 13:05:29.263 CEST LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.002 s, sync=0.002 s, total=0.014 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=16384 kB, estimación=16384 kB; lsn=9/8D000028, lsn de redo=9/8D000028
+08134385K 09066309P; ; 2025-05-06 13:05:29.279 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones
+08134385K 09066309P; ; 2025-05-06 13:10:29.264 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-06 13:10:30.155 CEST LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.866 s, sync=0.008 s, total=0.892 s; archivos sincronizados=4, más largo=0.005 s, promedio=0.002 s; distancia=37 kB, estimación=14749 kB; lsn=9/8D009600, lsn de redo=9/8D0095C8
+08134385K 09066309P; ; 2025-05-06 13:35:29.186 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-06 13:35:29.974 CEST LOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.767 s, sync=0.009 s, total=0.789 s; archivos sincronizados=5, más largo=0.005 s, promedio=0.002 s; distancia=8 kB, estimación=13275 kB; lsn=9/8D00B888, lsn de redo=9/8D00B850
+08134385K 09066309P; ::1(50019); 2025-05-06 13:42:46.008 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(50646); 2025-05-06 13:44:08.769 CEST ERROR:  no existe la relación «telpark_foraneo.clientes» en carácter 15
+08134385K 09066309P; ::1(50646); 2025-05-06 13:44:08.769 CEST SENTENCIA:  SELECT * FROM telpark_foraneo.clientes;
+08134385K 09066309P; ::1(50670); 2025-05-06 13:44:22.484 CEST LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS postgres_fdw;
+08134385K 09066309P; ::1(50670); 2025-05-06 13:44:22.514 CEST LOG:  sentencia: CREATE SERVER IF NOT EXISTS maestro1
+	    FOREIGN DATA WRAPPER postgres_fdw
+	    OPTIONS (host 'localhost', port '5432', dbname 'telpark');
+08134385K 09066309P; ::1(50670); 2025-05-06 13:44:22.518 CEST LOG:  sentencia: CREATE USER MAPPING IF NOT EXISTS FOR postgres
+	    SERVER maestro1
+	    OPTIONS (user 'postgres', password 'Gaturro2005');
+08134385K 09066309P; ::1(50670); 2025-05-06 13:44:22.520 CEST LOG:  sentencia: CREATE SCHEMA IF NOT EXISTS telpark_foraneo;
+08134385K 09066309P; ::1(50670); 2025-05-06 13:44:22.522 CEST LOG:  sentencia: IMPORT FOREIGN SCHEMA public
+	    FROM SERVER maestro1
+	    INTO telpark_foraneo;
+08134385K 09066309P; ; 2025-05-06 13:45:30.000 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-06 13:45:37.546 CEST LOG:  checkpoint completo: escritos 70 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=7.482 s, sync=0.049 s, total=7.546 s; archivos sincronizados=44, más largo=0.006 s, promedio=0.002 s; distancia=214 kB, estimación=11969 kB; lsn=9/8D041370, lsn de redo=9/8D041338
+08134385K 09066309P; ::1(51159); 2025-05-06 13:52:32.836 CEST ERROR:  error de sintaxis en o cerca de «)» en carácter 82
+08134385K 09066309P; ::1(51159); 2025-05-06 13:52:32.836 CEST SENTENCIA:  SELECT provincia, COUNT(*) AS total
+	FROM (telpark.reservas JOIN telpark.clientes) UNION (telpark_foraneo.reservas JOIN telpark_foraneo.clientes)
+	GROUP BY provincia;
+08134385K 09066309P; ::1(51187); 2025-05-06 13:52:58.776 CEST ERROR:  error de sintaxis en o cerca de «)» en carácter 82
+08134385K 09066309P; ::1(51187); 2025-05-06 13:52:58.776 CEST SENTENCIA:  SELECT provincia, COUNT(*) AS total
+	FROM (telpark.reservas JOIN telpark.clientes) UNION (telpark_foraneo.reservas JOIN telpark_foraneo.clientes)
+	GROUP BY provincia;
+08134385K 09066309P; ::1(51187); 2025-05-06 13:55:49.877 CEST ERROR:  no existe la relación «telpark_foraneo.clientes» en carácter 15
+08134385K 09066309P; ::1(51187); 2025-05-06 13:55:49.877 CEST SENTENCIA:  SELECT * FROM telpark_foraneo.clientes;
+08134385K 09066309P; ::1(51378); 2025-05-06 13:56:28.927 CEST ERROR:  error de sintaxis en o cerca de «telpark_foraneo» en carácter 143
+08134385K 09066309P; ::1(51378); 2025-05-06 13:56:28.927 CEST SENTENCIA:  SELECT provincia, COUNT(*) AS total
+	FROM (telpark.reservas JOIN telpark.clientes ON reservas.clienteid_clientes = clientes.clineteid) UNION (telpark_foraneo.reservas JOIN telpark_foraneo.clientes ON reservas.clienteid_clientes = clientes.clineteid)
+	WHERE reservas.fecha_reserva BETWEEN '2023-01-01' AND '2023-12-31'
+	GROUP BY provincia;
+08134385K 09066309P; ::1(51378); 2025-05-06 13:57:01.159 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ::1(51103); 2025-05-06 13:57:09.178 CEST LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ; 2025-05-06 13:57:16.970 CEST LOG:  proceso ayudante «logical replication launcher» (PID 74008) fue terminado por una excepción 0xC000013A
+08134385K 09066309P; ; 2025-05-06 13:57:16.970 CEST HINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+08134385K 09066309P; ; 2025-05-06 13:57:16.970 CEST LOG:  terminando todos los otros procesos de servidor activos

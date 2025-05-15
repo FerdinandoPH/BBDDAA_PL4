@@ -1,0 +1,66 @@
+08134385K 09066309P; ; 2025-03-18 12:39:40.790 CET LOG:  el sistema de bases de datos fue apagado en 2025-03-18 12:39:26 CET
+08134385K 09066309P; ::1(53223); 2025-03-18 12:41:05.646 CET LOG:  sentencia: DROP DATABASE IF EXISTS investigar;
+08134385K 09066309P; ; 2025-03-18 12:41:05.654 CET LOG:  empezando checkpoint: immediate force wait
+08134385K 09066309P; ; 2025-03-18 12:41:05.672 CET LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.005 s, total=0.020 s; archivos sincronizados=3, más largo=0.002 s, promedio=0.002 s; distancia=1 kB, estimación=1 kB; lsn=6/1E726D60, lsn de redo=6/1E726CF0
+08134385K 09066309P; ::1(53223); 2025-03-18 12:41:05.718 CET LOG:  sentencia: CREATE DATABASE investigar;
+08134385K 09066309P; ::1(53224); 2025-03-18 12:41:06.004 CET LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores(
+	    codigo_investigador NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    apellidos TEXT,
+	    salario NUMERIC
+	);
+08134385K 09066309P; ::1(53224); 2025-03-18 12:41:06.017 CET LOG:  sentencia: CREATE TABLE IF NOT EXISTS contratos(
+	    codigo_contrato NUMERIC PRIMARY KEY,
+	    nombre TEXT,
+	    entidad TEXT,
+	    coste NUMERIC
+	);
+08134385K 09066309P; ::1(53224); 2025-03-18 12:41:06.022 CET LOG:  sentencia: CREATE TABLE IF NOT EXISTS investigadores_contratos(
+	    codigo_investigador NUMERIC,
+	    codigo_contrato NUMERIC,
+	    horas NUMERIC,
+	    PRIMARY KEY (codigo_investigador, codigo_contrato)
+	);
+08134385K 09066309P; ::1(53224); 2025-03-18 12:41:06.029 CET LOG:  sentencia: COPY  investigadores FROM STDIN DELIMITER ','
+08134385K 09066309P; ::1(53224); 2025-03-18 12:41:19.267 CET LOG:  sentencia: COPY  contratos FROM STDIN DELIMITER ','
+08134385K 09066309P; ::1(53224); 2025-03-18 12:41:20.234 CET LOG:  sentencia: COPY  investigadores_contratos FROM STDIN DELIMITER ','
+08134385K 09066309P; ::1(53224); 2025-03-18 12:43:21.076 CET LOG:  sentencia: ALTER TABLE investigadores_contratos
+	ADD FOREIGN KEY (codigo_investigador) REFERENCES investigadores(codigo_investigador) ON DELETE RESTRICT;
+08134385K 09066309P; ::1(53224); 2025-03-18 12:43:28.851 CET LOG:  sentencia: ALTER TABLE investigadores_contratos
+	ADD FOREIGN KEY (codigo_contrato) REFERENCES contratos(codigo_contrato) ON DELETE RESTRICT;
+08134385K 09066309P; ; 2025-03-18 12:46:05.496 CET LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-03-18 12:50:35.618 CET LOG:  checkpoint completo: escritos 8552 búfers (52.2%); 0 archivos WAL añadidos, 0 eliminados, 87 reciclados; write=269.596 s, sync=0.209 s, total=270.123 s; archivos sincronizados=318, más largo=0.004 s, promedio=0.001 s; distancia=1426469 kB, estimación=1426469 kB; lsn=6/75830538, lsn de redo=6/758304C8
+08134385K 09066309P; ::1(53224); 2025-03-18 12:59:54.457 CET ERROR:  error de sintaxis en o cerca de «RAISE» en carácter 1
+08134385K 09066309P; ::1(53224); 2025-03-18 12:59:54.457 CET SENTENCIA:  RAISE LOG "test";
+08134385K 09066309P; ::1(53224); 2025-03-18 13:33:36.893 CET ERROR:  error de sintaxis en o cerca de «LIMIT» en carácter 1
+08134385K 09066309P; ::1(53224); 2025-03-18 13:33:36.893 CET SENTENCIA:  LIMIT 1
+	SELECT * FROM pg_stats LIMIT 1;
+08134385K 09066309P; ::1(53224); 2025-03-18 13:37:08.457 CET ERROR:  no existe la columna «investigadores» en carácter 42
+08134385K 09066309P; ::1(53224); 2025-03-18 13:37:08.457 CET SENTENCIA:  SELECT * FROM pg_stats WHERE tablename = "investigadores";
+08134385K 09066309P; ::1(53224); 2025-03-18 13:37:41.078 CET ERROR:  no existe la columna «investigadores» en carácter 42
+08134385K 09066309P; ::1(53224); 2025-03-18 13:37:41.078 CET SENTENCIA:  SELECT * FROM pg_stats WHERE tablename = "investigadores";
+08134385K 09066309P; ::1(53224); 2025-03-18 13:38:03.518 CET ERROR:  no existe la columna «pg_proc» en carácter 42
+08134385K 09066309P; ::1(53224); 2025-03-18 13:38:03.518 CET SENTENCIA:  SELECT * FROM pg_stats WHERE tablename = "pg_proc";
+08134385K 09066309P; ::1(53224); 2025-03-18 13:38:09.601 CET ERROR:  no existe la columna «investigadores» en carácter 42
+08134385K 09066309P; ::1(53224); 2025-03-18 13:38:09.601 CET SENTENCIA:  SELECT * FROM pg_stats WHERE tablename = investigadores;
+08134385K 09066309P; ::1(53224); 2025-03-18 13:38:22.701 CET ERROR:  no existe la columna «investigadores» en carácter 45
+08134385K 09066309P; ::1(53224); 2025-03-18 13:38:22.701 CET SENTENCIA:  SELECT * FROM pg_stats WHERE tablename LIKE "investigadores";
+08134385K 09066309P; ::1(53224); 2025-03-18 13:38:56.560 CET ERROR:  error de sintaxis en o cerca de «pg_proc» en carácter 95
+08134385K 09066309P; ::1(53224); 2025-03-18 13:38:56.560 CET SENTENCIA:  SELECT * FROM pg_stats WHERE tablename = "pg_proc;
+	
+	SELECT * FROM pg_stats WHERE tablename = "pg_proc;
+08134385K 09066309P; ::1(53224); 2025-03-18 13:39:00.104 CET ERROR:  no existe la columna «pg_proc» en carácter 42
+08134385K 09066309P; ::1(53224); 2025-03-18 13:39:00.104 CET SENTENCIA:  SELECT * FROM pg_stats WHERE tablename = pg_proc;
+08134385K 09066309P; ::1(53224); 2025-03-18 13:39:07.724 CET ERROR:  no existe la columna «pg_proc» en carácter 45
+08134385K 09066309P; ::1(53224); 2025-03-18 13:39:07.724 CET SENTENCIA:  SELECT * FROM pg_stats WHERE tablename LIKE "pg_proc";
+08134385K 09066309P; ::1(53224); 2025-03-18 13:46:43.582 CET ERROR:  no existe la columna «inhereted» en carácter 30
+08134385K 09066309P; ::1(53224); 2025-03-18 13:46:43.582 CET HINT:  Probablemente quiera hacer referencia a la columna «pg_stats.inherited».
+08134385K 09066309P; ::1(53224); 2025-03-18 13:46:43.582 CET SENTENCIA:  SELECT * FROM pg_stats WHERE inhereted = f;
+08134385K 09066309P; ::1(53224); 2025-03-18 13:47:05.064 CET ERROR:  no existe la columna «f» en carácter 42
+08134385K 09066309P; ::1(53224); 2025-03-18 13:47:05.064 CET SENTENCIA:  SELECT * FROM pg_stats WHERE inherited = f;
+08134385K 09066309P; ::1(53224); 2025-03-18 13:47:15.995 CET ERROR:  no existe la columna «f» en carácter 42
+08134385K 09066309P; ::1(53224); 2025-03-18 13:47:15.995 CET SENTENCIA:  SELECT * FROM pg_stats WHERE inherited = "f";
+08134385K 09066309P; ::1(53224); 2025-03-18 13:47:39.129 CET ERROR:  no existe la columna «f» en carácter 51
+08134385K 09066309P; ::1(53224); 2025-03-18 13:47:39.129 CET SENTENCIA:  SELECT * FROM pg_stats WHERE pg_stats.inherited = "f";
+08134385K 09066309P; ::1(53224); 2025-03-18 13:56:33.659 CET LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

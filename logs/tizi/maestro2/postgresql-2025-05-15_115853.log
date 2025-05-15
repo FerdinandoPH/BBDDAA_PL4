@@ -1,0 +1,12 @@
+08134385K 09066309P; ; 2025-05-15 11:58:53.917 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 11:58:53.918 CEST LOG:  escuchando en la dirección IPv6 «::», port 5433
+08134385K 09066309P; ; 2025-05-15 11:58:53.918 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5433
+08134385K 09066309P; ; 2025-05-15 11:58:53.969 CEST LOG:  el sistema de bases de datos fue apagado en 2025-05-15 11:58:30 CEST
+08134385K 09066309P; ; 2025-05-15 11:58:53.987 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones
+08134385K 09066309P; ; 2025-05-15 12:01:55.777 CEST LOG:  se recibió petición de apagado rápido
+08134385K 09066309P; ; 2025-05-15 12:01:55.779 CEST LOG:  abortando transacciones activas
+08134385K 09066309P; ; 2025-05-15 12:01:55.785 CEST LOG:  proceso ayudante «logical replication launcher» (PID 26292) terminó con código de salida 1
+08134385K 09066309P; ; 2025-05-15 12:01:55.788 CEST LOG:  apagando
+08134385K 09066309P; ; 2025-05-15 12:01:55.808 CEST LOG:  empezando checkpoint: shutdown immediate
+08134385K 09066309P; ; 2025-05-15 12:01:55.828 CEST LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.005 s, sync=0.003 s, total=0.023 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=9/8F004530, lsn de redo=9/8F004530
+08134385K 09066309P; ; 2025-05-15 12:01:55.846 CEST LOG:  el sistema de bases de datos está apagado

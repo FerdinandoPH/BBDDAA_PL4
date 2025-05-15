@@ -1,0 +1,3 @@
+08134385K 09066309P; ; 2025-03-20 17:12:24.037 CET LOG:  el sistema de bases de datos fue apagado en 2025-03-20 17:11:50 CET
+08134385K 09066309P; ; 2025-03-20 17:17:24.034 CET LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-03-20 17:17:24.082 CET LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.010 s, sync=0.004 s, total=0.052 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=6/758306D0, lsn de redo=6/75830698

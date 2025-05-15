@@ -1,0 +1,23 @@
+08134385K 09066309P; ; 2025-03-06 10:27:45.689 CET [8700] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-03-05 23:42:52 CET
+08134385K 09066309P; ; 2025-03-06 10:27:48.316 CET [8700] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+08134385K 09066309P; ; 2025-03-06 10:27:48.325 CET [8700] LOG:  redo comienza en 4/765FF350
+08134385K 09066309P; ; 2025-03-06 10:27:48.326 CET [8700] LOG:  largo de registro no válido en 4/765FF438: se esperaba al menos 24, se obtuvo 0
+08134385K 09066309P; ; 2025-03-06 10:27:48.326 CET [8700] LOG:  redo listo en 4/765FF400 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+08134385K 09066309P; ; 2025-03-06 10:27:48.337 CET [8704] LOG:  empezando checkpoint: end-of-recovery immediate wait
+08134385K 09066309P; ; 2025-03-06 10:27:48.358 CET [8704] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.003 s, total=0.025 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=4/765FF438, lsn de redo=4/765FF438
+08134385K 09066309P; ::1(61862); 2025-03-07 13:55:29.493 CET [2140] LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_producto_id ON productos USING hash (producto_id);
+08134385K 09066309P; ; 2025-03-07 13:55:29.714 CET [8704] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-03-07 13:56:42.776 CET [8704] LOG:  checkpoint completo: escritos 27 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=72.870 s, sync=0.166 s, total=73.063 s; archivos sincronizados=14, más largo=0.154 s, promedio=0.012 s; distancia=841 kB, estimación=841 kB; lsn=4/945D94D0, lsn de redo=4/766D1AD8
+08134385K 09066309P; ; 2025-03-07 13:56:45.148 CET [8704] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-03-07 13:57:11.336 CET [8704] LOG:  checkpoint completo: escritos 9 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.822 s, sync=0.122 s, total=26.188 s; archivos sincronizados=1, más largo=0.122 s, promedio=0.122 s; distancia=535321 kB, estimación=535321 kB; lsn=4/B506E250, lsn de redo=4/97198030
+08134385K 09066309P; ; 2025-03-07 13:57:13.691 CET [8704] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 28 segundos)
+08134385K 09066309P; ; 2025-03-07 13:57:13.691 CET [8704] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-03-07 13:57:13.691 CET [8704] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-03-07 13:57:39.657 CET [8704] LOG:  checkpoint completo: escritos 199 búfers (1.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.718 s, sync=0.008 s, total=25.967 s; archivos sincronizados=1, más largo=0.008 s, promedio=0.008 s; distancia=540538 kB, estimación=540538 kB; lsn=4/D5E87AD8, lsn de redo=4/B8176C10
+08134385K 09066309P; ; 2025-03-07 13:57:42.199 CET [8704] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+08134385K 09066309P; ; 2025-03-07 13:57:42.199 CET [8704] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-03-07 13:57:42.199 CET [8704] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ::1(61862); 2025-03-07 13:57:50.650 CET [2140] LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+08134385K 09066309P; ::1(61862); 2025-03-07 13:59:57.507 CET [2140] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+08134385K 09066309P; ; 2025-03-07 16:45:17.092 CET [8704] LOG:  checkpoint completo: escritos 19 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=10054.403 s, sync=0.186 s, total=10054.893 s; archivos sincronizados=1, más largo=0.186 s, promedio=0.186 s; distancia=539621 kB, estimación=540447 kB; lsn=4/E2AF58E8, lsn de redo=4/D90700E0

@@ -1,0 +1,16 @@
+08134385K 09066309P; ; 2025-05-15 12:58:17.702 CEST LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1941, 64-bit
+08134385K 09066309P; ; 2025-05-15 12:58:17.703 CEST LOG:  escuchando en la dirección IPv6 «::», port 5435
+08134385K 09066309P; ; 2025-05-15 12:58:17.703 CEST LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5435
+08134385K 09066309P; ; 2025-05-15 12:58:17.759 CEST LOG:  el sistema de bases de datos fue apagado en 2025-05-15 12:51:08 CEST
+08134385K 09066309P; ; 2025-05-15 12:58:17.761 CEST LOG:  recuperado el estado de replicación del nodo 1 a 0/0
+08134385K 09066309P; ; 2025-05-15 12:58:17.778 CEST LOG:  el sistema de bases de datos está listo para aceptar conexiones
+08134385K 09066309P; ; 2025-05-15 12:58:17.853 CEST LOG:  el ayudante «apply» de replicación lógica para la suscripción «telpark_sub» ha iniciado
+08134385K 09066309P; ; 2025-05-15 13:03:17.872 CEST LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-05-15 13:03:18.380 CEST LOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.444 s, sync=0.011 s, total=0.513 s; archivos sincronizados=6, más largo=0.003 s, promedio=0.002 s; distancia=12 kB, estimación=12 kB; lsn=9/8F032180, lsn de redo=9/8F032148
+08134385K 09066309P; ; 2025-05-15 13:43:13.502 CEST ERROR:  no se pudo recibir datos desde el flujo de WAL: el servidor ha cerrado la conexión inesperadamente
+		Probablemente se debe a que el servidor terminó de manera anormal
+		antes o durante el procesamiento de la petición.
+08134385K 09066309P; ; 2025-05-15 13:43:13.538 CEST LOG:  proceso ayudante «logical replication worker» (PID 34548) terminó con código de salida 1
+08134385K 09066309P; ; 2025-05-15 13:43:13.552 CEST LOG:  proceso ayudante «logical replication launcher» (PID 64060) fue terminado por una excepción 0xC000013A
+08134385K 09066309P; ; 2025-05-15 13:43:13.552 CEST HINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+08134385K 09066309P; ; 2025-05-15 13:43:13.552 CEST LOG:  terminando todos los otros procesos de servidor activos

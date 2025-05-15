@@ -1,0 +1,6 @@
+08134385K 09066309P; ; 2025-05-15 13:43:13.621 CEST LOG:  proceso de log (PID 69808) fue terminado por una excepción 0xC000013A
+08134385K 09066309P; ; 2025-05-15 13:43:13.621 CEST HINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+08134385K 09066309P; ; 2025-05-15 13:43:13.622 CEST LOG:  se recibió petición de apagado rápido
+08134385K 09066309P; ; 2025-05-15 13:43:13.680 CEST LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-05-15 13:03:25 CEST
+08134385K 09066309P; ; 2025-05-15 13:43:16.146 CEST LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+08134385K 09066309P; ; 2025-05-15 13:43:16.156 CEST LOG:  redo comienza en 9/8F00E588

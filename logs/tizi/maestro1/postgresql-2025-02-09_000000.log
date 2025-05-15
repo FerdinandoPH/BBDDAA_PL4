@@ -1,0 +1,86 @@
+08134385K 09066309P; ::1(52763); 2025-02-11 12:11:57.933 CET [1172] LOG:  sentencia: DROP DATABASE IF EXISTS PL1;
+08134385K 09066309P; ::1(52763); 2025-02-11 12:11:57.941 CET [1172] LOG:  sentencia: CREATE DATABASE PL1;
+08134385K 09066309P; ::1(52764); 2025-02-11 12:11:58.462 CET [10812] LOG:  sentencia: CREATE TABLE productos(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(50),
+	    stock INTEGER,
+	    precio INTEGER
+	);
+08134385K 09066309P; ::1(52764); 2025-02-11 12:11:58.493 CET [10812] LOG:  sentencia: COPY  productos FROM STDIN DELIMITER ',' CSV;
+08134385K 09066309P; ; 2025-02-11 12:12:20.056 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:12:39.060 CET [7180] LOG:  checkpoint completo: escritos 11143 búfers (68.0%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=17.832 s, sync=0.942 s, total=19.009 s; archivos sincronizados=302, más largo=0.110 s, promedio=0.004 s; distancia=527675 kB, estimación=527675 kB; lsn=0/4EC6EC20, lsn de redo=0/2F2015B8
+08134385K 09066309P; ; 2025-02-11 12:12:39.318 CET [7180] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+08134385K 09066309P; ; 2025-02-11 12:12:39.318 CET [7180] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-11 12:12:39.319 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:12:51.927 CET [7180] LOG:  checkpoint completo: escritos 10870 búfers (66.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=11.998 s, sync=0.232 s, total=12.609 s; archivos sincronizados=2, más largo=0.201 s, promedio=0.116 s; distancia=539009 kB, estimación=539009 kB; lsn=0/6E7FBD00, lsn de redo=0/50061D20
+08134385K 09066309P; ; 2025-02-11 12:12:52.644 CET [7180] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+08134385K 09066309P; ; 2025-02-11 12:12:52.644 CET [7180] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-11 12:12:52.644 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:13:04.218 CET [7180] LOG:  checkpoint completo: escritos 10942 búfers (66.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=11.128 s, sync=0.175 s, total=11.574 s; archivos sincronizados=3, más largo=0.126 s, promedio=0.059 s; distancia=540718 kB, estimación=540718 kB; lsn=0/8F742670, lsn de redo=0/7106D700
+08134385K 09066309P; ; 2025-02-11 12:13:05.067 CET [7180] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+08134385K 09066309P; ; 2025-02-11 12:13:05.067 CET [7180] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-11 12:13:05.067 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:13:17.070 CET [7180] LOG:  checkpoint completo: escritos 10945 búfers (66.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=11.569 s, sync=0.149 s, total=12.003 s; archivos sincronizados=2, más largo=0.117 s, promedio=0.075 s; distancia=540857 kB, estimación=540857 kB; lsn=0/B03A1D40, lsn de redo=0/9209BCE8
+08134385K 09066309P; ; 2025-02-11 12:13:18.011 CET [7180] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+08134385K 09066309P; ; 2025-02-11 12:13:18.011 CET [7180] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-11 12:13:18.011 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:13:30.086 CET [7180] LOG:  checkpoint completo: escritos 10990 búfers (67.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=11.766 s, sync=0.102 s, total=12.075 s; archivos sincronizados=3, más largo=0.045 s, promedio=0.034 s; distancia=542310 kB, estimación=542310 kB; lsn=0/D14495A8, lsn de redo=0/B32354F8
+08134385K 09066309P; ; 2025-02-11 12:13:31.062 CET [7180] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+08134385K 09066309P; ; 2025-02-11 12:13:31.062 CET [7180] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-11 12:13:31.062 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:18:01.291 CET [7180] LOG:  checkpoint completo: escritos 10399 búfers (63.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.944 s, sync=0.011 s, total=270.230 s; archivos sincronizados=2, más largo=0.007 s, promedio=0.006 s; distancia=539278 kB, estimación=542006 kB; lsn=0/DEBC4240, lsn de redo=0/D40D8D58
+08134385K 09066309P; ::1(53693); 2025-02-11 12:32:53.356 CET [7984] LOG:  sentencia: DROP DATABASE IF EXISTS PL1;
+08134385K 09066309P; ; 2025-02-11 12:32:53.365 CET [7180] LOG:  empezando checkpoint: immediate force wait
+08134385K 09066309P; ; 2025-02-11 12:32:53.417 CET [7180] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 10 reciclados; write=0.002 s, sync=0.002 s, total=0.053 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.001 s; distancia=175028 kB, estimación=505308 kB; lsn=0/DEBC5F30, lsn de redo=0/DEBC5EF8
+08134385K 09066309P; ::1(53693); 2025-02-11 12:32:53.457 CET [7984] LOG:  sentencia: CREATE DATABASE PL1;
+08134385K 09066309P; ::1(53694); 2025-02-11 12:32:53.865 CET [21048] LOG:  sentencia: CREATE TABLE productos(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	);
+08134385K 09066309P; ::1(53694); 2025-02-11 12:32:53.890 CET [21048] LOG:  sentencia: COPY  productos FROM STDIN DELIMITER ',' CSV;
+08134385K 09066309P; ; 2025-02-11 12:33:07.411 CET [7180] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+08134385K 09066309P; ; 2025-02-11 12:33:07.411 CET [7180] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-11 12:33:07.411 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:33:25.523 CET [7180] LOG:  checkpoint completo: escritos 8184 búfers (50.0%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=16.269 s, sync=1.529 s, total=18.113 s; archivos sincronizados=302, más largo=0.437 s, promedio=0.006 s; distancia=529640 kB, estimación=529640 kB; lsn=1/1E804940, lsn de redo=0/FF100028
+08134385K 09066309P; ; 2025-02-11 12:33:26.077 CET [7180] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 19 segundos)
+08134385K 09066309P; ; 2025-02-11 12:33:26.077 CET [7180] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-11 12:33:26.077 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:33:41.903 CET [7180] LOG:  checkpoint completo: escritos 12279 búfers (74.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=14.802 s, sync=0.596 s, total=15.827 s; archivos sincronizados=2, más largo=0.303 s, promedio=0.298 s; distancia=540700 kB, estimación=540700 kB; lsn=1/3EF0F890, lsn de redo=1/201073E0
+08134385K 09066309P; ; 2025-02-11 12:33:42.615 CET [7180] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+08134385K 09066309P; ; 2025-02-11 12:33:42.615 CET [7180] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-11 12:33:42.615 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:33:57.245 CET [7180] LOG:  checkpoint completo: escritos 12744 búfers (77.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=13.399 s, sync=0.675 s, total=14.630 s; archivos sincronizados=3, más largo=0.357 s, promedio=0.225 s; distancia=540313 kB, estimación=540662 kB; lsn=1/5FC8E0B0, lsn de redo=1/410ADBB8
+08134385K 09066309P; ; 2025-02-11 12:33:58.027 CET [7180] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+08134385K 09066309P; ; 2025-02-11 12:33:58.027 CET [7180] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-11 12:33:58.027 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:34:11.517 CET [7180] LOG:  checkpoint completo: escritos 13564 búfers (82.8%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=12.307 s, sync=0.624 s, total=13.491 s; archivos sincronizados=2, más largo=0.317 s, promedio=0.312 s; distancia=543240 kB, estimación=543240 kB; lsn=1/81000430, lsn de redo=1/6232FC38
+08134385K 09066309P; ; 2025-02-11 12:34:12.191 CET [7180] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+08134385K 09066309P; ; 2025-02-11 12:34:12.191 CET [7180] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+08134385K 09066309P; ; 2025-02-11 12:34:12.192 CET [7180] LOG:  empezando checkpoint: wal
+08134385K 09066309P; ; 2025-02-11 12:38:42.208 CET [7180] LOG:  checkpoint completo: escritos 10498 búfers (64.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.765 s, sync=0.018 s, total=270.017 s; archivos sincronizados=5, más largo=0.008 s, promedio=0.004 s; distancia=539757 kB, estimación=542891 kB; lsn=1/84C487A8, lsn de redo=1/8324B1A8
+08134385K 09066309P; ; 2025-02-11 12:39:12.236 CET [7180] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-02-11 12:42:09.273 CET [7180] LOG:  checkpoint completo: escritos 1599 búfers (9.8%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=176.904 s, sync=0.100 s, total=177.038 s; archivos sincronizados=9, más largo=0.086 s, promedio=0.012 s; distancia=27720 kB, estimación=491374 kB; lsn=1/853AEFD8, lsn de redo=1/84D5D1C8
+08134385K 09066309P; ; 2025-02-11 12:44:12.275 CET [7180] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-02-11 12:46:15.935 CET [7180] LOG:  checkpoint completo: escritos 1138 búfers (6.9%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=123.603 s, sync=0.013 s, total=123.661 s; archivos sincronizados=7, más largo=0.006 s, promedio=0.002 s; distancia=6522 kB, estimación=442889 kB; lsn=1/853BBD30, lsn de redo=1/853BBCF8
+08134385K 09066309P; ::1(53694); 2025-02-11 13:05:13.103 CET [21048] ERROR:  no existe la función pgstattuple(unknown) en carácter 15
+08134385K 09066309P; ::1(53694); 2025-02-11 13:05:13.103 CET [21048] HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+08134385K 09066309P; ::1(53694); 2025-02-11 13:05:13.103 CET [21048] SENTENCIA:  SELECT * FROM pgstattuple('pg_catalog.pg_proc');
+08134385K 09066309P; ::1(53694); 2025-02-11 13:05:18.474 CET [21048] ERROR:  no existe la función pg_stattuple(unknown) en carácter 15
+08134385K 09066309P; ::1(53694); 2025-02-11 13:05:18.474 CET [21048] HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+08134385K 09066309P; ::1(53694); 2025-02-11 13:05:18.474 CET [21048] SENTENCIA:  SELECT * FROM pg_stattuple('pg_catalog.pg_proc');
+08134385K 09066309P; ::1(53694); 2025-02-11 13:06:02.033 CET [21048] ERROR:  no existe la función pgstattuple(unknown) en carácter 15
+08134385K 09066309P; ::1(53694); 2025-02-11 13:06:02.033 CET [21048] HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+08134385K 09066309P; ::1(53694); 2025-02-11 13:06:02.033 CET [21048] SENTENCIA:  SELECT * FROM pgstattuple('productos');
+08134385K 09066309P; ::1(53694); 2025-02-11 13:06:30.625 CET [21048] ERROR:  no existe la función pgstattuple(unknown) en carácter 15
+08134385K 09066309P; ::1(53694); 2025-02-11 13:06:30.625 CET [21048] HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+08134385K 09066309P; ::1(53694); 2025-02-11 13:06:30.625 CET [21048] SENTENCIA:  SELECT * FROM pgstattuple('pl1.productos');
+08134385K 09066309P; ::1(53694); 2025-02-11 13:15:15.586 CET [21048] LOG:  sentencia: CREATE EXTENSION pgstattuple;
+08134385K 09066309P; ; 2025-02-11 13:19:12.991 CET [7180] LOG:  empezando checkpoint: time
+08134385K 09066309P; ; 2025-02-11 13:19:17.922 CET [7180] LOG:  checkpoint completo: escritos 46 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.876 s, sync=0.037 s, total=4.932 s; archivos sincronizados=21, más largo=0.004 s, promedio=0.002 s; distancia=253 kB, estimación=398625 kB; lsn=1/853FB480, lsn de redo=1/853FB448
+08134385K 09066309P; ::1(53694); 2025-02-11 13:58:54.235 CET [21048] ERROR:  el operador no existe: text / integer en carácter 60
+08134385K 09066309P; ::1(53694); 2025-02-11 13:58:54.235 CET [21048] HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+08134385K 09066309P; ::1(53694); 2025-02-11 13:58:54.235 CET [21048] SENTENCIA:  SELECT pg_size_pretty(pg_total_relation_size('productos')) / 8192;
+08134385K 09066309P; ::1(53694); 2025-02-11 14:03:15.339 CET [21048] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
