@@ -1,0 +1,22 @@
+                                                 QUERY PLAN                                                  
+-------------------------------------------------------------------------------------------------------------
+ HashAggregate  (cost=1348.70..1350.70 rows=200 width=40)
+   Group Key: clientes.provincia
+   ->  HashAggregate  (cost=1048.66..1248.69 rows=20003 width=32)
+         Group Key: clientes.provincia
+         ->  Append  (cost=2.67..998.65 rows=20003 width=32)
+               ->  Hash Join  (cost=2.67..4.19 rows=40 width=7)
+                     Hash Cond: (reservas.clienteid_clientes = clientes.clienteid)
+                     ->  Seq Scan on reservas  (cost=0.00..1.40 rows=40 width=4)
+                     ->  Hash  (cost=2.30..2.30 rows=30 width=11)
+                           ->  Seq Scan on clientes  (cost=0.00..2.30 rows=30 width=11)
+               ->  Merge Join  (cost=588.18..894.45 rows=19963 width=32)
+                     Merge Cond: (clientes_1.clienteid = reservas_1.clienteid_clientes)
+                     ->  Sort  (cost=222.03..225.44 rows=1365 width=36)
+                           Sort Key: clientes_1.clienteid
+                           ->  Foreign Scan on clientes clientes_1  (cost=100.00..150.95 rows=1365 width=36)
+                     ->  Sort  (cost=366.15..373.46 rows=2925 width=4)
+                           Sort Key: reservas_1.clienteid_clientes
+                           ->  Foreign Scan on reservas reservas_1  (cost=100.00..197.75 rows=2925 width=4)
+(18 filas)
+
